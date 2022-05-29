@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next-image-export-optimizer'
 import styles from '../styles/Home.module.css'
 
-import { prefix } from '../../utils/prefix.js';
+import { prefix } from '../utils/prefix.js';
 
 export default function Home() {
   return (
