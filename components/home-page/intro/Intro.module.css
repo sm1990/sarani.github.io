@@ -1,0 +1,88 @@
+img.homePageLogo {
+    width: 330px;
+}
+
+.homeIntro h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 60px;
+    margin: 40px 0;
+}
+
+.description p {
+    color: #c0c0c0;
+    font-size: 31px;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.introTopRow,
+.introBottomRow {
+    padding: 0;
+}
+
+.introTopRow {
+    padding-bottom: 60px;
+}
+
+.introBottomRow ul {
+    padding: 0;
+    margin: 10px 0;
+    display: inline-block;
+    float: right;
+}
+
+.introBottomRow ul li {
+    list-style: none;
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    /* width: 240px; */
+}
+
+a.homeIntroButton {
+    font-size: 25px;
+    background-color: #20b6b0;
+    color: #fff;
+    padding: 10px 70px 10px 20px;
+    display: inline-block;
+    float: right;
+    background-image: url("/images/main-right-arrow-home.svg");
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* margin-top: 30px; */
+    font-weight: 500;
+    text-decoration: none;
+    min-width: 366px;
+    margin-bottom: 10px;
+    border: 1px solid #20b6b0;
+    margin-top: 8px;
+}
+
+@media (min-width: 576px) {
+    a.homeIntroButton {
+        min-width: 400px;
+    }
+}
+
+.homeIntroButton p {
+    padding: 0;
+    margin: 0;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    font-size: 11px;
+    margin-left: 1px;
+    line-height: 15px;
+}
+
+a.playButton {
+    background-color: transparent;
+    background-image: url("/images/main-right-arrow-home-hover.svg") !important;
+}
+
+a.homeIntroButton:hover {
+    background-color: #eeeeee;
+    background-image: url("/images/main-right-arrow-home-hover.svg") !important;
+    color: #494949;
+}
