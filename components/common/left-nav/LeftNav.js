@@ -2,6 +2,7 @@ import * as React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
 import LearnToc from '../../../files1.json';
+import { prefix } from '../../../utils/prefix';
 import styles from './LeftNav.module.css';
 
 export default function LeftNav(props) {
@@ -53,7 +54,8 @@ export default function LeftNav(props) {
         : 
           (directory.position > 0) ?
             <li key={directory.dirName}>
-              <a id={directory.id} className={(id === directory.id)? "active":null} href={directory.url}>
+              <a id={directory.id} className={(id === directory.id)? "active":null} 
+                href={(`${prefix}`)? `${prefix}` + "/" : '' + directory.url}>
                 {directory.dirName}
               </a>
             </li>
