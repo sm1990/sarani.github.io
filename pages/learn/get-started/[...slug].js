@@ -82,7 +82,7 @@ export default function PostPage({ frontmatter, content, id }) {
             })
         }
         fetchData();
-    }, []);
+    }, [code,language]);
     return [codeSnippet]
   }
 
