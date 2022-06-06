@@ -59,8 +59,8 @@ const nextConfig = {
         destination: `/${redirectBase}learn/get-started/install-ballerina/:slug`,
       },
       {
-        source: `/sarani.github.io/learn/`,
-        destination: `/sarani.github.io/downloads`,
+        source: `/learn`,
+        destination: `/downloads`
       },
 
 
