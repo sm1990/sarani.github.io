@@ -38,7 +38,7 @@ export default function WhyBal() {
                 describing service interfaces.</p>
               <ul className={styles.inlineLinkList}>
                 <li className={styles.greenLinkArrow}>
-                  <Link href={`${prefix}/why-ballerina/flexibly-typed/`}>More info</Link>
+                  <Link href={`/why-ballerina/flexibly-typed/`}>More info</Link>
                 </li>
               </ul>
           </div>
@@ -51,7 +51,7 @@ export default function WhyBal() {
             <p>Type-safe, declarative processing of JSON, XML, and tabular data with language-integrated queries.</p>
             <ul className={styles.inlineLinkList}>
               <li className={styles.greenLinkArrow}>
-                <Link href={`${prefix}/why-ballerina/data-oriented/`}>More info</Link>
+                <Link href={`/why-ballerina/data-oriented/`}>More info</Link>
               </li>
             </ul>
           </div>
@@ -68,7 +68,7 @@ export default function WhyBal() {
             <p>Programs have both a textual syntax and an equivalent graphical form based on sequence diagrams.</p>
             <ul className={styles.inlineLinkList}>
               <li className={styles.greenLinkArrow}>
-                <Link href={`${prefix}/why-ballerina/graphical/`}>More info</Link>
+                <Link href={`/why-ballerina/graphical/`}>More info</Link>
               </li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export default function WhyBal() {
             <p>Easy and efficient  concurrency with sequence diagrams and language-managed threads without the complexity of asynchronous functions.</p>
             <ul className={styles.inlineLinkList}>
               <li className={styles.greenLinkArrow} >
-                <Link href={`${prefix}/why-ballerina/concurrent/`}>More info</Link>
+                <Link href={`/why-ballerina/concurrent/`}>More info</Link>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ export default function WhyBal() {
             <p>Explicit error handling, static types, and concurrency safety, combined with a  familiar, readable syntax make programs reliable and maintainable.</p>
             <ul className={styles.inlineLinkList}>
               <li className={styles.greenLinkArrow}>
-                <Link  href={`${prefix}/why-ballerina/reliable-maintainable/`}>More info</Link>
+                <Link  href={`/why-ballerina/reliable-maintainable/`}>More info</Link>
               </li>
             </ul>
           </div>
