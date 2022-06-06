@@ -23,7 +23,7 @@ export default function WhyBal() {
               <p>Network primitives in the language make it simpler to write services and run them in the cloud.</p>
               <ul className={styles.inlineLinkList}>
                 <li className={styles.greenLinkArrow}>
-                  <Link href={`${prefix}/why-ballerina/cloud-native/`}>More info</Link>
+                  <Link href={`/why-ballerina/cloud-native/`}>More info</Link>
                 </li>
               </ul>
           </div>
