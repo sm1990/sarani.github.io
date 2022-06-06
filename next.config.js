@@ -58,10 +58,6 @@ const nextConfig = {
         source: `/${redirectBase}learn/install-ballerina/:slug`,
         destination: `/${redirectBase}learn/get-started/install-ballerina/:slug`,
       },
-      {
-        source: `/learn`,
-        destination: `/downloads`
-      },
 
 
 
@@ -144,6 +140,15 @@ const nextConfig = {
         source: `/${redirectBase}downloads/swan-lake-release-notes`,
         destination: `/${redirectBase}downloads/swan-lake-release-notes/2201.0.2`,
       }
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/learn',
+        destination: '/downloads',
+        permanent: true
+      },
     ]
   },
   resolve: [{"path":false,"fs": false}],
