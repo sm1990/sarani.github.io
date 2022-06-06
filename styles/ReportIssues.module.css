@@ -1,0 +1,13 @@
+.repository {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.repository img {
+    padding-top: 1rem;
+}
+
+.repoTitle {
+    height: 50px;
+}
