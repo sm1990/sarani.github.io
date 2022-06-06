@@ -147,7 +147,7 @@ const nextConfig = {
       {
         source: '/learn',
         destination: '/downloads',
-        permanent: true
+        permanent: false
       },
     ]
   },
