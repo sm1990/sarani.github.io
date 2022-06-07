@@ -146,7 +146,7 @@ const nextConfig = {
     return [
       {
         source: '/learn',
-        destination: '/downloads',
+        destination: '/license-of-site',
         permanent: false
       },
     ]
