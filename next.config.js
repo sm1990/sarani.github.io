@@ -145,8 +145,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/learn',
-        destination: '/license-of-site',
+        source: '/test',
+        destination: 'https://www.google.com/',
         permanent: false
       },
     ]
