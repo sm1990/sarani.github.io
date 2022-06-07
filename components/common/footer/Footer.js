@@ -32,19 +32,19 @@ export default function Footer() {
                 <li><Link className={styles.footerLinkSM} href="https://github.com/ballerina-platform" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/github.svg`} width={18} height={18} alt="GitHub"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/stackoverflow.svg`} width={15} height={18} alt="Stackoverflow"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href="https://twitter.com/ballerinalang" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/twitter.svg`} width={19} height={15} alt="Twitter"/></Link></li>
-                <li><Link className={styles.footerLinkSM} href={`${prefix}/community/#ballerina-slack-community`} passHref><Image src={`${prefix}/images/slack.svg`} width={17} height={17} alt="Slack"/></Link></li>
+                <li><Link className={styles.footerLinkSM} href={`/community/#ballerina-slack-community`} passHref><Image src={`${prefix}/images/slack.svg`} width={17} height={17} alt="Slack"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href="https://www.youtube.com/c/Ballerinalang" passHref><Image src={`${prefix}/images/youtube-icon.svg`} width={15} height={18} alt="Youtube"/></Link></li>
                 </ul>
               </div>
               <div className={styles.subscribe}>
-                <Link className={styles.subscribeBtn} href={`${prefix}/community/#subscribe-to-newsletter`}>Subscribe to our newsletter</Link>
+                <Link className={styles.subscribeBtn} href={`/community/#subscribe-to-newsletter`}>Subscribe to our newsletter</Link>
               </div>
                 
             </div>
 
             <div className={styles.footerLinks}>
             <ul>
-                <li><Link className="footerLink" href={`${prefix}/downloads`}>DOWNLOAD</Link></li>
+                <li><Link className="footerLink" href={`/downloads`}>DOWNLOAD</Link></li>
                 <li><Link className="footerLink" href="https://github.com/ballerina-platform/ballerina-lang/issues/new/choose">REPORT ISSUES</Link></li>
             </ul>
             </div>
@@ -59,12 +59,12 @@ export default function Footer() {
           <Col xs={12}>
             <ul>
               <li><Link className="footerLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/license-of-site`}>SITE LICENSE</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/terms-of-service`}>TERMS OF SERVICE</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/privacy-policy`}>PRIVACY POLICY</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/cookie-policy`}>COOKIE POLICY</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/security-policy`}>SECURITY POLICY</Link></li>
-              <li><Link className="footerLink" href={`${prefix}/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</Link></li>
+              <li><Link className="footerLink" href={`/license-of-site`}>SITE LICENSE</Link></li>
+              <li><Link className="footerLink" href={`/terms-of-service`}>TERMS OF SERVICE</Link></li>
+              <li><Link className="footerLink" href={`/privacy-policy`}>PRIVACY POLICY</Link></li>
+              <li><Link className="footerLink" href={`/cookie-policy`}>COOKIE POLICY</Link></li>
+              <li><Link className="footerLink" href={`/security-policy`}>SECURITY POLICY</Link></li>
+              <li><Link className="footerLink" href={`/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</Link></li>
             </ul>
           </Col>
         </Row>
