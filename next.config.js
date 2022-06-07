@@ -58,6 +58,10 @@ const nextConfig = {
         source: `/${redirectBase}learn/install-ballerina/:slug`,
         destination: `/${redirectBase}learn/get-started/install-ballerina/:slug`,
       },
+      {
+        source: '/learn',
+        destination: '/learn/get-started/install-ballerina/set-up-ballerina',
+      },
 
 
 
@@ -142,15 +146,7 @@ const nextConfig = {
       }
     ]
   },
-  async redirects() {
-    return [
-      {
-        source: '/test',
-        destination: 'https://www.google.com/',
-        permanent: false
-      },
-    ]
-  },
+  
   resolve: [{"path":false,"fs": false}],
 
 
