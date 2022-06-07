@@ -23,8 +23,8 @@ const nextConfig = {
     // console.log(ss);
     return [
       {
-        source: `/${redirectBase}learn/build-a-data-service-in-ballerina`,
-        destination: `/${redirectBase}learn/get-started/build-a-data-service-in-ballerina`,
+        source: `/learn/build-a-data-service-in-ballerina`,
+        destination: `/learn/get-started/build-a-data-service-in-ballerina`,
       },
       {
         source: `/${redirectBase}learn/deploy-ballerina-on-kubernetes`,
