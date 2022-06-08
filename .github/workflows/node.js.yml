@@ -36,6 +36,8 @@ jobs:
       run: npm run export
     - name: Add .nojekyll file
       run: touch ./out/.nojekyll
+      run: chmod +x "../rearrangeFiles.sh"
+      run: ../rearrangeFiles.sh
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:

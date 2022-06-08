@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 // const ss = `/gggggggg/`;
-const redirectBase = process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/` : '/';
+const redirectBase = process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/` : '';
 const nextConfig = {
   reactStrictMode: true,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
@@ -20,7 +20,6 @@ const nextConfig = {
     generateAndUseBlurImages: true,
   },
   async rewrites() {
-    // console.log(ss);
     return [
       {
         source: `/learn/build-a-data-service-in-ballerina`,
@@ -59,7 +58,7 @@ const nextConfig = {
         destination: `/${redirectBase}learn/get-started/install-ballerina/:slug`,
       },
       {
-        source: '/learn/',
+        source: '/learn',
         destination: '/learn/get-started/install-ballerina/set-up-ballerina',
       },
 
