@@ -6,7 +6,31 @@ import Link from 'next/link';
 import { prefix } from '../../../utils/prefix';
 import styles from './Intro.module.css';
 
+
 export default function Intro() {
+
+  const [hoverBtn, setHoverBtn] = React.useState(false);
+  
+  let imagePath, imagePathHover = '';
+  
+  if({prefix}) {
+    imagePath = prefix + '/images/main-right-arrow-home.svg'
+    imagePathHover = prefix + '/images/main-right-arrow-home-hover.svg'
+  }
+
+  const buttonStyle = {
+    backgroundImage: 'url('+ imagePath +')',
+    backgroundSize: '60px 60px',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right center',
+  };
+  
+  const buttonStyleHover = {
+    backgroundImage: 'url('+ imagePathHover +')',
+    backgroundSize: '60px 60px',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right center',
+  };
 
   return (
     <Col sm={12}>
@@ -22,11 +46,27 @@ export default function Intro() {
               </Col>
 
               <Col sm={12} md={4}>
-                <a className={styles.homeIntroButton} target="_blank" href={`${prefix}/learn/getting-started-with-ballerina/`} rel="noreferrer">
+                <a className={styles.homeIntroButton} 
+                  onMouseEnter={()=>{
+                    setHoverBtn(true);
+                  }}
+                  onMouseLeave={()=>{
+                    setHoverBtn(false);
+                  }}
+                  style={
+                    (hoverBtn ? buttonStyleHover : buttonStyle)
+                  }
+                  target="_blank" 
+                  href={`${prefix}/learn/getting-started-with-ballerina/`} 
+                  rel="noreferrer">
                   Get started
                   <p>Install Ballerina, set it all up <br/>and take it for a spin.</p>
                 </a>
-                <a className={`${styles.homeIntroButton} ${styles.playButton}`} target="_blank" href={`${prefix}/learn/by-example/`} rel="noreferrer">
+                <a className={`${styles.homeIntroButton} ${styles.playButton}`} 
+                  style={buttonStyleHover} 
+                  target="_blank" 
+                  href={`${prefix}/learn/by-example/`} 
+                  rel="noreferrer">
                   Examples
                   <p>Explore and try Ballerina examples.<br/> &nbsp;</p>
                 </a>

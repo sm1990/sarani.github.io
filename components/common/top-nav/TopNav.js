@@ -43,11 +43,10 @@ const TopNav = (props) => {
           >
             <Nav.Link className={(launcher === 'downloads')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/downloads`}>Download</Nav.Link>
             <Nav.Link className={styles.navItem} href="https://play.ballerina.io/">Playground</Nav.Link>
-            <Nav.Link className={(launcher === 'docs-learn')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/learn`}>Learn</Nav.Link>
+            <Nav.Link className={(launcher === 'docs-learn')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/learn/install-ballerina/set-up-ballerina`}>Learn</Nav.Link>
             <Nav.Link className={styles.navItem} href="https://central.ballerina.io/">Central</Nav.Link>
             <Nav.Link className={(launcher === 'community')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/community`}>Community</Nav.Link>
             <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/">Blog</Nav.Link>
-            <a className={styles.navItem} href={ '/test' } as={ prefix + '/learn/get-started/deploy-ballerina-on-kubernetes' }>test</a>
             <NavDropdown title="Swarn Lake" id={styles.navbarScrollingDropdown}>
               <NavDropdown.Item href="#action3">Swan-Lake</NavDropdown.Item>
               <NavDropdown.Item href="#action4">V 1.2</NavDropdown.Item>
