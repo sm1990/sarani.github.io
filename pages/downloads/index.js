@@ -12,9 +12,8 @@ export default function Downloads() {
    const [key1, setKey1] = React.useState('Windows');
    const [key2, setKey2] = React.useState('Windows');
 
-   let os = global.navigator.platform;
-
    React.useEffect(() => {
+      let os = global.navigator.platform;
       if (os.indexOf('Linux') > -1) {
          setKey1('Linux');
          setKey2('Linux');
@@ -24,7 +23,7 @@ export default function Downloads() {
          setKey1('Mac');
          setKey2('Mac');
       } 
-   },[os]);
+   });
 
    return (
       <Layout>
