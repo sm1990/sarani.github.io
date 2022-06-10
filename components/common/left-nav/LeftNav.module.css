@@ -1,6 +1,7 @@
 .leftNavAccordian button {
     padding: 1rem 0.75rem;
     font-size: 13px;
+    font-weight: 300;
     text-transform: capitalize;
 }
 
@@ -12,6 +13,11 @@
 .leftNavAccordian button:not([aria-expanded="false"]) {
     background: #f7f7f7;
     color: #20b6b0;
+    font-weight: 400;
+}
+
+.leftNavAccordian button:not(.collapsed) {
+    box-shadow: none;
 }
 
 .leftNavAccordian button:not(.collapsed)::after {
