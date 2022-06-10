@@ -8,11 +8,7 @@ import styles from './WhyBal.module.css';
 
 export default function WhyBal() {
 
-  let imagePath = '';
-  
-  if({prefix}) {
-    imagePath = prefix + '/images/toc-bg.svg'
-  }
+  let imagePath = prefix + '/images/toc-bg.svg';
 
   const linkStyle = {
     backgroundImage: 'url('+ imagePath +')',

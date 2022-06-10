@@ -24,15 +24,41 @@ export default function Downloads() {
    }, [osName])
 
 
-   let imagePath = '';
-  
-   if({prefix}) {
-      imagePath = prefix + '/images/downloads/vs-code.svg'
-   }
+   let vsCodeImagePath = prefix + '/images/downloads/vs-code.svg';
+   let windowsImagePath = prefix + '/images/downloads/windows.svg';
+   let linuxImagePath = prefix + '/images/downloads/linux.svg';
+   let macImagePath = prefix + '/images/downloads/mac.svg';
+
 
    const vscodeIcon = {
-      backgroundImage: 'url('+ imagePath +')',
+      backgroundImage: 'url('+ vsCodeImagePath +')'
    }
+
+   const windowsIcon = {
+      backgroundImage: 'url('+ windowsImagePath +')',
+      backgroundSize: 'contain',
+      paddingLeft: '25px',
+      backgroundRepeat: 'no-repeat',
+   }
+
+   const linuxIcon = {
+      backgroundImage: 'url('+ linuxImagePath +')',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      paddingLeft: '25px'
+   }
+
+   const macIcon = {
+      backgroundImage: 'url('+ macImagePath +')',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      paddingLeft: '25px'
+   }
+
+
+   const Windows = <span style={windowsIcon}>Windows</span>
+   const Linux = <span style={linuxIcon}>Linux</span>
+   const Mac = <span style={macIcon}>macOs</span>
 
    return (
       <Layout>
@@ -50,12 +76,12 @@ export default function Downloads() {
          </Row>
 
          <Row className='downloadDetails pageContentRow'>
-         <Col xs={12} sm={4} className="downloads-tabs">
+         <Col xs={12} sm={4} md={12} lg={4} className="downloads-tabs">
                <Tabs id="swan-lake-releases" 
                      activeKey={key1} 
                      onSelect={(x) => setKey1(x)} 
                      className="mb-3">
-                  <Tab eventKey="Windows" title="Windows">
+                  <Tab eventKey="Windows" title={Windows}>
                      <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}">
                         <div className="cSize">msi <span id="packWindowsName">154mb</span></div>
                      </a>
@@ -65,7 +91,7 @@ export default function Downloads() {
                      <li><a id="packWindowsAsc" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}.asc">asc</a></li>
                      </ul>
                   </Tab>
-                  <Tab eventKey="Linux" title="Linux">
+                  <Tab eventKey="Linux" title={Linux}>
                      <div className='dVersions'>
                         <div className='dVersion'>
                            <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}">
@@ -89,7 +115,7 @@ export default function Downloads() {
                         </div>
                      </div>
                   </Tab>
-                  <Tab eventKey="Mac" title="macOS">
+                  <Tab eventKey="Mac" title={Mac}>
                      <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}">
                         <div className="cSize">pkg <span id="packWindowsName">154mb</span></div>
                      </a>
@@ -112,7 +138,7 @@ export default function Downloads() {
                </div>
 
             </Col>
-            <Col xs={12} sm={8} className="donwloadInstructions">
+            <Col xs={12} sm={8} md={12} lg={8} className="donwloadInstructions">
                <Alert variant="light">
                   <p><strong>If you are already using Ballerina 2201.0.0 (Swan Lake)</strong>, run either of the commands below to directly update to swanlake 22.xxxx using the <a href={`${prefix}/learn/tooling-guide/cli-tools/update-tool/`}>Ballerina Update Tool.</a></p>
                   <p><code className="highlighter-rouge language-plaintext">bal dist update</code> (or <code className="highlighter-rouge language-plaintext">bal dist pull swanlake 22.xx)</code></p>
@@ -193,12 +219,12 @@ export default function Downloads() {
          </Row>
 
          <Row className='downloadDetails pageContentRow'>
-            <Col xs={12} sm={4} className="downloads-tabs">
+            <Col xs={12} sm={4} md={12} lg={4} className="downloads-tabs">
                <Tabs id="1.2x-releases" 
                   activeKey={key2} 
                   onSelect={(y) => setKey2(y)} 
                   className="mb-3">
-                  <Tab eventKey="Windows" title="Windows">
+                  <Tab eventKey="Windows" title={Windows}>
                      <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}">
                         <div className="cSize">msi <span id="packWindowsName">154mb</span></div>
                      </a>
@@ -208,7 +234,7 @@ export default function Downloads() {
                         <li><a href="{{ site.dist_server }}/downloads/{{ site.data.stable-latest.metadata.version }}/{{ site.data.stable-latest.metadata.windows-installer }}.asc">asc</a></li>
                      </ul>
                   </Tab>
-                  <Tab eventKey="Linux" title="Linux">
+                  <Tab eventKey="Linux" title={Linux}>
                      <div className='dVersions'>
                         <div className='dVersion'>
                         <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}">
@@ -232,7 +258,7 @@ export default function Downloads() {
                      </div>
                   </div>
                   </Tab>
-                  <Tab eventKey="Mac" title="macOS">
+                  <Tab eventKey="Mac" title={Mac}>
                      <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}">
                         <div className="cSize">pkg <span id="packWindowsName">154mb</span></div>
                      </a>
@@ -254,7 +280,7 @@ export default function Downloads() {
                </div>
 
             </Col>
-            <Col xs={12} sm={8} className="donwloadInstructions">
+            <Col xs={12} sm={8} md={12} lg={8} className="donwloadInstructions">
                <Alert variant="light">
                   <p> If you already have jBallerina version 1.2.0 or above installed, you can use the 
                      <a href={`${prefix}/1.2/learn/keeping-ballerina-up-to-date/`}>Ballerina update tool</a> to 

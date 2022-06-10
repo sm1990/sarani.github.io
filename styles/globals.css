@@ -462,22 +462,38 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
   line-height: 32px;
 }
 
-.cWindows {
+/* .cWindows {
   background-image: url("/images/downloads/windows.svg");
+  background-size: contain;
+  padding-left: 25px;
 }
 
 .cLinux {
   background-image: url("/images/downloads/linux.svg");
+  background-size: contain;
+  padding-left: 25px;
 }
 
 .cMac {
     background-image: url("/images/downloads/mac.svg");
-}
+    background-size: contain;
+    padding-left: 25px;
+} */
 
-.cVSCode {
+/* .cVSCode {
   background-image: url("/images/downloads/vs-code.svg");
-}
+} */
 
 .other .cHomeWhyBallerinaBox h4 {
   height: 50px;
 }
+
+
+
+
+/* .mdContent .toc {
+  position: fixed;
+  right: 0;
+  top: 114px;
+  overflow: scroll;
+} */

@@ -9,13 +9,9 @@ import styles from './Intro.module.css';
 export default function Intro() {
 
   const [hoverBtn, setHoverBtn] = React.useState(false);
-  
-  let imagePath, imagePathHover = '';
-  
-  if({prefix}) {
-    imagePath = prefix + '/images/main-right-arrow-home.svg'
-    imagePathHover = prefix + '/images/main-right-arrow-home-hover.svg'
-  }
+
+  let imagePath = prefix + '/images/main-right-arrow-home.svg';
+  let imagePathHover = prefix + '/images/main-right-arrow-home-hover.svg';
 
   const buttonStyle = {
     backgroundImage: 'url('+ imagePath +')',
