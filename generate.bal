@@ -1,7 +1,7 @@
 import ballerina/io;
 import ballerina/file;
 import ballerina/regex;
-// import ballerina/lang.array;
+
 
 // command line input: relative path of the folder structure
 configurable string inputPath = ?;
@@ -50,14 +50,30 @@ public function generateStructure(string path, int level=0) returns Folder|error
     } else if (path.indexOf("why-ballerina") !== ()) {
         url = regex:replaceAll(path, "^((?:[a-zA-Z0-9-]+/){1})([a-zA-Z0-9-]+)/", "/why-ballerina/");
     }
-    dirName = regex:replaceAll(dirName, ".md", "");
-    dirName = regex:replaceAll(dirName, "-", " ");
+    // dirName = regex:replaceAll(dirName, ".md", "");
+    // dirName = regex:replaceAll(dirName, "-", " ");
     url = regex:replaceAll(url, ".md", "");
     id = regex:replaceAll(id, ".md", "");
 
     if !isDir {
+        
+        // Get the correct title of the document from frontmatter
+        if(regex:matches(dirName, "^.*md$") || regex:matches(dirName, "^.*html$")) {
+            string[] content = check io:fileReadLines(path);
+            foreach var t in content {
+                regex:Match? result = regex:search(t,"title");
+                if (result !== () ) {
+                    dirName = regex:replace(t, "^title: ", "");
+                    break;
+                }
+            }
+        }
+        
+
         Folder file = { dirName, level, position, isDir, url, id };
         return file;
+    } else {
+        dirName = regex:replaceAll(dirName, "-", " ");
     }
 
     file:MetaData[] subDir = check file:readDir(path);
@@ -77,5 +93,5 @@ public function main() returns error? {
     Folder dirStructure = check generateStructure(inputPath);
     json jsonDirStructure = <json> dirStructure;
 
-    check io:fileWriteJson("./files1.json", jsonDirStructure);
+    check io:fileWriteJson("./files2.json", jsonDirStructure);
 }
