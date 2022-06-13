@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PSL2TX4"/>
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-2"/>
 
-        <script async src="/jquery/jquery.min.js"/>
+        {/* <script async src="/jquery/jquery.min.js"/> */}
         {/* <script async src="/jquery/jquery.min.js"/>
         <script async src="/shiki/shiki.js" /> */}
         

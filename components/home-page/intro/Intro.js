@@ -42,10 +42,10 @@ export default function Intro() {
 
               <Col sm={12} md={4}>
                 <a className={styles.homeIntroButton} 
-                  onMouseEnter={()=>{
+                  onMouseEnter={()=> {
                     setHoverBtn(true);
                   }}
-                  onMouseLeave={()=>{
+                  onMouseLeave={()=> {
                     setHoverBtn(false);
                   }}
                   style={
