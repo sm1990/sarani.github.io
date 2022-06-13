@@ -67,7 +67,7 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function PostPage({ frontmatter, content }) {
 
-  const ShowCode = (code,language) => {
+  const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
     
     React.useEffect( () => { 
@@ -121,7 +121,7 @@ export default function PostPage({ frontmatter, content }) {
               code({node, inline, className, children, ...props}) {
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
-                  <div dangerouslySetInnerHTML={{__html: ShowCode(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
+                  <div dangerouslySetInnerHTML={{__html: HighlightSyntax(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
                 ) : (
                   <code className={className} {...props}>
                     {children}

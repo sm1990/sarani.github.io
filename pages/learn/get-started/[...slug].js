@@ -4,9 +4,14 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
+// import MarkdownNavbar from 'react-markdown-navbar';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
+// import dynamic from 'next/dynamic';
+// import slug from 'rehype-slug';
+// import toc from 'rehype-toc';
+// import autoheadings from 'rehype-autolink-headings';
 
 import { getHighlighter, setCDN } from "shiki";
 
@@ -15,7 +20,9 @@ setCDN("https://unpkg.com/shiki/");
 
 import Layout from '../../../layouts/LayoutDocs';
 import LeftNav from '../../../components/common/left-nav/LeftNav';
+import PrevNext from '../../../components/common/prev-next/PrevNext';
 import { prefix } from '../../../utils/prefix';
+
 
 
 var traverseFolder = function(dir) {
@@ -69,7 +76,9 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function PostPage({ frontmatter, content, id }) {
 
-  const ShowCode = (code,language) => {
+  // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
+
+  const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
     
     React.useEffect( () => { 
@@ -85,6 +94,8 @@ export default function PostPage({ frontmatter, content, id }) {
     }, [code,language]);
     return [codeSnippet]
   }
+
+
 
   return (
     <>
@@ -126,7 +137,7 @@ export default function PostPage({ frontmatter, content, id }) {
                 code({node, inline, className, children, ...props}) {
                   const match = /language-(\w+)/.exec(className || '')
                   return !inline && match ? (
-                    <div dangerouslySetInnerHTML={{__html: ShowCode(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
+                    <div dangerouslySetInnerHTML={{__html: HighlightSyntax(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
                   ) : (
                     <code className={className} {...props}>
                       {children}
@@ -134,31 +145,23 @@ export default function PostPage({ frontmatter, content, id }) {
                   )
                 }
               }}
-              
-              rehypePlugins={[rehypeRaw]}
+              rehypePlugins={[rehypeRaw]}  
             >
               {content}
             </ReactMarkdown>
 
             <div className='contentNav'>
-              <Col xs={6} className='prevLink'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#20b6b0" className="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                </svg> &nbsp;
-                <a href='#'>Install Ballerina</a>
-              </Col>
-              <Col xs={6} className='nextLink'>
-                <a href='#'>Language basics</a> &nbsp;
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#20b6b0" className="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-              </Col>
+              <PrevNext/>
             </div>
           </Container>
         </Col>
         <Col sm={2} className='pageToc d-none d-sm-block'>
           <h6>On this page</h6>
-          <MarkdownNavbar source={content} ordered={false} headingTopOffset={150} declarative/>
+          <MarkdownNavbar 
+          source={content} 
+          ordered={false} 
+          headingTopOffset={150} 
+          declarative/>
         </Col>
       </Layout>
     </>

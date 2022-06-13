@@ -54,7 +54,7 @@ export default function LeftNav(props) {
         : 
           (directory.position > 0) ?
             <li key={directory.dirName}>
-              <a id={directory.id} className={(id === directory.id)? "active":null} 
+              <a id={directory.id} className={(id === directory.id)? styles.active:null} 
                 href={(`${prefix}`)? `${prefix}` + directory.url : directory.url}>
                 {directory.dirName}
               </a>
