@@ -49,21 +49,22 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-
+  const id = slug[slug.length-1];
   slug=slug.join('/');
   const fileName = fs.readFileSync(`swan-lake/references/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
       frontmatter,
-      content
+      content,
+      id
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, id }) {
 
-  const ShowCode = (code,language) => {
+  const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
     
     React.useEffect( () => { 
@@ -103,7 +104,7 @@ export default function PostPage({ frontmatter, content }) {
       </Head>
       <Layout>
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-          <LeftNav launcher='learn'/>
+          <LeftNav launcher='learn' id={id}/>
         </Col>
         <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col>
         <Col xs={12} sm={7} xxl={8} className='mdContent'>
@@ -120,7 +121,7 @@ export default function PostPage({ frontmatter, content }) {
                 code({node, inline, className, children, ...props}) {
                   const match = /language-(\w+)/.exec(className || '')
                   return !inline && match ? (
-                    <div dangerouslySetInnerHTML={{__html: ShowCode(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
+                    <div dangerouslySetInnerHTML={{__html: HighlightSyntax(String(children).replace(/\n$/, ''),match[1].toLowerCase())}} />
                   ) : (
                     <code className={className} {...props}>
                       {children}
