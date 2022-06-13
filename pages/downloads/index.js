@@ -11,6 +11,17 @@ export default function Downloads() {
    const [key1, setKey1] = React.useState('Windows');
    const [key2, setKey2] = React.useState('Windows');
 
+   const [hoverBtn1, setHoverBtn1] = React.useState(false);
+   const [hoverBtn2, setHoverBtn2] = React.useState(false);
+   const [hoverBtn3, setHoverBtn3] = React.useState(false);
+   const [hoverBtn4, setHoverBtn4] = React.useState(false);
+   const [hoverBtn5, setHoverBtn5] = React.useState(false);
+   const [hoverBtn6, setHoverBtn6] = React.useState(false);
+   const [hoverBtn7, setHoverBtn7] = React.useState(false);
+   const [hoverBtn8, setHoverBtn8] = React.useState(false);
+   const [hoverBtn9, setHoverBtn9] = React.useState(false);
+   const [hoverBtn10, setHoverBtn10] = React.useState(false);
+
    React.useEffect(() => {
       
       if (osName.indexOf('Linux') > -1) {
@@ -21,6 +32,7 @@ export default function Downloads() {
          setKey1('Mac')
          setKey2('Mac')
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [osName])
 
 
@@ -28,7 +40,8 @@ export default function Downloads() {
    let windowsImagePath = prefix + '/images/downloads/windows.svg';
    let linuxImagePath = prefix + '/images/downloads/linux.svg';
    let macImagePath = prefix + '/images/downloads/mac.svg';
-
+   let downloadIconPath = prefix + '/images/download-bg.svg';
+   let downloadIconHoverPath = prefix + '/images/download-bg-white.svg';
 
    const vscodeIcon = {
       backgroundImage: 'url('+ vsCodeImagePath +')'
@@ -53,6 +66,19 @@ export default function Downloads() {
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       paddingLeft: '25px'
+   }
+
+   const downloadIcon = {
+      backgroundImage: 'url('+ downloadIconPath +')',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'left 20px top 20px'
+   }
+
+   const downloadIconHover = {
+      backgroundImage: 'url('+ downloadIconHoverPath +')',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'left 20px top 20px',
+      backgroundColor: '#20b6b0'
    }
 
 
@@ -82,7 +108,18 @@ export default function Downloads() {
                      onSelect={(x) => setKey1(x)} 
                      className="mb-3">
                   <Tab eventKey="Windows" title={Windows}>
-                     <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}">
+                     <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" 
+                     className="cGTMDownload cDownload cDownloadNew" data-download="downloads" 
+                     data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}"
+                     onMouseEnter={()=> {
+                        setHoverBtn1(true);
+                     }}
+                     onMouseLeave={()=> {
+                        setHoverBtn1(false);
+                     }}
+                     style={
+                        (hoverBtn1 ? downloadIconHover : downloadIcon)
+                     }>
                         <div className="cSize">msi <span id="packWindowsName">154mb</span></div>
                      </a>
                      <ul className="cDiwnloadSubLinks">
@@ -94,7 +131,18 @@ export default function Downloads() {
                   <Tab eventKey="Linux" title={Linux}>
                      <div className='dVersions'>
                         <div className='dVersion'>
-                           <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}">
+                           <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" 
+                           className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" 
+                           data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}"
+                           onMouseEnter={()=> {
+                              setHoverBtn2(true);
+                           }}
+                           onMouseLeave={()=> {
+                              setHoverBtn2(false);
+                           }}
+                           style={
+                              (hoverBtn2 ? downloadIconHover : downloadIcon)
+                           }>
                               <div className="cSize">deb <span id="packLinuxName">154mb</span></div>
                            </a>
                            <ul className="cDiwnloadSubLinks">
@@ -104,7 +152,18 @@ export default function Downloads() {
                            </ul>
                         </div>
                         <div className='dVersion'>
-                           <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.rpm-installer }}" className="cGTMDownload cDownload cLinuxPKGs cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.rpm-installer }}">
+                           <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.rpm-installer }}" 
+                           className="cGTMDownload cDownload cLinuxPKGs cDownloadNew" 
+                           data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.rpm-installer }}"
+                           onMouseEnter={()=> {
+                              setHoverBtn3(true);
+                           }}
+                           onMouseLeave={()=> {
+                              setHoverBtn3(false);
+                           }}
+                           style={
+                              (hoverBtn3 ? downloadIconHover : downloadIcon)
+                           }>
                               <div className="cSize">rpm <span id="packLinuxName">154mb</span></div>
                            </a>
                            <ul className="cDiwnloadSubLinks">
@@ -116,7 +175,18 @@ export default function Downloads() {
                      </div>
                   </Tab>
                   <Tab eventKey="Mac" title={Mac}>
-                     <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}">
+                     <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" 
+                     className="cGTMDownload cDownload cDownloadNew" data-download="downloads" 
+                     data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}"
+                     onMouseEnter={()=> {
+                        setHoverBtn4(true);
+                     }}
+                     onMouseLeave={()=> {
+                        setHoverBtn4(false);
+                     }}
+                     style={
+                        (hoverBtn4 ? downloadIconHover : downloadIcon)
+                     }>
                         <div className="cSize">pkg <span id="packWindowsName">154mb</span></div>
                      </a>
                      <ul className="cDiwnloadSubLinks">
@@ -170,7 +240,18 @@ export default function Downloads() {
          <Row className="downloadsVSCode pageContentRow">
             <Col xs={12} sm={12} md={4} lg={4}>
                <h3 className="cVSCode" style={vscodeIcon}>Visual Studio Code</h3>
-               <a id="packWindows" href="https://marketplace.visualstudio.com/items?itemName=wso2.ballerina" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" target="_blank" rel="noreferrer">
+               <a id="packWindows" href="https://marketplace.visualstudio.com/items?itemName=wso2.ballerina" 
+               className="cGTMDownload cDownload cDownloadNew" data-download="downloads" 
+               target="_blank" rel="noreferrer"
+               onMouseEnter={()=> {
+                  setHoverBtn5(true);
+               }}
+               onMouseLeave={()=> {
+                  setHoverBtn5(false);
+               }}
+               style={
+                  (hoverBtn5 ? downloadIconHover : downloadIcon)
+               }>
                   <div className="cSize">Ballerina Extension<span id="packWindowsName"></span></div>
                </a>
                <br/>
@@ -225,7 +306,18 @@ export default function Downloads() {
                   onSelect={(y) => setKey2(y)} 
                   className="mb-3">
                   <Tab eventKey="Windows" title={Windows}>
-                     <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}">
+                     <a id="packWindows" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.windows-installer }}" 
+                     className="cGTMDownload cDownload cDownloadNew" data-download="downloads" 
+                     data-pack="{{ site.data.swanlake-latest.metadata.windows-installer }}"
+                     onMouseEnter={()=> {
+                        setHoverBtn6(true);
+                     }}
+                     onMouseLeave={()=> {
+                        setHoverBtn6(false);
+                     }}
+                     style={
+                        (hoverBtn6 ? downloadIconHover : downloadIcon)
+                     }>
                         <div className="cSize">msi <span id="packWindowsName">154mb</span></div>
                      </a>
                      <ul className="cDiwnloadSubLinks">
@@ -237,7 +329,18 @@ export default function Downloads() {
                   <Tab eventKey="Linux" title={Linux}>
                      <div className='dVersions'>
                         <div className='dVersion'>
-                        <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}">
+                        <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.linux-installer }}" 
+                        className="cGTMDownload cDownload cLinuxPKGs  cDownloadNew" data-download="downloads" 
+                        data-pack="{{ site.data.swanlake-latest.metadata.linux-installer }}"
+                        onMouseEnter={()=> {
+                           setHoverBtn7(true);
+                        }}
+                         onMouseLeave={()=> {
+                           setHoverBtn7(false);
+                        }}
+                        style={
+                           (hoverBtn7 ? downloadIconHover : downloadIcon)
+                        }>
                            <div className="cSize">deb <span id="packLinuxName">154mb</span></div>
                         </a>
                         <ul className="cDiwnloadSubLinks">
@@ -247,7 +350,18 @@ export default function Downloads() {
                         </ul>
                      </div>
                      <div className='dVersion'>
-                        <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.rpm-installer }}" className="cGTMDownload cDownload cLinuxPKGs cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.rpm-installer }}">
+                        <a id="packLinux" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.rpm-installer }}" 
+                        className="cGTMDownload cDownload cLinuxPKGs cDownloadNew" data-download="downloads" 
+                        data-pack="{{ site.data.swanlake-latest.metadata.rpm-installer }}"
+                        onMouseEnter={()=> {
+                           setHoverBtn8(true);
+                        }}
+                        onMouseLeave={()=> {
+                           setHoverBtn8(false);
+                        }}
+                        style={
+                           (hoverBtn8 ? downloadIconHover : downloadIcon)
+                        }>
                            <div className="cSize">rpm <span id="packLinuxName">154mb</span></div>
                         </a>
                         <ul className="cDiwnloadSubLinks">
@@ -259,7 +373,17 @@ export default function Downloads() {
                   </div>
                   </Tab>
                   <Tab eventKey="Mac" title={Mac}>
-                     <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}">
+                     <a id="packMac" href="{{ site.dist_server }}/downloads/{{ site.data.swanlake-latest.metadata.version }}/{{ site.data.swanlake-latest.metadata.macos-installer }}" className="cGTMDownload cDownload cDownloadNew" 
+                     data-download="downloads" data-pack="{{ site.data.swanlake-latest.metadata.macos-installer }}"
+                     onMouseEnter={()=> {
+                        setHoverBtn9(true);
+                     }}
+                     onMouseLeave={()=> {
+                        setHoverBtn9(false);
+                     }}
+                     style={
+                        (hoverBtn9 ? downloadIconHover : downloadIcon)
+                     }>
                         <div className="cSize">pkg <span id="packWindowsName">154mb</span></div>
                      </a>
                      <ul className="cDiwnloadSubLinks">
@@ -299,7 +423,18 @@ export default function Downloads() {
          <Row className="downloadsVSCode pageContentRow">
             <Col xs={12} sm={12} md={4} lg={4}>
                <h3 className="cVSCode" style={vscodeIcon}>Visual Studio Code</h3>
-               <a id="packWindows" href="https://github.com/wso2/ballerina-plugin-vscode/releases/tag/v2.1.1" className="cGTMDownload cDownload cDownloadNew" data-download="downloads" target="_blank" rel="noreferrer">
+               <a id="packWindows" href="https://github.com/wso2/ballerina-plugin-vscode/releases/tag/v2.1.1" 
+               className="cGTMDownload cDownload cDownloadNew" data-download="downloads" 
+               target="_blank" rel="noreferrer"
+               onMouseEnter={()=> {
+                  setHoverBtn10(true);
+               }}
+               onMouseLeave={()=> {
+                  setHoverBtn10(false);
+               }}
+               style={
+                  (hoverBtn10 ? downloadIconHover : downloadIcon)
+               }>
                   <div className="cSize">Ballerina Extension<span id="packWindowsName"></span></div>
                </a>
             </Col>

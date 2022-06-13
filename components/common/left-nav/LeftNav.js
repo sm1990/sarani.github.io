@@ -26,7 +26,7 @@ export default function LeftNav(props) {
                 {
                 (category.subDirectories) ?
                   <SubDir directories={category.subDirectories}/>
-                : <li key={category.dirName}>{category.dirName}</li>
+                : <li key={category.id}>{category.dirName}</li>
                 }
                 </ul>
               </Accordion.Body>
@@ -53,7 +53,7 @@ export default function LeftNav(props) {
        </> 
         : 
           (directory.position > 0) ?
-            <li key={directory.dirName}>
+            <li key={directory.id}>
               <a id={directory.id} className={(id === directory.id)? styles.active:null} 
                 href={(`${prefix}`)? `${prefix}` + directory.url : directory.url}>
                 {directory.dirName}

@@ -312,9 +312,9 @@ a.cDownload {
   background-color: #57595d;
   color: #ffffff !important;
   padding: 20px 8px 20px 60px;
-  background-image: url("/images/download-bg.svg");
+  /* background-image: url("/images/download-bg.svg");
   background-repeat: no-repeat;
-  background-position: left 20px top 20px;
+  background-position: left 20px top 20px; */
   text-decoration: none;
   min-height: 60px;
   line-height: 35px;
@@ -445,11 +445,11 @@ a.cDownload .cSize {
   color: #20b6b0;
 }
 
-a.cDownload:hover {
+/* a.cDownload:hover {
   background-image: url("/images/download-bg-white.svg");
   background-color: #20b6b0;
   background-image: url("/images/download-bg-white.svg");
-}
+} */
 
 .cWindows, .cLinux, .cMac, .cVSCode {
   background-repeat: no-repeat;
