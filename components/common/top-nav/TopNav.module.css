@@ -113,3 +113,7 @@ nav.docs, nav.downloads, nav.other, nav.docs-learn {
         margin-left: 0.5rem;
     }
 }
+
+.searchModal {
+    background: #ebedf0;
+}
