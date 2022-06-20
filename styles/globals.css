@@ -20,6 +20,11 @@ a {
   font-weight: 300;
 }
 
+.contentRow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .leftNav {
   position: -webkit-sticky;
   position: sticky;
@@ -181,7 +186,7 @@ pre.shiki {
   height: calc(100vh - 4rem);
   overflow-y: auto;
   /* background-color: aqua; */
-  padding-right: 0 !important;
+  padding-right: 38px !important;
   padding-left: 0 !important;
   padding-top: 25px;
   font-size: 13px;
@@ -190,6 +195,12 @@ pre.shiki {
 
 .pageToc h6 {
   color: #57595d;
+}
+
+.pageToc::-webkit-scrollbar {
+  display: none;
+  /* width: 7px;
+  background-color: #ffffff; */
 }
 
 .markdown-navigation {
@@ -217,6 +228,11 @@ pre.shiki {
 
 .home .wrap-page-content {
   padding-bottom: 0;
+}
+
+.home-wrap-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 
@@ -497,3 +513,7 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
   top: 114px;
   overflow: scroll;
 } */
+.container-fluid {
+  padding-right: var(--bs-gutter-x,2.25rem) !important;
+  padding-left: var(--bs-gutter-x,2.25rem) !important;
+}

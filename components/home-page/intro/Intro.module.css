@@ -56,13 +56,13 @@ a.homeIntroButton {
     /* margin-top: 30px; */
     font-weight: 500;
     text-decoration: none;
-    min-width: 366px;
+    min-width: 318px;
     margin-bottom: 10px;
     border: 1px solid #20b6b0;
     margin-top: 8px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 960px) {
     a.homeIntroButton {
         min-width: 400px;
     }

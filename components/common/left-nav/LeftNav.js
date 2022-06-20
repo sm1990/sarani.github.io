@@ -26,7 +26,7 @@ export default function LeftNav(props) {
                 {
                 (category.subDirectories) ?
                   <SubDir directories={category.subDirectories}/>
-                : <li key={category.id}>{category.dirName}</li>
+                : null
                 }
                 </ul>
               </Accordion.Body>
@@ -43,14 +43,14 @@ export default function LeftNav(props) {
         <Accordion>
           <Accordion.Item eventKey={directory.id}>
             <Accordion.Header>{directory.dirName}</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className={styles.acBody}>
               <ul className={styles.secondTier}>
                 <SubDir directories={directory.subDirectories}/>
               </ul>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-       </> 
+      </> 
         : 
           (directory.position > 0) ?
             <li key={directory.id}>
