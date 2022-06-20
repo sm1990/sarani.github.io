@@ -1,6 +1,6 @@
 import Image from 'next-image-export-optimizer';
 import dynamic from 'next/dynamic';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 import Layout from '../layouts/LayoutHome';
 import Intro from '../components/home-page/intro/Intro';

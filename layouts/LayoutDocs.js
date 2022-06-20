@@ -19,19 +19,22 @@ export default function Layout({ children }) {
         {/* <script async src="/jquery/jquery.min.js"/> */}
         {/* <script async src="/jquery/jquery.min.js"/>
         <script async src="/shiki/shiki.js" /> */}
+
+<meta name="viewport" content="width=500, initial-scale=1"/>
+
         
       </Head>
       <Stack gap={0} className='main-wrapper'>
         <TopNav launcher='docs'/>
-        <Container className='wrap-page-content' fluid>
-          <Row >
+        <div className='wrap-page-content'>
+          <Row className='contentRow'>
             {/* <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
               <LeftNav/>
             </Col>
             <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col> */}
             {children}
           </Row>
-        </Container>
+        </div>
 
         <Footer/>
 

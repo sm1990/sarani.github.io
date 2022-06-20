@@ -82,16 +82,18 @@ export default function PostPage({ frontmatter, content, id }) {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
     
     React.useEffect( () => { 
-        async function fetchData() {
-            getHighlighter({
-              theme: "nord",
-              langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
-            }).then((highlighter) => {
-              setCodeSnippet(highlighter.codeToHtml(code,language));
-            })
-        }
-        fetchData();
+
+      async function fetchData() {
+          getHighlighter({
+            theme: "nord",
+            langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
+          }).then((highlighter) => {
+            setCodeSnippet(highlighter.codeToHtml(code,language));
+          })
+      }
+      fetchData();
     }, [code,language]);
+
     return [codeSnippet]
   }
 
