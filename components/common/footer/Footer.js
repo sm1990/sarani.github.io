@@ -56,7 +56,7 @@ export default function Footer() {
           </Col>
         </Row>
         <Row className={styles.policyLinks}>
-          <Col xs={12} className={styles.linksCol}>
+          <Col xs={12}>
             <ul>
               <li><Link className="footerLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</Link></li>
               <li><Link className="footerLink" href={`/license-of-site`}>SITE LICENSE</Link></li>

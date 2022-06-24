@@ -3,7 +3,7 @@
     font-size: 13px;
     font-weight: 300;
     text-transform: capitalize;
-    padding-left: 38px;
+    /* padding-left: 38px; */
 }
 
 .leftNavAccordian button:focus {
@@ -46,7 +46,7 @@ ul.firstTier li {
     flex-direction: row;
     align-items: center;
     padding-left: 1.25rem;  
-    padding-left: 45px;   
+    /* padding-left: 45px;    */
 }
 
 ul.firstTier li a {
@@ -65,7 +65,7 @@ ul.firstTier .acBody {
 ul.firstTier button {
     padding: 1rem 0.75rem 1rem 1.25rem;
     font-size: 13px;
-    padding-left: 45px;
+    /* padding-left: 45px; */
 }
 
 ul.secondTier {
@@ -73,13 +73,13 @@ ul.secondTier {
 }
 
 ul.secondTier li {
-    padding-left: 38px;
+    /* padding-left: 38px; */
 }
 
 ul.secondTier button {
     padding: 1rem 0.75rem 1rem 1.25rem;
     font-size: 13px;
-    padding-left: 45px;
+    /* padding-left: 45px; */
 }
 
 ul.firstTier li a.active, ul.firstTier li a:hover,

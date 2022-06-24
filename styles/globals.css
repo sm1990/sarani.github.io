@@ -20,10 +20,10 @@ a {
   font-weight: 300;
 }
 
-.contentRow {
+/* .contentRow {
   margin-left: 0 !important;
   margin-right: 0 !important;
-}
+} */
 
 .leftNav {
   position: -webkit-sticky;
@@ -50,12 +50,12 @@ a {
 
 .mdContent {
   padding-top: 35px;
-  padding-left: 3% !important;
-  padding-right: 3% !important;
+  padding-left: 1% !important;
+  padding-right: 1% !important;
 }
 
 .policyContent {
-  padding-right: 3% !important;
+  padding-right:  1% !important;
 }
 
 .topRow {
@@ -69,7 +69,8 @@ a {
 
 .mdContent h1, .policyContent h1 {
   /* font-size: 38px; */
-  color: #585a5e;
+  /* color: #585a5e; */
+  color: #464646;
   /* font-weight: 600; */
   /* margin-bottom: 30px; */
 }
@@ -79,7 +80,8 @@ a {
   margin-top: 40px;
   /* margin-bottom: 30px;
   font-weight: 200; */
-  color: #464646;
+  /* color: #464646; */
+  color: #585a5e;
   /* border-bottom: 1px solid #464646;
   display: inline-block;
   padding-bottom: 10px;
@@ -89,9 +91,14 @@ a {
 
 .mdContent h3, .policyContent h3 {
   margin-top: 40px;
+  color: #585a5e;
 }
 
-.mdContent p, .mdContent li, .policyContent p {
+.community h3 {
+  color: #585a5e;
+}
+
+.mdContent p, .mdContent li, .policyContent p, .communityRow p {
   font-size: 16px;
   color: #57595d;
   line-height: 24px;
@@ -186,7 +193,7 @@ pre.shiki {
   height: calc(100vh - 4rem);
   overflow-y: auto;
   /* background-color: aqua; */
-  padding-right: 38px !important;
+  padding-right: 0 !important;
   padding-left: 0 !important;
   padding-top: 25px;
   font-size: 13px;
@@ -230,10 +237,12 @@ pre.shiki {
   padding-bottom: 0;
 }
 
-.home-wrap-row {
+
+
+/* .home-wrap-row, .community-wrap-row {
   margin-left: 0 !important;
   margin-right: 0 !important;
-}
+} */
 
 
 
@@ -277,15 +286,21 @@ a.cGreenLinkArrow:hover {
   margin-bottom: 20px;
 }
 
+.pageContentRow h2 {
+  color: #585a5e;
+}
+
 .pageHeader h1 {
   padding-top: 35px;
-  color: #585a5e;
+  color: #464646;
+  /* color: #585a5e; */
   font-weight: 500;
 }
 
 .donwloadVersion h2 {
   /* font-size: 24px; */
-  color: #464646;
+  /* color: #464646; */
+  color: #585a5e;
   font-size: 32px;
   margin-top: 15px;
 }
@@ -513,7 +528,25 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
   top: 114px;
   overflow: scroll;
 } */
-.container-fluid {
+/* .container-fluid, .communityRow {
   padding-right: var(--bs-gutter-x,2.25rem) !important;
   padding-left: var(--bs-gutter-x,2.25rem) !important;
+} */
+
+.communityRow {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.communityRow h2 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.slackRow {
+  background-color: #e6eaeb;
+}
+
+.modal-content {
+  border-radius: 0 !important;
 }

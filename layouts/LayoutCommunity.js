@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       <Stack gap={0} className='main-wrapper community'>
         <TopNav launcher='community'/>
         <Container className='wrap-page-content' fluid>
-          <Row >
+          <Row className='community-wrap-row'>
             {/* <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
               <LeftNav/>
             </Col>

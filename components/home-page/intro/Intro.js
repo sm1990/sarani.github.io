@@ -36,11 +36,11 @@ export default function Intro() {
               <Col sm={12} md={4}></Col>
             </Row>
             <Row className={styles.introBottomRow}>
-              <Col sm={12} md={7} className={styles.description}>
+              <Col sm={12} md={8} className={styles.description}>
                 <p>Ballerina is an open-source programming language for the cloud that makes it easier to use, combine, and create network services.</p>
               </Col>
 
-              <Col sm={12} md={5}>
+              <Col sm={12} md={4}>
                 <a className={styles.homeIntroButton} 
                   onMouseEnter={()=> {
                     setHoverBtn(true);
