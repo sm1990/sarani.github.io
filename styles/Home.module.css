@@ -1,19 +1,13 @@
 .homeIntro {
   padding: 80px 0 130px 0;
-  padding-right: var(--bs-gutter-x,2.25rem) !important;
-  padding-left: var(--bs-gutter-x,2.25rem) !important;
 }
 
 .homeWhyBal, .homeEvents {
   background: #fff;
-  padding-right: var(--bs-gutter-x,2.25rem) !important;
-  padding-left: var(--bs-gutter-x,2.25rem) !important;
 }
 
 .homeBalAction, .homeVideos {
   background: #f5f5f5;
-  padding-right: var(--bs-gutter-x,2.25rem) !important;
-  padding-left: var(--bs-gutter-x,2.25rem) !important;
 }
 
 .homeBalAction {
@@ -40,7 +34,6 @@
 .homeEvents {
   padding-bottom: 3rem;
 }
-
 
 
 

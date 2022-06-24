@@ -12,6 +12,10 @@
     letter-spacing: 0.4px;
 }
 
+.upcoming {
+    color: #585a5e;
+}
+
 .eventRows h3 {
     padding-bottom: 20px;
 }
