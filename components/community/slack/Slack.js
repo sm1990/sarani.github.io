@@ -118,13 +118,13 @@ export default function Slack() {
                     
                 <div className={styles.checkboxWrapper}>
                     <input type="checkbox" id="terms" className="checkbox" ref={termsRef}/>
-                    <label className={styles.checkboxLabel} for="terms">I agree to the <a href="/privacy-policy" target="_blank" className="getStartLinks">Ballerina data privacy policy</a>.</label>
+                    <label className={styles.checkboxLabel} htmlFor="terms">I agree to the <a href="/privacy-policy" target="_blank" className="getStartLinks">Ballerina data privacy policy</a>.</label>
                 </div>
                   
               </Col>
               <Col sm={12} md={4} lg={4}>
                 <button type="button" 
-                  class={styles.submitButton} 
+                  className={styles.submitButton} 
                   id="slackSubscribeButton" 
                   onClick={inviteSlackUser}>Join us</button>
               </Col>
@@ -132,7 +132,7 @@ export default function Slack() {
           </form>
 
           <p className={styles.member}>
-              Are you already a member?  <a href="https://ballerina-platform.slack.com/" target="_blank">Go to Slack</a>
+              Are you already a member?  <a href="https://ballerina-platform.slack.com/" target="_blank" rel="noreferrer">Go to Slack</a>
           </p>
         </Col>
 
@@ -144,7 +144,7 @@ export default function Slack() {
               <p className={styles.slackFoot}>Slack members</p>
             </Col>
             <Col sm={12} md={6} lg={6} className="slackImage">
-              <Image src={`${prefix}/images/slack-community.svg`} width={132} height={92}/>
+              <Image src={`${prefix}/images/slack-community.svg`} width={132} height={92} alt="Slack Community"/>
             </Col>
           </Row>        
         </Col>
