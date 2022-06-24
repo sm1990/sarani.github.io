@@ -17,9 +17,9 @@ export default function Downloads() {
   return (
     <Layout>
       <Col sm={12}>
-      <div class="collapse navbar-collapse" id="myNavbar">
-               <ul class="nav navbar-nav secondary-nav" >
-                 <li class="active"><a href="#subscribe-to-our-newsletter">Newsletter</a></li>
+      <div className="collapse navbar-collapse" id="myNavbar">
+               <ul className="nav navbar-nav secondary-nav" >
+                 <li className="active"><a href="#subscribe-to-our-newsletter">Newsletter</a></li>
                  <li><a href="#events">Events</a></li>
                  <li><a href="#resources">Resources</a></li>
                  <li><a href="#ballerina-slack-community">Slack</a></li>
