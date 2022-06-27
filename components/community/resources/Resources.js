@@ -47,7 +47,7 @@ export default function Resources() {
                     style={
                         (hoverBtn ? linkArrowHover : linkArrow)
                     }>
-                    <a href="/community/resources" target="_blank" className={styles.viewAll}>View all resources </a>
+                    <a href={`${prefix}/community/resources`} target="_blank" className={styles.viewAll}>View all resources </a>
                 </p>
               </Col>
             </Row>
