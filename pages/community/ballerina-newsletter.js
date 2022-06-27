@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import Layout from '../../layouts/LayoutCommunity';
 import NewsletterSubscription from '../../components/common/newsletter-subscription/NewsletterSubscription';
-import { prefix } from '../../../utils/prefix';
+import { prefix } from '../../utils/prefix';
 
 export async function getStaticProps() {
     // Get all our posts
