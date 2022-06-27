@@ -6,6 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import Layout from '../../layouts/LayoutCommunity';
 import NewsletterSubscription from '../../components/common/newsletter-subscription/NewsletterSubscription';
+import { prefix } from '../../../utils/prefix';
 
 export async function getStaticProps() {
     // Get all our posts
@@ -66,7 +67,7 @@ export default function BallerinaNewsLetter({ posts }) {
                     }
                     <div key={index} className='newsletterInfo'>
                         <p className='newsletterDate'>{frontmatter.title}</p>
-                        <a className='newsletterLink' target="_blank" rel="noreferrer" href={`/community/newsletter/${slug}`} >
+                        <a className='newsletterLink' target="_blank" rel="noreferrer" href={`${prefix}/community/newsletter/${slug}`} >
                             <h4 className='newsletterTitle'>Ballerina: a data-oriented programming language</h4>
                         </a>
                     </div>
