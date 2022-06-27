@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-
 import Layout from '../../layouts/LayoutCommunity';
 import Newsletter from '../../components/community/newsletter/Newsletter';
 import Events from '../../components/community/events/Events';

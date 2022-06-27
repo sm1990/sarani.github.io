@@ -49,7 +49,7 @@ export default function Events() {
                         style={
                             (hoverBtn ? linkArrowHover : linkArrow)
                         }>
-                        <a href="/community/events/" target="_blank" className={styles.viewAll}>View all events </a>
+                        <a href={`${prefix}/community/events/`} target="_blank" className={styles.viewAll}>View all events </a>
                     </p>
                 </Col>
             </Row>
