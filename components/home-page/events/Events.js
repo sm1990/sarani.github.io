@@ -13,6 +13,12 @@ export default function Events() {
         </Col>
       </Row>
 
+      <Row>
+        <Col sm={12}>
+          <h3>Upcoming events</h3>
+        </Col>
+      </Row>
+
       <UpcomingEvents/>
 
     </Col>
