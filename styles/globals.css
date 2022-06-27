@@ -550,3 +550,114 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
 .modal-content {
   border-radius: 0 !important;
 }
+
+.newsletterCat {
+  margin-top: 30px !important;
+}
+
+.newsletterInfo {
+  border-bottom: .3px solid #d9dadb;
+  padding: 10px 0;
+}
+
+.newsletterDate {
+  color: #585a5e !important;
+  font-weight: 500 !important;
+}
+
+.newsletterTitle {
+  /* color:#20b6b0; */
+  margin:0px auto;
+  line-height: 30px;
+  padding-bottom:10px
+}
+
+.newsletterLink {
+  color: #20b6b0;
+  text-decoration: none;
+}
+
+.newsletterLink:hover {
+  color: #57595d !important;
+  text-decoration: none;
+}
+
+.newsletter {
+  border-right: 1px solid #d1d4da;
+  /* padding-right: 15px;
+  margin-right: 15px; */
+  display: inline-block;
+  min-height: 390px;
+}
+
+.newsletter td {
+  padding-left: 0 !important;
+}
+
+.subscriptionCol {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  /* background-color: aqua; */
+  /* padding-right: 0 !important;
+  padding-left: 0 !important; */
+  padding-top: 25px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-size: 13px;
+}
+
+ul.eventsTabs {
+  justify-content: flex-end;
+}
+
+.community .nav-tabs .nav-link {
+  border: none;
+}
+
+.eventsTabs .nav-link, .eventsTabs .nav-link:hover  {
+  border: none;
+}
+
+.eventsTabs li button {
+  color: #20b6b0;
+  cursor: default;
+  background: none;
+  border: none;
+}
+
+.eventsTabs li button:focus, .eventsTabs li button:hover {
+  color: #57595d !important;
+  border: none;
+  background-color: none;
+  isolation: isolate;
+}
+
+.eventsTabs li button[aria-selected="true"],
+.eventsTabs li button[aria-selected="true"]:focus,
+.eventsTabs li button[aria-selected="true"]:hover {
+  color: #57595d !important;
+  cursor: default;
+  background-color: none !important;
+  border: none;
+  border-bottom: #20b6b0 3px solid !important;
+}
+
+
+.formLink {
+  color: #20b6b0;
+  text-decoration: none;
+}
+
+.formLink:hover {
+  color: #57595d;
+  text-decoration: none;
+}
+
+.formEmbedded {
+  width: 100%;
+  height: 350px;
+  /* overflow: auto; */
+}
