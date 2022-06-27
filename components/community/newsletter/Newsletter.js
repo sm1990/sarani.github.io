@@ -46,7 +46,7 @@ export default function Newsletter() {
                         style={
                             (hoverBtn ? linkArrowHover : linkArrow)
                         }>
-                        <a href={`${prefix}/community/ballerina-newsletter`} target="_blank" className={styles.viewAll}>View all newsletters </a>
+                        <a href={`${prefix}/community/ballerina-newsletter`} target="_blank" rel="noreferrer" className={styles.viewAll}>View all newsletters </a>
                     </p>
                 </Col>
             </Row>

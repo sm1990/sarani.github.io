@@ -55,7 +55,7 @@ export default function TechTalk() {
                         style={
                             (hoverBtn ? linkArrowHover : linkArrow)
                         }>
-                        <a href={`${prefix}/community/ballerina-tech-talk/`} target="_blank" className={styles.viewAll}>View all Tech Talks </a>
+                        <a href={`${prefix}/community/ballerina-tech-talk/`} rel="noreferrer" target="_blank" className={styles.viewAll}>View all Tech Talks </a>
                     </p>
                 </Col>
             </Row>
