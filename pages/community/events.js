@@ -6,7 +6,7 @@ import Layout from '../../layouts/LayoutCommunity';
 import UpcomingEvents from '../../components/common/upcoming-events/UpcomingEvents';
 import PastEvents from '../../components/community/events/past-events/PastEvents';
 
-export default function BallerinaNewsLetter() {
+export default function Events() {
  
   return (
     <Layout>
