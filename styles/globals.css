@@ -661,3 +661,12 @@ ul.eventsTabs {
   height: 350px;
   /* overflow: auto; */
 }
+
+
+
+.learnRow {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: #a7a8ab solid 1px;
+}
+

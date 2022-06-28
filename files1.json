@@ -229,7 +229,7 @@
                         {
                             "dirName": "function as a service with ballerina",
                             "level": 3,
-                            "position": 0,
+                            "position": 2,
                             "isDir": true,
                             "url": "/learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina",
                             "id": "function-as-a-service-with-ballerina",
@@ -237,7 +237,7 @@
                                 {
                                     "dirName": "Azure Functions",
                                     "level": 4,
-                                    "position": 0,
+                                    "position": 2,
                                     "isDir": false,
                                     "url": "/learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/azure-functions",
                                     "id": "azure-functions"
@@ -245,7 +245,7 @@
                                 {
                                     "dirName": "AWS Lambda",
                                     "level": 4,
-                                    "position": 0,
+                                    "position": 1,
                                     "isDir": false,
                                     "url": "/learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda",
                                     "id": "aws-lambda"
@@ -255,7 +255,7 @@
                         {
                             "dirName": "code to cloud",
                             "level": 3,
-                            "position": 0,
+                            "position": 1,
                             "isDir": true,
                             "url": "/learn/run-ballerina-programs-in-the-cloud/code-to-cloud",
                             "id": "code-to-cloud",
@@ -263,7 +263,7 @@
                                 {
                                     "dirName": "Code to Cloud deployment",
                                     "level": 4,
-                                    "position": 0,
+                                    "position": 1,
                                     "isDir": false,
                                     "url": "/learn/run-ballerina-programs-in-the-cloud/code-to-cloud/code-to-cloud-deployment",
                                     "id": "code-to-cloud-deployment"
