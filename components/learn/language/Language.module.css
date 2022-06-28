@@ -1,0 +1,56 @@
+.langRow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.linkText {
+    color: #20b6b0;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.linkText:hover {
+    color: #57595d;
+}
+
+.linkVideo {
+    padding: 5px 15px;
+    background-color: #20b6b0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.linkVideo:hover {
+    background-color: #57595d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btnCol {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.langSlides {
+    padding: 20px;
+    background-color: #20b6b0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.langSlides:hover {
+    padding: 20px;
+    background-color: #57595d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
