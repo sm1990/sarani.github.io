@@ -55,10 +55,10 @@ const TopNav = (props) => {
               <Nav.Link className={(launcher === 'community')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/community`}>Community</Nav.Link>
               <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/">Blog</Nav.Link>
               <NavDropdown title="Swan Lake" id={styles.navbarScrollingDropdown}>
-                <NavDropdown.Item href="#action3">Swan-Lake</NavDropdown.Item>
-                <NavDropdown.Item href="/1.2/learn/">V 1.2</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">V 1.1</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">V 1.0</NavDropdown.Item>
+                <NavDropdown.Item href={`${prefix}/learn/`}>Swan-Lake</NavDropdown.Item>
+                <NavDropdown.Item href={`${prefix}/1.2/learn/`}>V 1.2</NavDropdown.Item>
+                <NavDropdown.Item href={`${prefix}/1.1/learn/`}>V 1.1</NavDropdown.Item>
+                <NavDropdown.Item href={`${prefix}/1.0/learn/`}>V 1.0</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form className="d-flex">
