@@ -1,0 +1,1357 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-PSL2TX4"></script><script src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-2"></script><meta name="next-head-count" content="5"/><meta name="robots" content="noindex"/><meta name="googlebot" content="noindex"/><meta name="author" content="WSO2, Inc."/><meta property="og:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta property="og:title" content="Ballerina"/><meta property="og:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@ballerinalang"/><meta name="twitter:creator" content="@ballerinalang"/><meta name="twitter:title" content="Ballerina"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta property="twitter:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><link rel="shortcut icon" href="/sarani.github.io/images/favicon.ico"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/sarani.github.io/_next/static/css/7841f10ed1920b81.css" as="style"/><link rel="stylesheet" href="/sarani.github.io/_next/static/css/7841f10ed1920b81.css" data-n-g=""/><link rel="preload" href="/sarani.github.io/_next/static/css/30c629d66883cef3.css" as="style"/><link rel="stylesheet" href="/sarani.github.io/_next/static/css/30c629d66883cef3.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/sarani.github.io/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/sarani.github.io/_next/static/chunks/webpack-5eb31c0b92c81f71.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/framework-bb5c596eafb42b22.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/main-98a1a717dae31bf2.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/pages/_app-557e3b4efecd738c.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/410-46d08a682048d6c6.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/722-2cbc26cf7056599d.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/pages/1.2/learn/%5B...slug%5D-ca93244e23df67fc.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_buildManifest.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_ssgManifest.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrIzQ.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjARc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu52xM.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ABc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBhc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBBc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgWxM.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5g.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtvAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz0dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzQdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzwdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzMdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz8dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz4dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzAdL-vwnYg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xFIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xMIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xEIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xLIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xHIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xGIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzIXKMny.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxFIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxMIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxEIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxLIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxHIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxGIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzIXKMny.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body><div id="__next" data-reactroot=""><div class="main-wrapper vstack gap-0"><div class="wrap-page-content container-fluid"><div class="row"><div class="mdContent col-12"><div class="container"><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module is used to interact with Kafka Brokers via Kafka Consumer and Kafka Producer clients.
+This module supports Kafka 1.x.x and 2.0.0 versions.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,kafka">
+
+    <title>API Docs - ballerina/kafka</title>
+    <script src="../html-template-resources/jquery.min.js"></script>
+
+    <!-- BIO THEME START -->
+<link rel="stylesheet" href="/css/latest-bootstrap.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="/css/latest-bootstrap-theme.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="/js/latest-bootstrap.js"></script>
+
+<script type="text/javascript" src="/js/api-doc-template.js"></script>
+<script type="text/javascript" src="/js/ballerina-common.js"></script>
+<link rel="stylesheet" href="/css/ballerina-io.css">
+<link rel="stylesheet" href="/css/ballerina-io-docs.css">
+<link rel="stylesheet" href="/css/ballerina-io-api-new.css">
+
+<style>
+    .line-numbers-wrap {
+        display: none;
+    }
+     .cVersionChangeBanner{
+    color: #000000;
+    background-color: #fcdf4a !important;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    transition : all 0.3s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 9;
+    }
+    .cInfoBannerLink{
+        color: #000000;
+        text-decoration: underline;
+    }
+     .cInfoBannerLink:hover{
+        color: #545454 !important;
+        text-decoration: underline !important;
+    }
+   
+    .content-wrapper{
+        padding-top: 2em !important;
+    }
+    @media only screen and (max-width: 992px) {
+        .content-wrapper {padding-top: 7em !important}
+
+    }
+</style>
+<!-- BIO THEME END -->
+
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/font.css">
+    <script src="../html-template-resources/semantic.min.js"></script>
+    <script src="../syntax-highlighter/highlighter.js"></script>
+
+</head>
+
+
+<body class="cBallerina-io">
+    <div class="row cBallerina-io-top-row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cTopLineContainer">
+        <div class="cTopLine"></div>
+    </div>
+</div>
+<div class="cVersionChangeBanner">
+       This API documentation is for Ballerina 1.2.0. <a href="https://lib.ballerina.io" class="cInfoBannerLink">View API documentation for the latest release</a>.
+    </div>
+    <div class="row cBallerina-io-Nav" id="iMainNavigation" style="top:50px">
+
+</div>
+<div class="clearfix"></div>
+    <div class="navi-wrapper">
+        <div class="navi-wrapper-content">
+            <a href="
+    ../index.html">
+    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+</a>
+
+            
+
+    
+        <div class="version">v1.2.14</div>
+    
+
+
+<div class="primary-list module">
+    
+        <a href="../kafka/index.html" onclick="menuLinkClick()">
+            <h3>kafka</h3>
+        </a>
+    
+    <ul>
+        
+        <li>
+            <a data="records" href="../kafka/index.html#records" onclick="menuLinkClick()">Records</a>
+        </li>
+        
+        
+            <li>
+                <a  data="objects" href="../kafka/index.html#objects" onclick="menuLinkClick()">Objects</a>
+            </li>
+        
+        
+            <li>
+                <a data="clients" href="../kafka/index.html#clients" onclick="menuLinkClick()">Clients</a>
+            </li>
+        
+        
+        
+        
+            <li>
+                <a data="constants" href="../kafka/index.html#constants" onclick="menuLinkClick()">Constants</a>
+            </li>
+        
+        
+        
+            <li>
+                <a data="types" href="../kafka/index.html#types" onclick="menuLinkClick()">Types</a>
+            </li>
+        
+        
+            <li>
+                <a data="errors" href="../kafka/index.html#errors" onclick="menuLinkClick()">Errors</a>
+            </li>
+        
+    </ul>
+    <div class="ui divider"></div>
+</div>
+
+            <div class="primary-list module-list">
+    
+        <h3>All Modules</h3>
+        <ul>
+            
+                <li>
+                    <a href="../auth/index.html">auth</a>
+                </li>
+            
+                <li>
+                    <a href="../cache/index.html">cache</a>
+                </li>
+            
+                <li>
+                    <a href="../config/index.html">config</a>
+                </li>
+            
+                <li>
+                    <a href="../crypto/index.html">crypto</a>
+                </li>
+            
+                <li>
+                    <a href="../email/index.html">email</a>
+                </li>
+            
+                <li>
+                    <a href="../encoding/index.html">encoding</a>
+                </li>
+            
+                <li>
+                    <a href="../file/index.html">file</a>
+                </li>
+            
+                <li>
+                    <a href="../filepath/index.html">filepath</a>
+                </li>
+            
+                <li>
+                    <a href="../grpc/index.html">grpc</a>
+                </li>
+            
+                <li>
+                    <a href="../http/index.html">http</a>
+                </li>
+            
+                <li>
+                    <a href="../io/index.html">io</a>
+                </li>
+            
+                <li>
+                    <a href="../java/index.html">java</a>
+                </li>
+            
+                <li>
+                    <a href="../java.arrays/index.html">java.arrays</a>
+                </li>
+            
+                <li>
+                    <a href="../java.jdbc/index.html">java.jdbc</a>
+                </li>
+            
+                <li>
+                    <a href="../jsonutils/index.html">jsonutils</a>
+                </li>
+            
+                <li>
+                    <a href="../jwt/index.html">jwt</a>
+                </li>
+            
+                <li>
+                    <a href="../kafka/index.html">kafka</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.array/index.html">lang.array</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.boolean/index.html">lang.boolean</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.decimal/index.html">lang.decimal</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.error/index.html">lang.error</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.float/index.html">lang.float</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.future/index.html">lang.future</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.int/index.html">lang.int</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.map/index.html">lang.map</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.object/index.html">lang.object</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.stream/index.html">lang.stream</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.string/index.html">lang.string</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.table/index.html">lang.table</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.typedesc/index.html">lang.typedesc</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.value/index.html">lang.value</a>
+                </li>
+            
+                <li>
+                    <a href="../lang.xml/index.html">lang.xml</a>
+                </li>
+            
+                <li>
+                    <a href="../ldap/index.html">ldap</a>
+                </li>
+            
+                <li>
+                    <a href="../log/index.html">log</a>
+                </li>
+            
+                <li>
+                    <a href="../math/index.html">math</a>
+                </li>
+            
+                <li>
+                    <a href="../mime/index.html">mime</a>
+                </li>
+            
+                <li>
+                    <a href="../nats/index.html">nats</a>
+                </li>
+            
+                <li>
+                    <a href="../oauth2/index.html">oauth2</a>
+                </li>
+            
+                <li>
+                    <a href="../observe/index.html">observe</a>
+                </li>
+            
+                <li>
+                    <a href="../openapi/index.html">openapi</a>
+                </li>
+            
+                <li>
+                    <a href="../rabbitmq/index.html">rabbitmq</a>
+                </li>
+            
+                <li>
+                    <a href="../reflect/index.html">reflect</a>
+                </li>
+            
+                <li>
+                    <a href="../runtime/index.html">runtime</a>
+                </li>
+            
+                <li>
+                    <a href="../socket/index.html">socket</a>
+                </li>
+            
+                <li>
+                    <a href="../stringutils/index.html">stringutils</a>
+                </li>
+            
+                <li>
+                    <a href="../system/index.html">system</a>
+                </li>
+            
+                <li>
+                    <a href="../task/index.html">task</a>
+                </li>
+            
+                <li>
+                    <a href="../test/index.html">test</a>
+                </li>
+            
+                <li>
+                    <a href="../time/index.html">time</a>
+                </li>
+            
+                <li>
+                    <a href="../transactions/index.html">transactions</a>
+                </li>
+            
+                <li>
+                    <a href="../websub/index.html">websub</a>
+                </li>
+            
+                <li>
+                    <a href="../xmlutils/index.html">xmlutils</a>
+                </li>
+            
+                <li>
+                    <a href="../xslt/index.html">xslt</a>
+                </li>
+            
+        </ul>
+        <div class="ui divider"></div>
+    
+</div>
+        </div>
+    </div>
+    <div class="content-wrapper pusher">
+        <div>
+    <a id="toc" class="toc item" onclick="displayMenu()">
+        <img src="../html-template-resources/images/menu.svg">
+    </a>
+</div>
+        <div class="main-wrapper module-wrapper">
+                <h1>
+                    <a class="breadcrumb-home" href="
+    ../index.html">
+    <img class="breadcrumb-home-icon" src="../html-template-resources/images/home.svg">
+</a>
+                    
+                        Module : <span class="modules">kafka</span>
+                    
+                </h1>
+                    <h2>Module Overview</h2>
+<p>This module is used to interact with Kafka Brokers via Kafka Consumer and Kafka Producer clients.
+This module supports Kafka 1.x.x and 2.0.0 versions.</p>
+<p>For information on the operations, which you can perform with this module, see the below <strong>Functions</strong>.
+For examples on the usage of the operations, see the following.</p>
+<ul>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-producer.html">Producer Example</a></li>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-consumer-service.html">Consumer Service Example</a></li>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-consumer-client.html">Consumer Client Example</a></li>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-producer-transactional.html">Transactional Producer Example</a></li>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-authentication-sasl-plain-consumer.html">SASL Consumer Authentication Example</a></li>
+<li><a href="https://ballerina.io/1.2/learn/by-example/kafka-authentication-sasl-plain-producer.html">SASL Producer Authentication Example</a></li>
+</ul>
+<h4>Basic Usages</h4>
+<h5>Publishing Messages</h5>
+<ol>
+<li>Initialize the Kafka message producer.</li>
+</ol>
+<pre><code class="language-ballerina">kafka:ProducerConfiguration producerConfiguration = {
+    bootstrapServers: &quot;localhost:9092&quot;,
+    clientId: &quot;basic-producer&quot;,
+    acks: &quot;all&quot;,
+    retryCount: 3,
+    valueSerializerType: kafka:SER_STRING,
+    keySerializerType: kafka:SER_INT
+};
+
+kafka:Producer kafkaProducer = new (producerConfiguration);
+</code></pre>
+<ol start="2">
+<li>Use the <code>kafka:Producer</code> to publish messages.</li>
+</ol>
+<pre><code class="language-ballerina">string message = &quot;Hello World, Ballerina&quot;;
+kafka:ProducerError? result = kafkaProducer-&gt;send(message, &quot;kafka-topic&quot;, key = 1);
+</code></pre>
+<h5>Consuming Messages</h5>
+<ol>
+<li>Initializing the Kafka message consumer.</li>
+</ol>
+<pre><code class="language-ballerina">kafka:ConsumerConfiguration consumerConfiguration = {
+    bootstrapServers: &quot;localhost:9092&quot;,
+    groupId: &quot;group-id&quot;,
+    offsetReset: &quot;earliest&quot;,
+    topics: [&quot;kafka-topic&quot;]
+};
+
+kafka:Consumer consumer = new (consumerConfiguration);
+</code></pre>
+<ol start="2">
+<li>Use the <code>kafka:Consumer</code> as a simple record consumer.</li>
+</ol>
+<pre><code class="language-ballerina">kafka:ConsumerRecord[]|kafka:ConsumerError result = consumer-&gt;poll(1000);
+</code></pre>
+<ol start="3">
+<li>Use the <code>kafka:Consumer</code> as a listener.</li>
+</ol>
+<pre><code class="language-ballerina">listener kafka:Consumer consumer = new (consumerConfiguration);
+
+service kafkaService on consumer {
+    // This resource will be executed when a message is published to the
+    // subscribed topic/topics.
+    resource function onMessage(kafka:Consumer kafkaConsumer,
+            kafka:ConsumerRecord[] records) {
+    }
+}
+</code></pre>
+<h4>Send Data Using Avro</h4>
+<p>The Ballerina Kafka module supports Avro serialization and deserialization.</p>
+<p>To try this, create a new Ballerina project and two modules inside it.</p>
+<p>Execute the below commands to do this.</p>
+<pre><code class="language-shell">ballerina new kafka_avro_sample
+cd kafka_avro_sample
+ballerina add producer
+ballerina add consumer
+</code></pre>
+<h5>Dependencies</h5>
+<p>To use Avro, you need to add the necessary dependencies to the Ballerina project you created.
+To do so, download the necessary dependencies and add them inside the <code>resources</code> directory. Also, add those dependencies to the <code>Ballerina.toml</code> file of your project.
+The following is a sample <code>Ballerina.toml</code> file with the dependencies.</p>
+<pre><code class="language-toml">    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/kafka-avro-serializer-5.4.1.jar&quot;
+    artifactId = &quot;kafka-avro-serializer&quot;
+    version = &quot;5.4.1&quot;
+    groupId = &quot;io.confluent&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/kafka-schema-registry-client-5.4.1.jar&quot;
+    artifactId = &quot;kafka-schema-registry-client&quot;
+    version = &quot;5.4.1&quot;
+    groupId = &quot;io.confluent&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/common-config-5.4.1.jar&quot;
+    artifactId = &quot;common-config&quot;
+    version = &quot;5.4.1&quot;
+    groupId = &quot;io.confluent&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/common-utils-5.4.1.jar&quot;
+    artifactId = &quot;common-utils&quot;
+    version = &quot;5.4.1&quot;
+    groupId = &quot;io.confluent&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/avro-1.9.2.jar&quot;
+    artifactId = &quot;avro&quot;
+    version = &quot;1.9.2&quot;
+    groupId = &quot;org.apache.avro&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/jackson-core-2.10.3.jar&quot;
+    artifactId = &quot;jackson-core&quot;
+    version = &quot;1.9.2&quot;
+    groupId = &quot;com.fasterxml.jackson.core&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/jackson-databind-2.10.3.jar&quot;
+    artifactId = &quot;jackson-databind&quot;
+    version = &quot;2.10.3&quot;
+    groupId = &quot;com.fasterxml.jackson.core&quot;
+
+    [[platform.libraries]]
+    module = &quot;producer&quot;
+    path = &quot;./resources/jackson-annotations-2.10.3.jar&quot;
+    artifactId = &quot;jackson-annotations&quot;
+    version = &quot;2.10.3&quot;
+    groupId = &quot;com.fasterxml.jackson.core&quot;
+</code></pre>
+<p>Now, the directory structure will look like below (some of the files are ignored).</p>
+<pre><code class="language-shell">├── Ballerina.toml
+├── resources
+│   ├── avro-1.9.2.jar
+│   ├── common-config-5.4.1.jar
+│   ├── common-utils-5.4.1.jar
+│   ├── jackson-annotations-2.10.3.jar
+│   ├── jackson-core-2.10.3.jar
+│   ├── jackson-databind-2.10.3.jar
+│   ├── kafka-avro-serializer-5.4.1.jar
+│   └── kafka-schema-registry-client-5.4.1.jar
+└── src
+    ├── consumer
+    │   └── main.bal
+    └── producer
+        └── main.bal
+</code></pre>
+<h5>Avro Producer</h5>
+<p>The <code>kafka:Proucer</code> can be configured to send data using Avro by providing the following configurations.</p>
+<ul>
+<li><code>schemaString</code>: This is the schema string, which is used to define the Avro schema.</li>
+<li><code>dataRecord</code>: The data record you want to send through Kafka.</li>
+</ul>
+<p>src/producer/main.bal:</p>
+<pre><code class="language-ballerina">import ballerina/io;
+import ballerina/kafka;
+
+public type Person record {
+    string name;
+    int age;
+};
+
+kafka:ProducerConfiguration configs = {
+    bootstrapServers: &quot;&lt;KAFKA_BROKER_HOST_AND_PORT&gt;&quot;,
+    // Other configurations
+    valueSerializerType: kafka:SER_AVRO,
+    schemaRegistryUrl: &quot;&lt;SCHEMA_REGISTRY_URL&gt;&quot;
+};
+
+string schema = &quot;{\&quot;type\&quot; : \&quot;record\&quot;,&quot; +
+                  &quot;\&quot;namespace\&quot; : \&quot;Thisaru\&quot;,&quot; +
+                  &quot;\&quot;name\&quot; : \&quot;person\&quot;,&quot; +
+                  &quot;\&quot;fields\&quot; : [&quot; + 
+                    &quot;{ \&quot;name\&quot; : \&quot;name\&quot;, \&quot;type\&quot; : \&quot;string\&quot; },&quot; +
+                    &quot;{ \&quot;name\&quot; : \&quot;age\&quot;, \&quot;type\&quot; : \&quot;int\&quot; }&quot; +
+                  &quot;]}&quot;;
+
+public function main() {
+    kafka:Producer producer = new(configs);
+
+    Person person = {
+        name: &quot;Lahiru Perera&quot;,
+        age: 28
+    };
+
+    kafka:AvroRecord avroRecord = {
+        schemaString: schema,
+        dataRecord: person
+    };
+
+    kafka:ProducerError? result = producer-&gt;send(avroRecord, &quot;add-person&quot;);
+    if (result is kafka:ProducerError) {
+        io:println(result);    
+    }
+}
+</code></pre>
+<h5>Avro Consumer</h5>
+<p>The Kafka implementation of Ballerina currently supports Avro deserialization only for generic records.
+The Consumer will return a <code>kafka:AvroGenericRecord</code> with the data received from Avro.</p>
+<p>The following is a sample consumer.</p>
+<p>src/producer/main.bal:</p>
+<pre><code class="language-ballerina">import ballerina/io;
+import ballerina/kafka;
+
+kafka:ConsumerConfiguration configs = {
+    bootstrapServers: &quot;&lt;KAFKA_BROKER_HOST_AND_PORT&gt;&quot;,
+    groupId: &quot;test-group&quot;,
+    // Other configurations
+    topics: [&quot;add-person&quot;],
+    valueDeserializerType: kafka:DES_AVRO,
+    schemaRegistryUrl: &quot;&lt;SCHEMA_REGISTRY_URL&gt;&quot;
+};
+
+listener kafka:Consumer consumer = new(configs);
+
+service KafkaService on consumer {
+    resource function onMessage(kafka:Consumer consumer, kafka:ConsumerRecord[] records) {
+        io:println(&quot;Records received&quot;);
+        foreach var kafkaRecord in records {
+            anydata value = kafkaRecord.value;
+            if (value is kafka:AvroGenericRecord) {
+                io:println(value);
+            } else {
+                io:println(&quot;Invalid record type&quot;);
+            }
+        }
+    }
+}
+</code></pre>
+<p>Now, execute the below command to run the consumer:</p>
+<pre><code class="language-shell">ballerina run consumer
+</code></pre>
+<p>This will start the Kafka service to listen. You can verify it by the following messages, which will be displayed on the screen.</p>
+<pre><code class="language-shell">[ballerina/kafka] kafka servers: &lt;KAFKA_BROKER_HOST_AND_PORT&gt;
+[ballerina/kafka] subscribed topics: add-person
+[ballerina/kafka] started kafka listener
+</code></pre>
+<p>Then, open another terminal and execute the below command to run the producer:</p>
+<pre><code class="language-shell">ballerina run producer
+</code></pre>
+<p>Now, the consumer will receive the data and the received data will be printed on the Console as follows.</p>
+<pre><code class="language-shell">Records received
+name=Lahiru Perera age=28
+</code></pre>
+
+
+            
+            <section class="method-content" id="records">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#records">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Records </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="AuthenticationConfiguration" title="AuthenticationConfiguration">
+                                <a class="records " href="records/AuthenticationConfiguration.html">AuthenticationConfiguration</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations related to Kafka authentication mechanisms.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="AvroGenericRecord" title="AvroGenericRecord">
+                                <a class="records " href="records/AvroGenericRecord.html">AvroGenericRecord</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a generic Avro record.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="AvroRecord" title="AvroRecord">
+                                <a class="records " href="records/AvroRecord.html">AvroRecord</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Defines a record to send data using Avro serialization.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="ConsumerConfiguration" title="ConsumerConfiguration">
+                                <a class="records " href="records/ConsumerConfiguration.html">ConsumerConfiguration</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations related to consumer endpoint.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="ConsumerRecord" title="ConsumerRecord">
+                                <a class="records " href="records/ConsumerRecord.html">ConsumerRecord</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Type related to consumer record.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="Detail" title="Detail">
+                                <a class="records " href="records/Detail.html">Detail</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents the details of an error.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="KeyStore" title="KeyStore">
+                                <a class="records " href="records/KeyStore.html">KeyStore</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations related to the KeyStore.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="PartitionOffset" title="PartitionOffset">
+                                <a class="records " href="records/PartitionOffset.html">PartitionOffset</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents the topic partition position in which the consumed record is stored.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="ProducerConfiguration" title="ProducerConfiguration">
+                                <a class="records " href="records/ProducerConfiguration.html">ProducerConfiguration</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents the Kafka Producer configuration.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="Protocols" title="Protocols">
+                                <a class="records " href="records/Protocols.html">Protocols</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations related to the SSL/TLS protocol and the versions to be used.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="SecureSocket" title="SecureSocket">
+                                <a class="records " href="records/SecureSocket.html">SecureSocket</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations for facilitating secure communication with the Kafka server.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="TopicPartition" title="TopicPartition">
+                                <a class="records " href="records/TopicPartition.html">TopicPartition</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a topic partition.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate records" id="TrustStore" title="TrustStore">
+                                <a class="records " href="records/TrustStore.html">TrustStore</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configurations related to the TrustStore.
+                            </td>
+                        </tr>
+                    
+                </table>
+            </section>
+            
+
+            
+            <section class="method-content" id="objects">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#objects">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Objects </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate objects" id="Deserializer" title="Deserializer">
+                                <a class="objects " href="objects/Deserializer.html">Deserializer</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a Kafka deserializer object.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate objects" id="Serializer" title="Serializer">
+                                <a class="objects " href="objects/Serializer.html">Serializer</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a Kafka serializer object.
+                            </td>
+                        </tr>
+                    
+                </table>
+             </section>
+            
+
+            
+             <section class="method-content" id="clients">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#clients">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Clients </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate clients" id="Consumer" title="Consumer">
+                                <a class="clients " href="clients/Consumer.html">Consumer</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a Kafka consumer endpoint.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate clients" id="Producer" title="Producer">
+                                <a class="clients " href="clients/Producer.html">Producer</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a Kafka producer endpoint.
+                            </td>
+                        </tr>
+                    
+                </table>
+             </section>
+            
+
+            
+           
+
+            
+
+
+            
+            <section class="method-content" id="constants">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#constants">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Constants </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_BYTE_ARRAY" title="DES_BYTE_ARRAY">
+                                <a class="constant " href="constants.html#DES_BYTE_ARRAY">DES_BYTE_ARRAY</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka byte array deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_STRING" title="DES_STRING">
+                                <a class="constant " href="constants.html#DES_STRING">DES_STRING</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka string deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_INT" title="DES_INT">
+                                <a class="constant " href="constants.html#DES_INT">DES_INT</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka int deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_FLOAT" title="DES_FLOAT">
+                                <a class="constant " href="constants.html#DES_FLOAT">DES_FLOAT</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka float deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_CUSTOM" title="DES_CUSTOM">
+                                <a class="constant " href="constants.html#DES_CUSTOM">DES_CUSTOM</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>User-defined deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="DES_AVRO" title="DES_AVRO">
+                                <a class="constant " href="constants.html#DES_AVRO">DES_AVRO</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Apache Avro deserializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="ISOLATION_COMMITTED" title="ISOLATION_COMMITTED">
+                                <a class="constant " href="constants.html#ISOLATION_COMMITTED">ISOLATION_COMMITTED</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configures the consumer to read the committed messages only in the transactional mode when poll() is called.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="ISOLATION_UNCOMMITTED" title="ISOLATION_UNCOMMITTED">
+                                <a class="constant " href="constants.html#ISOLATION_UNCOMMITTED">ISOLATION_UNCOMMITTED</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Configures the consumer to read all the messages including the aborted ones.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="ACKS_ALL" title="ACKS_ALL">
+                                <a class="constant " href="constants.html#ACKS_ALL">ACKS_ALL</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Producer acknowledgement type is 'all'.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="ACKS_NONE" title="ACKS_NONE">
+                                <a class="constant " href="constants.html#ACKS_NONE">ACKS_NONE</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Producer acknowledgement type '0'.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="ACKS_SINGLE" title="ACKS_SINGLE">
+                                <a class="constant " href="constants.html#ACKS_SINGLE">ACKS_SINGLE</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Producer acknowledgement type '1'.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_BYTE_ARRAY" title="SER_BYTE_ARRAY">
+                                <a class="constant " href="constants.html#SER_BYTE_ARRAY">SER_BYTE_ARRAY</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka Byte Array serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_STRING" title="SER_STRING">
+                                <a class="constant " href="constants.html#SER_STRING">SER_STRING</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka string serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_INT" title="SER_INT">
+                                <a class="constant " href="constants.html#SER_INT">SER_INT</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka int serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_FLOAT" title="SER_FLOAT">
+                                <a class="constant " href="constants.html#SER_FLOAT">SER_FLOAT</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>In-built Kafka float serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_CUSTOM" title="SER_CUSTOM">
+                                <a class="constant " href="constants.html#SER_CUSTOM">SER_CUSTOM</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>User-defined serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="SER_AVRO" title="SER_AVRO">
+                                <a class="constant " href="constants.html#SER_AVRO">SER_AVRO</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Apache Avro serializer.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="COMPRESSION_NONE" title="COMPRESSION_NONE">
+                                <a class="constant " href="constants.html#COMPRESSION_NONE">COMPRESSION_NONE</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>No compression.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="COMPRESSION_GZIP" title="COMPRESSION_GZIP">
+                                <a class="constant " href="constants.html#COMPRESSION_GZIP">COMPRESSION_GZIP</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka GZIP compression type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="COMPRESSION_SNAPPY" title="COMPRESSION_SNAPPY">
+                                <a class="constant " href="constants.html#COMPRESSION_SNAPPY">COMPRESSION_SNAPPY</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka Snappy compression type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="COMPRESSION_LZ4" title="COMPRESSION_LZ4">
+                                <a class="constant " href="constants.html#COMPRESSION_LZ4">COMPRESSION_LZ4</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka LZ4 compression type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="COMPRESSION_ZSTD" title="COMPRESSION_ZSTD">
+                                <a class="constant " href="constants.html#COMPRESSION_ZSTD">COMPRESSION_ZSTD</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka ZSTD compression type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="AUTH_SASL_PLAIN" title="AUTH_SASL_PLAIN">
+                                <a class="constant " href="constants.html#AUTH_SASL_PLAIN">AUTH_SASL_PLAIN</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka SASL_PLAIN authentication mechanism</p>
+
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="PROTOCOL_SASL_PLAINTEXT" title="PROTOCOL_SASL_PLAINTEXT">
+                                <a class="constant " href="constants.html#PROTOCOL_SASL_PLAINTEXT">PROTOCOL_SASL_PLAINTEXT</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="PROTOCOL_SASL_SSL" title="PROTOCOL_SASL_SSL">
+                                <a class="constant " href="constants.html#PROTOCOL_SASL_SSL">PROTOCOL_SASL_SSL</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="CONSUMER_ERROR" title="CONSUMER_ERROR">
+                                <a class="constant " href="constants.html#CONSUMER_ERROR">CONSUMER_ERROR</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Used as the error reason for the <code>kafka:ConsumerError</code> type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="PRODUCER_ERROR" title="PRODUCER_ERROR">
+                                <a class="constant " href="constants.html#PRODUCER_ERROR">PRODUCER_ERROR</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Used as the error reason for the <code>kafka:ProducerError</code> type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate constant" id="AVRO_ERROR" title="AVRO_ERROR">
+                                <a class="constant " href="constants.html#AVRO_ERROR">AVRO_ERROR</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Used as the error reason for the <code>kafka:AvroError</code> type.
+                            </td>
+                        </tr>
+                    
+                </table>
+            </section>
+            
+
+
+            
+
+            
+            <section class="method-content" id="types">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#types">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Types </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="AuthenticationMechanism" title="AuthenticationMechanism">
+                                <a class="types " href="types.html#AuthenticationMechanism">AuthenticationMechanism</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents the supported Kafka SASL authentication mechanisms.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="CompressionType" title="CompressionType">
+                                <a class="types " href="types.html#CompressionType">CompressionType</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka compression types to compress the messages.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="DeserializerType" title="DeserializerType">
+                                <a class="types " href="types.html#DeserializerType">DeserializerType</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka in-built deserializer type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="IsolationLevel" title="IsolationLevel">
+                                <a class="types " href="types.html#IsolationLevel">IsolationLevel</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka consumer isolation level type.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="ProducerAcks" title="ProducerAcks">
+                                <a class="types " href="types.html#ProducerAcks">ProducerAcks</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka producer acknowledgement types.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="SecurityProtocol" title="SecurityProtocol">
+                                <a class="types " href="types.html#SecurityProtocol">SecurityProtocol</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents the supported security protocols for Kafka clients.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate types" id="SerializerType" title="SerializerType">
+                                <a class="types " href="types.html#SerializerType">SerializerType</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Kafka in-built serializer types.
+                            </td>
+                        </tr>
+                    
+                </table>
+            </section>
+            
+
+            
+             <section class="method-content" id="errors">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#errors">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                <h2> Errors </h2>
+                </div>
+                <table>
+                    
+                        <tr>
+                            <td class="module-title truncate errors" id="AvroError" title="AvroError">
+                                <a class="errors " href="errors.html#AvroError">AvroError</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Represents a Kafka Avro related error.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate errors" id="ConsumerError" title="ConsumerError">
+                                <a class="errors " href="errors.html#ConsumerError">ConsumerError</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Error type specific to the <code>kafka:Consumer</code> object functions.
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate errors" id="ProducerError" title="ProducerError">
+                                <a class="errors " href="errors.html#ProducerError">ProducerError</a>
+                            </td>
+                            <td class="module-desc">
+                                
+                                <p>Error type specific to the <code>kafka:Producer</code> object functions.
+                            </td>
+                        </tr>
+                    
+                </table>
+            </section>
+            
+        </div>
+    </div>
+
+</body>
+
+<script>
+let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
+let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
+
+let lastId;
+let cur = [];
+
+let contentWrapper = document.querySelector(".content-wrapper");
+contentWrapper.addEventListener("scroll", event => {
+  let fromTop = contentWrapper.scrollTop;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+
+<script>
+    window.onload = (event) => {
+        ballerinaHighlighter.highlightSnippets();
+    };
+</script>
+
+
+</div></div></div></div><div class="vstack gap-0"><div class="Footer_footer__gXdNn container-fluid"><div class="row"><div class="col-lg-6 col-md-6 col-sm-12 col-12"><div class="Footer_socialMedia__99VpI"><div class="Footer_smIcons__HD9f7"><ul><li></li><li></li><li></li><li></li><li></li></ul></div><div class="Footer_subscribe__6aRU2"><a href="/sarani.github.io/community#subscribe-to-newsletter">Subscribe to our newsletter</a></div></div><div class="Footer_footerLinks__M9jUM"><ul><li><a href="/sarani.github.io/downloads">DOWNLOAD</a></li><li><a href="https://github.com/ballerina-platform/ballerina-lang/issues/new/choose">REPORT ISSUES</a></li></ul></div></div><div class="Footer_inspire__ZAi5V col-lg-6 col-md-6 col-sm-10 col-12"><p>In the creation of Ballerina, we were inspired by many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub, and WSO2.</p></div></div><div class="Footer_policyLinks__q3ge1 row"><div class="col-12"><ul><li><a href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</a></li><li><a href="/sarani.github.io/license-of-site">SITE LICENSE</a></li><li><a href="/sarani.github.io/terms-of-service">TERMS OF SERVICE</a></li><li><a href="/sarani.github.io/privacy-policy">PRIVACY POLICY</a></li><li><a href="/sarani.github.io/cookie-policy">COOKIE POLICY</a></li><li><a href="/sarani.github.io/security-policy">SECURITY POLICY</a></li><li><a href="/sarani.github.io/trademark-usage-policy">TRADEMARK USAGE POLICY</a></li></ul></div></div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"frontmatter":{},"content":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\n\u003chead\u003e\n    \u003cmeta charset=\"utf-8\"/\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"/\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\"\u003e\n    \u003cmeta name=\"description\" content=\"This module is used to interact with Kafka Brokers via Kafka Consumer and Kafka Producer clients.\nThis module supports Kafka 1.x.x and 2.0.0 versions.\n\"\u003e\n    \u003cmeta name=\"keywords\" content=\"ballerina,ballerina lang,api docs,kafka\"\u003e\n\n    \u003ctitle\u003eAPI Docs - ballerina/kafka\u003c/title\u003e\n    \u003cscript src=\"../html-template-resources/jquery.min.js\"\u003e\u003c/script\u003e\n\n    \u003c!-- BIO THEME START --\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/latest-bootstrap.css\"\u003e\n\u003c!-- Optional theme --\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/latest-bootstrap-theme.css\"\u003e\n\u003c!-- Latest compiled and minified JavaScript --\u003e\n\u003cscript src=\"/js/latest-bootstrap.js\"\u003e\u003c/script\u003e\n\n\u003cscript type=\"text/javascript\" src=\"/js/api-doc-template.js\"\u003e\u003c/script\u003e\n\u003cscript type=\"text/javascript\" src=\"/js/ballerina-common.js\"\u003e\u003c/script\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io.css\"\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io-docs.css\"\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io-api-new.css\"\u003e\n\n\u003cstyle\u003e\n    .line-numbers-wrap {\n        display: none;\n    }\n     .cVersionChangeBanner{\n    color: #000000;\n    background-color: #fcdf4a !important;\n    width: 100%;\n    display: inline-block;\n    padding: 10px 0px;\n    text-align: center;\n    font-weight: 500;\n    font-size: 20px;\n    transition : all 0.3s;\n    position: fixed;\n    top: 0;\n    width: 100%;\n    height: 50px;\n    z-index: 9;\n    }\n    .cInfoBannerLink{\n        color: #000000;\n        text-decoration: underline;\n    }\n     .cInfoBannerLink:hover{\n        color: #545454 !important;\n        text-decoration: underline !important;\n    }\n   \n    .content-wrapper{\n        padding-top: 2em !important;\n    }\n    @media only screen and (max-width: 992px) {\n        .content-wrapper {padding-top: 7em !important}\n\n    }\n\u003c/style\u003e\n\u003c!-- BIO THEME END --\u003e\n\n    \u003clink rel=\"stylesheet\" href=\"../html-template-resources/semantic.min.css\"\u003e\n    \u003clink rel=\"stylesheet\" href=\"../html-template-resources/styles/css/styles.css\"\u003e\n    \u003clink rel=\"stylesheet\" href=\"../html-template-resources/styles/css/font.css\"\u003e\n    \u003cscript src=\"../html-template-resources/semantic.min.js\"\u003e\u003c/script\u003e\n    \u003cscript src=\"../syntax-highlighter/highlighter.js\"\u003e\u003c/script\u003e\n\n\u003c/head\u003e\n\n\n\u003cbody class=\"cBallerina-io\"\u003e\n    \u003cdiv class=\"row cBallerina-io-top-row\"\u003e\n    \u003cdiv class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"\u003e\u003c/div\u003e\n    \u003cdiv class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6 cTopLineContainer\"\u003e\n        \u003cdiv class=\"cTopLine\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\"cVersionChangeBanner\"\u003e\n       This API documentation is for Ballerina 1.2.0. \u003ca href=\"https://lib.ballerina.io\" class=\"cInfoBannerLink\"\u003eView API documentation for the latest release\u003c/a\u003e.\n    \u003c/div\u003e\n    \u003cdiv class=\"row cBallerina-io-Nav\" id=\"iMainNavigation\" style=\"top:50px\"\u003e\n\n\u003c/div\u003e\n\u003cdiv class=\"clearfix\"\u003e\u003c/div\u003e\n    \u003cdiv class=\"navi-wrapper\"\u003e\n        \u003cdiv class=\"navi-wrapper-content\"\u003e\n            \u003ca href=\"\n    ../index.html\"\u003e\n    \u003cimg class=\"logo\" src=\"../html-template-resources/images/ballerina-logo.png\"\u003e\n\u003c/a\u003e\n\n            \n\n    \n        \u003cdiv class=\"version\"\u003ev1.2.14\u003c/div\u003e\n    \n\n\n\u003cdiv class=\"primary-list module\"\u003e\n    \n        \u003ca href=\"../kafka/index.html\" onclick=\"menuLinkClick()\"\u003e\n            \u003ch3\u003ekafka\u003c/h3\u003e\n        \u003c/a\u003e\n    \n    \u003cul\u003e\n        \n        \u003cli\u003e\n            \u003ca data=\"records\" href=\"../kafka/index.html#records\" onclick=\"menuLinkClick()\"\u003eRecords\u003c/a\u003e\n        \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca  data=\"objects\" href=\"../kafka/index.html#objects\" onclick=\"menuLinkClick()\"\u003eObjects\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"clients\" href=\"../kafka/index.html#clients\" onclick=\"menuLinkClick()\"\u003eClients\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n        \n        \n            \u003cli\u003e\n                \u003ca data=\"constants\" href=\"../kafka/index.html#constants\" onclick=\"menuLinkClick()\"\u003eConstants\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n        \n            \u003cli\u003e\n                \u003ca data=\"types\" href=\"../kafka/index.html#types\" onclick=\"menuLinkClick()\"\u003eTypes\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"errors\" href=\"../kafka/index.html#errors\" onclick=\"menuLinkClick()\"\u003eErrors\u003c/a\u003e\n            \u003c/li\u003e\n        \n    \u003c/ul\u003e\n    \u003cdiv class=\"ui divider\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n            \u003cdiv class=\"primary-list module-list\"\u003e\n    \n        \u003ch3\u003eAll Modules\u003c/h3\u003e\n        \u003cul\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../auth/index.html\"\u003eauth\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../cache/index.html\"\u003ecache\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../config/index.html\"\u003econfig\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../crypto/index.html\"\u003ecrypto\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../email/index.html\"\u003eemail\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../encoding/index.html\"\u003eencoding\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../file/index.html\"\u003efile\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../filepath/index.html\"\u003efilepath\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../grpc/index.html\"\u003egrpc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../http/index.html\"\u003ehttp\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../io/index.html\"\u003eio\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../java/index.html\"\u003ejava\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../java.arrays/index.html\"\u003ejava.arrays\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../java.jdbc/index.html\"\u003ejava.jdbc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../jsonutils/index.html\"\u003ejsonutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../jwt/index.html\"\u003ejwt\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../kafka/index.html\"\u003ekafka\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.array/index.html\"\u003elang.array\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.boolean/index.html\"\u003elang.boolean\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.decimal/index.html\"\u003elang.decimal\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.error/index.html\"\u003elang.error\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.float/index.html\"\u003elang.float\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.future/index.html\"\u003elang.future\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.int/index.html\"\u003elang.int\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.map/index.html\"\u003elang.map\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.object/index.html\"\u003elang.object\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.stream/index.html\"\u003elang.stream\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.string/index.html\"\u003elang.string\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.table/index.html\"\u003elang.table\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.typedesc/index.html\"\u003elang.typedesc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.value/index.html\"\u003elang.value\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../lang.xml/index.html\"\u003elang.xml\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../ldap/index.html\"\u003eldap\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../log/index.html\"\u003elog\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../math/index.html\"\u003emath\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../mime/index.html\"\u003emime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../nats/index.html\"\u003enats\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../oauth2/index.html\"\u003eoauth2\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../observe/index.html\"\u003eobserve\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../openapi/index.html\"\u003eopenapi\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../rabbitmq/index.html\"\u003erabbitmq\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../reflect/index.html\"\u003ereflect\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../runtime/index.html\"\u003eruntime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../socket/index.html\"\u003esocket\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../stringutils/index.html\"\u003estringutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../system/index.html\"\u003esystem\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../task/index.html\"\u003etask\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../test/index.html\"\u003etest\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../time/index.html\"\u003etime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../transactions/index.html\"\u003etransactions\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../websub/index.html\"\u003ewebsub\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../xmlutils/index.html\"\u003exmlutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../xslt/index.html\"\u003exslt\u003c/a\u003e\n                \u003c/li\u003e\n            \n        \u003c/ul\u003e\n        \u003cdiv class=\"ui divider\"\u003e\u003c/div\u003e\n    \n\u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"content-wrapper pusher\"\u003e\n        \u003cdiv\u003e\n    \u003ca id=\"toc\" class=\"toc item\" onclick=\"displayMenu()\"\u003e\n        \u003cimg src=\"../html-template-resources/images/menu.svg\"\u003e\n    \u003c/a\u003e\n\u003c/div\u003e\n        \u003cdiv class=\"main-wrapper module-wrapper\"\u003e\n                \u003ch1\u003e\n                    \u003ca class=\"breadcrumb-home\" href=\"\n    ../index.html\"\u003e\n    \u003cimg class=\"breadcrumb-home-icon\" src=\"../html-template-resources/images/home.svg\"\u003e\n\u003c/a\u003e\n                    \n                        Module : \u003cspan class=\"modules\"\u003ekafka\u003c/span\u003e\n                    \n                \u003c/h1\u003e\n                    \u003ch2\u003eModule Overview\u003c/h2\u003e\n\u003cp\u003eThis module is used to interact with Kafka Brokers via Kafka Consumer and Kafka Producer clients.\nThis module supports Kafka 1.x.x and 2.0.0 versions.\u003c/p\u003e\n\u003cp\u003eFor information on the operations, which you can perform with this module, see the below \u003cstrong\u003eFunctions\u003c/strong\u003e.\nFor examples on the usage of the operations, see the following.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-producer.html\"\u003eProducer Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-consumer-service.html\"\u003eConsumer Service Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-consumer-client.html\"\u003eConsumer Client Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-producer-transactional.html\"\u003eTransactional Producer Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-authentication-sasl-plain-consumer.html\"\u003eSASL Consumer Authentication Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://ballerina.io/1.2/learn/by-example/kafka-authentication-sasl-plain-producer.html\"\u003eSASL Producer Authentication Example\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4\u003eBasic Usages\u003c/h4\u003e\n\u003ch5\u003ePublishing Messages\u003c/h5\u003e\n\u003col\u003e\n\u003cli\u003eInitialize the Kafka message producer.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003ekafka:ProducerConfiguration producerConfiguration = {\n    bootstrapServers: \u0026quot;localhost:9092\u0026quot;,\n    clientId: \u0026quot;basic-producer\u0026quot;,\n    acks: \u0026quot;all\u0026quot;,\n    retryCount: 3,\n    valueSerializerType: kafka:SER_STRING,\n    keySerializerType: kafka:SER_INT\n};\n\nkafka:Producer kafkaProducer = new (producerConfiguration);\n\u003c/code\u003e\u003c/pre\u003e\n\u003col start=\"2\"\u003e\n\u003cli\u003eUse the \u003ccode\u003ekafka:Producer\u003c/code\u003e to publish messages.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003estring message = \u0026quot;Hello World, Ballerina\u0026quot;;\nkafka:ProducerError? result = kafkaProducer-\u0026gt;send(message, \u0026quot;kafka-topic\u0026quot;, key = 1);\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch5\u003eConsuming Messages\u003c/h5\u003e\n\u003col\u003e\n\u003cli\u003eInitializing the Kafka message consumer.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003ekafka:ConsumerConfiguration consumerConfiguration = {\n    bootstrapServers: \u0026quot;localhost:9092\u0026quot;,\n    groupId: \u0026quot;group-id\u0026quot;,\n    offsetReset: \u0026quot;earliest\u0026quot;,\n    topics: [\u0026quot;kafka-topic\u0026quot;]\n};\n\nkafka:Consumer consumer = new (consumerConfiguration);\n\u003c/code\u003e\u003c/pre\u003e\n\u003col start=\"2\"\u003e\n\u003cli\u003eUse the \u003ccode\u003ekafka:Consumer\u003c/code\u003e as a simple record consumer.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003ekafka:ConsumerRecord[]|kafka:ConsumerError result = consumer-\u0026gt;poll(1000);\n\u003c/code\u003e\u003c/pre\u003e\n\u003col start=\"3\"\u003e\n\u003cli\u003eUse the \u003ccode\u003ekafka:Consumer\u003c/code\u003e as a listener.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003elistener kafka:Consumer consumer = new (consumerConfiguration);\n\nservice kafkaService on consumer {\n    // This resource will be executed when a message is published to the\n    // subscribed topic/topics.\n    resource function onMessage(kafka:Consumer kafkaConsumer,\n            kafka:ConsumerRecord[] records) {\n    }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003eSend Data Using Avro\u003c/h4\u003e\n\u003cp\u003eThe Ballerina Kafka module supports Avro serialization and deserialization.\u003c/p\u003e\n\u003cp\u003eTo try this, create a new Ballerina project and two modules inside it.\u003c/p\u003e\n\u003cp\u003eExecute the below commands to do this.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003eballerina new kafka_avro_sample\ncd kafka_avro_sample\nballerina add producer\nballerina add consumer\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch5\u003eDependencies\u003c/h5\u003e\n\u003cp\u003eTo use Avro, you need to add the necessary dependencies to the Ballerina project you created.\nTo do so, download the necessary dependencies and add them inside the \u003ccode\u003eresources\u003c/code\u003e directory. Also, add those dependencies to the \u003ccode\u003eBallerina.toml\u003c/code\u003e file of your project.\nThe following is a sample \u003ccode\u003eBallerina.toml\u003c/code\u003e file with the dependencies.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-toml\"\u003e    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/kafka-avro-serializer-5.4.1.jar\u0026quot;\n    artifactId = \u0026quot;kafka-avro-serializer\u0026quot;\n    version = \u0026quot;5.4.1\u0026quot;\n    groupId = \u0026quot;io.confluent\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/kafka-schema-registry-client-5.4.1.jar\u0026quot;\n    artifactId = \u0026quot;kafka-schema-registry-client\u0026quot;\n    version = \u0026quot;5.4.1\u0026quot;\n    groupId = \u0026quot;io.confluent\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/common-config-5.4.1.jar\u0026quot;\n    artifactId = \u0026quot;common-config\u0026quot;\n    version = \u0026quot;5.4.1\u0026quot;\n    groupId = \u0026quot;io.confluent\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/common-utils-5.4.1.jar\u0026quot;\n    artifactId = \u0026quot;common-utils\u0026quot;\n    version = \u0026quot;5.4.1\u0026quot;\n    groupId = \u0026quot;io.confluent\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/avro-1.9.2.jar\u0026quot;\n    artifactId = \u0026quot;avro\u0026quot;\n    version = \u0026quot;1.9.2\u0026quot;\n    groupId = \u0026quot;org.apache.avro\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/jackson-core-2.10.3.jar\u0026quot;\n    artifactId = \u0026quot;jackson-core\u0026quot;\n    version = \u0026quot;1.9.2\u0026quot;\n    groupId = \u0026quot;com.fasterxml.jackson.core\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/jackson-databind-2.10.3.jar\u0026quot;\n    artifactId = \u0026quot;jackson-databind\u0026quot;\n    version = \u0026quot;2.10.3\u0026quot;\n    groupId = \u0026quot;com.fasterxml.jackson.core\u0026quot;\n\n    [[platform.libraries]]\n    module = \u0026quot;producer\u0026quot;\n    path = \u0026quot;./resources/jackson-annotations-2.10.3.jar\u0026quot;\n    artifactId = \u0026quot;jackson-annotations\u0026quot;\n    version = \u0026quot;2.10.3\u0026quot;\n    groupId = \u0026quot;com.fasterxml.jackson.core\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNow, the directory structure will look like below (some of the files are ignored).\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003e├── Ballerina.toml\n├── resources\n│   ├── avro-1.9.2.jar\n│   ├── common-config-5.4.1.jar\n│   ├── common-utils-5.4.1.jar\n│   ├── jackson-annotations-2.10.3.jar\n│   ├── jackson-core-2.10.3.jar\n│   ├── jackson-databind-2.10.3.jar\n│   ├── kafka-avro-serializer-5.4.1.jar\n│   └── kafka-schema-registry-client-5.4.1.jar\n└── src\n    ├── consumer\n    │   └── main.bal\n    └── producer\n        └── main.bal\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch5\u003eAvro Producer\u003c/h5\u003e\n\u003cp\u003eThe \u003ccode\u003ekafka:Proucer\u003c/code\u003e can be configured to send data using Avro by providing the following configurations.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003eschemaString\u003c/code\u003e: This is the schema string, which is used to define the Avro schema.\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003edataRecord\u003c/code\u003e: The data record you want to send through Kafka.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003esrc/producer/main.bal:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003eimport ballerina/io;\nimport ballerina/kafka;\n\npublic type Person record {\n    string name;\n    int age;\n};\n\nkafka:ProducerConfiguration configs = {\n    bootstrapServers: \u0026quot;\u0026lt;KAFKA_BROKER_HOST_AND_PORT\u0026gt;\u0026quot;,\n    // Other configurations\n    valueSerializerType: kafka:SER_AVRO,\n    schemaRegistryUrl: \u0026quot;\u0026lt;SCHEMA_REGISTRY_URL\u0026gt;\u0026quot;\n};\n\nstring schema = \u0026quot;{\\\u0026quot;type\\\u0026quot; : \\\u0026quot;record\\\u0026quot;,\u0026quot; +\n                  \u0026quot;\\\u0026quot;namespace\\\u0026quot; : \\\u0026quot;Thisaru\\\u0026quot;,\u0026quot; +\n                  \u0026quot;\\\u0026quot;name\\\u0026quot; : \\\u0026quot;person\\\u0026quot;,\u0026quot; +\n                  \u0026quot;\\\u0026quot;fields\\\u0026quot; : [\u0026quot; + \n                    \u0026quot;{ \\\u0026quot;name\\\u0026quot; : \\\u0026quot;name\\\u0026quot;, \\\u0026quot;type\\\u0026quot; : \\\u0026quot;string\\\u0026quot; },\u0026quot; +\n                    \u0026quot;{ \\\u0026quot;name\\\u0026quot; : \\\u0026quot;age\\\u0026quot;, \\\u0026quot;type\\\u0026quot; : \\\u0026quot;int\\\u0026quot; }\u0026quot; +\n                  \u0026quot;]}\u0026quot;;\n\npublic function main() {\n    kafka:Producer producer = new(configs);\n\n    Person person = {\n        name: \u0026quot;Lahiru Perera\u0026quot;,\n        age: 28\n    };\n\n    kafka:AvroRecord avroRecord = {\n        schemaString: schema,\n        dataRecord: person\n    };\n\n    kafka:ProducerError? result = producer-\u0026gt;send(avroRecord, \u0026quot;add-person\u0026quot;);\n    if (result is kafka:ProducerError) {\n        io:println(result);    \n    }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch5\u003eAvro Consumer\u003c/h5\u003e\n\u003cp\u003eThe Kafka implementation of Ballerina currently supports Avro deserialization only for generic records.\nThe Consumer will return a \u003ccode\u003ekafka:AvroGenericRecord\u003c/code\u003e with the data received from Avro.\u003c/p\u003e\n\u003cp\u003eThe following is a sample consumer.\u003c/p\u003e\n\u003cp\u003esrc/producer/main.bal:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003eimport ballerina/io;\nimport ballerina/kafka;\n\nkafka:ConsumerConfiguration configs = {\n    bootstrapServers: \u0026quot;\u0026lt;KAFKA_BROKER_HOST_AND_PORT\u0026gt;\u0026quot;,\n    groupId: \u0026quot;test-group\u0026quot;,\n    // Other configurations\n    topics: [\u0026quot;add-person\u0026quot;],\n    valueDeserializerType: kafka:DES_AVRO,\n    schemaRegistryUrl: \u0026quot;\u0026lt;SCHEMA_REGISTRY_URL\u0026gt;\u0026quot;\n};\n\nlistener kafka:Consumer consumer = new(configs);\n\nservice KafkaService on consumer {\n    resource function onMessage(kafka:Consumer consumer, kafka:ConsumerRecord[] records) {\n        io:println(\u0026quot;Records received\u0026quot;);\n        foreach var kafkaRecord in records {\n            anydata value = kafkaRecord.value;\n            if (value is kafka:AvroGenericRecord) {\n                io:println(value);\n            } else {\n                io:println(\u0026quot;Invalid record type\u0026quot;);\n            }\n        }\n    }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNow, execute the below command to run the consumer:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003eballerina run consumer\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThis will start the Kafka service to listen. You can verify it by the following messages, which will be displayed on the screen.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003e[ballerina/kafka] kafka servers: \u0026lt;KAFKA_BROKER_HOST_AND_PORT\u0026gt;\n[ballerina/kafka] subscribed topics: add-person\n[ballerina/kafka] started kafka listener\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThen, open another terminal and execute the below command to run the producer:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003eballerina run producer\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNow, the consumer will receive the data and the received data will be printed on the Console as follows.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-shell\"\u003eRecords received\nname=Lahiru Perera age=28\n\u003c/code\u003e\u003c/pre\u003e\n\n\n            \n            \u003csection class=\"method-content\" id=\"records\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#records\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Records \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"AuthenticationConfiguration\" title=\"AuthenticationConfiguration\"\u003e\n                                \u003ca class=\"records \" href=\"records/AuthenticationConfiguration.html\"\u003eAuthenticationConfiguration\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations related to Kafka authentication mechanisms.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"AvroGenericRecord\" title=\"AvroGenericRecord\"\u003e\n                                \u003ca class=\"records \" href=\"records/AvroGenericRecord.html\"\u003eAvroGenericRecord\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a generic Avro record.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"AvroRecord\" title=\"AvroRecord\"\u003e\n                                \u003ca class=\"records \" href=\"records/AvroRecord.html\"\u003eAvroRecord\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eDefines a record to send data using Avro serialization.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"ConsumerConfiguration\" title=\"ConsumerConfiguration\"\u003e\n                                \u003ca class=\"records \" href=\"records/ConsumerConfiguration.html\"\u003eConsumerConfiguration\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations related to consumer endpoint.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"ConsumerRecord\" title=\"ConsumerRecord\"\u003e\n                                \u003ca class=\"records \" href=\"records/ConsumerRecord.html\"\u003eConsumerRecord\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eType related to consumer record.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"Detail\" title=\"Detail\"\u003e\n                                \u003ca class=\"records \" href=\"records/Detail.html\"\u003eDetail\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents the details of an error.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"KeyStore\" title=\"KeyStore\"\u003e\n                                \u003ca class=\"records \" href=\"records/KeyStore.html\"\u003eKeyStore\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations related to the KeyStore.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"PartitionOffset\" title=\"PartitionOffset\"\u003e\n                                \u003ca class=\"records \" href=\"records/PartitionOffset.html\"\u003ePartitionOffset\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents the topic partition position in which the consumed record is stored.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"ProducerConfiguration\" title=\"ProducerConfiguration\"\u003e\n                                \u003ca class=\"records \" href=\"records/ProducerConfiguration.html\"\u003eProducerConfiguration\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents the Kafka Producer configuration.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"Protocols\" title=\"Protocols\"\u003e\n                                \u003ca class=\"records \" href=\"records/Protocols.html\"\u003eProtocols\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations related to the SSL/TLS protocol and the versions to be used.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"SecureSocket\" title=\"SecureSocket\"\u003e\n                                \u003ca class=\"records \" href=\"records/SecureSocket.html\"\u003eSecureSocket\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations for facilitating secure communication with the Kafka server.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"TopicPartition\" title=\"TopicPartition\"\u003e\n                                \u003ca class=\"records \" href=\"records/TopicPartition.html\"\u003eTopicPartition\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a topic partition.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate records\" id=\"TrustStore\" title=\"TrustStore\"\u003e\n                                \u003ca class=\"records \" href=\"records/TrustStore.html\"\u003eTrustStore\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigurations related to the TrustStore.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n            \u003c/section\u003e\n            \n\n            \n            \u003csection class=\"method-content\" id=\"objects\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#objects\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Objects \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate objects\" id=\"Deserializer\" title=\"Deserializer\"\u003e\n                                \u003ca class=\"objects \" href=\"objects/Deserializer.html\"\u003eDeserializer\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a Kafka deserializer object.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate objects\" id=\"Serializer\" title=\"Serializer\"\u003e\n                                \u003ca class=\"objects \" href=\"objects/Serializer.html\"\u003eSerializer\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a Kafka serializer object.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n             \u003c/section\u003e\n            \n\n            \n             \u003csection class=\"method-content\" id=\"clients\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#clients\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Clients \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate clients\" id=\"Consumer\" title=\"Consumer\"\u003e\n                                \u003ca class=\"clients \" href=\"clients/Consumer.html\"\u003eConsumer\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a Kafka consumer endpoint.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate clients\" id=\"Producer\" title=\"Producer\"\u003e\n                                \u003ca class=\"clients \" href=\"clients/Producer.html\"\u003eProducer\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a Kafka producer endpoint.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n             \u003c/section\u003e\n            \n\n            \n           \n\n            \n\n\n            \n            \u003csection class=\"method-content\" id=\"constants\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#constants\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Constants \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_BYTE_ARRAY\" title=\"DES_BYTE_ARRAY\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_BYTE_ARRAY\"\u003eDES_BYTE_ARRAY\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka byte array deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_STRING\" title=\"DES_STRING\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_STRING\"\u003eDES_STRING\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka string deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_INT\" title=\"DES_INT\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_INT\"\u003eDES_INT\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka int deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_FLOAT\" title=\"DES_FLOAT\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_FLOAT\"\u003eDES_FLOAT\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka float deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_CUSTOM\" title=\"DES_CUSTOM\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_CUSTOM\"\u003eDES_CUSTOM\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eUser-defined deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"DES_AVRO\" title=\"DES_AVRO\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#DES_AVRO\"\u003eDES_AVRO\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eApache Avro deserializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"ISOLATION_COMMITTED\" title=\"ISOLATION_COMMITTED\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#ISOLATION_COMMITTED\"\u003eISOLATION_COMMITTED\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigures the consumer to read the committed messages only in the transactional mode when poll() is called.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"ISOLATION_UNCOMMITTED\" title=\"ISOLATION_UNCOMMITTED\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#ISOLATION_UNCOMMITTED\"\u003eISOLATION_UNCOMMITTED\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eConfigures the consumer to read all the messages including the aborted ones.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"ACKS_ALL\" title=\"ACKS_ALL\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#ACKS_ALL\"\u003eACKS_ALL\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eProducer acknowledgement type is 'all'.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"ACKS_NONE\" title=\"ACKS_NONE\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#ACKS_NONE\"\u003eACKS_NONE\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eProducer acknowledgement type '0'.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"ACKS_SINGLE\" title=\"ACKS_SINGLE\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#ACKS_SINGLE\"\u003eACKS_SINGLE\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eProducer acknowledgement type '1'.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_BYTE_ARRAY\" title=\"SER_BYTE_ARRAY\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_BYTE_ARRAY\"\u003eSER_BYTE_ARRAY\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka Byte Array serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_STRING\" title=\"SER_STRING\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_STRING\"\u003eSER_STRING\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka string serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_INT\" title=\"SER_INT\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_INT\"\u003eSER_INT\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka int serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_FLOAT\" title=\"SER_FLOAT\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_FLOAT\"\u003eSER_FLOAT\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eIn-built Kafka float serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_CUSTOM\" title=\"SER_CUSTOM\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_CUSTOM\"\u003eSER_CUSTOM\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eUser-defined serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"SER_AVRO\" title=\"SER_AVRO\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#SER_AVRO\"\u003eSER_AVRO\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eApache Avro serializer.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"COMPRESSION_NONE\" title=\"COMPRESSION_NONE\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#COMPRESSION_NONE\"\u003eCOMPRESSION_NONE\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eNo compression.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"COMPRESSION_GZIP\" title=\"COMPRESSION_GZIP\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#COMPRESSION_GZIP\"\u003eCOMPRESSION_GZIP\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka GZIP compression type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"COMPRESSION_SNAPPY\" title=\"COMPRESSION_SNAPPY\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#COMPRESSION_SNAPPY\"\u003eCOMPRESSION_SNAPPY\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka Snappy compression type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"COMPRESSION_LZ4\" title=\"COMPRESSION_LZ4\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#COMPRESSION_LZ4\"\u003eCOMPRESSION_LZ4\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka LZ4 compression type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"COMPRESSION_ZSTD\" title=\"COMPRESSION_ZSTD\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#COMPRESSION_ZSTD\"\u003eCOMPRESSION_ZSTD\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka ZSTD compression type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"AUTH_SASL_PLAIN\" title=\"AUTH_SASL_PLAIN\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#AUTH_SASL_PLAIN\"\u003eAUTH_SASL_PLAIN\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka SASL_PLAIN authentication mechanism\u003c/p\u003e\n\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"PROTOCOL_SASL_PLAINTEXT\" title=\"PROTOCOL_SASL_PLAINTEXT\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#PROTOCOL_SASL_PLAINTEXT\"\u003ePROTOCOL_SASL_PLAINTEXT\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"PROTOCOL_SASL_SSL\" title=\"PROTOCOL_SASL_SSL\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#PROTOCOL_SASL_SSL\"\u003ePROTOCOL_SASL_SSL\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"CONSUMER_ERROR\" title=\"CONSUMER_ERROR\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#CONSUMER_ERROR\"\u003eCONSUMER_ERROR\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eUsed as the error reason for the \u003ccode\u003ekafka:ConsumerError\u003c/code\u003e type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"PRODUCER_ERROR\" title=\"PRODUCER_ERROR\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#PRODUCER_ERROR\"\u003ePRODUCER_ERROR\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eUsed as the error reason for the \u003ccode\u003ekafka:ProducerError\u003c/code\u003e type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate constant\" id=\"AVRO_ERROR\" title=\"AVRO_ERROR\"\u003e\n                                \u003ca class=\"constant \" href=\"constants.html#AVRO_ERROR\"\u003eAVRO_ERROR\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eUsed as the error reason for the \u003ccode\u003ekafka:AvroError\u003c/code\u003e type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n            \u003c/section\u003e\n            \n\n\n            \n\n            \n            \u003csection class=\"method-content\" id=\"types\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#types\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Types \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"AuthenticationMechanism\" title=\"AuthenticationMechanism\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#AuthenticationMechanism\"\u003eAuthenticationMechanism\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents the supported Kafka SASL authentication mechanisms.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"CompressionType\" title=\"CompressionType\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#CompressionType\"\u003eCompressionType\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka compression types to compress the messages.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"DeserializerType\" title=\"DeserializerType\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#DeserializerType\"\u003eDeserializerType\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka in-built deserializer type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"IsolationLevel\" title=\"IsolationLevel\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#IsolationLevel\"\u003eIsolationLevel\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka consumer isolation level type.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"ProducerAcks\" title=\"ProducerAcks\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#ProducerAcks\"\u003eProducerAcks\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka producer acknowledgement types.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"SecurityProtocol\" title=\"SecurityProtocol\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#SecurityProtocol\"\u003eSecurityProtocol\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents the supported security protocols for Kafka clients.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate types\" id=\"SerializerType\" title=\"SerializerType\"\u003e\n                                \u003ca class=\"types \" href=\"types.html#SerializerType\"\u003eSerializerType\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eKafka in-built serializer types.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n            \u003c/section\u003e\n            \n\n            \n             \u003csection class=\"method-content\" id=\"errors\"\u003e\n                \u003cdiv class=\"main-method-title here\"\u003e\n                    \u003ca class=\"url-link\" href=\"#errors\"\u003e\n                        \u003cimg class=\"url-link-img\" src=\"../html-template-resources/images/link.svg\"\u003e\n                    \u003c/a\u003e\n                \u003ch2\u003e Errors \u003c/h2\u003e\n                \u003c/div\u003e\n                \u003ctable\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate errors\" id=\"AvroError\" title=\"AvroError\"\u003e\n                                \u003ca class=\"errors \" href=\"errors.html#AvroError\"\u003eAvroError\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eRepresents a Kafka Avro related error.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate errors\" id=\"ConsumerError\" title=\"ConsumerError\"\u003e\n                                \u003ca class=\"errors \" href=\"errors.html#ConsumerError\"\u003eConsumerError\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eError type specific to the \u003ccode\u003ekafka:Consumer\u003c/code\u003e object functions.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                        \u003ctr\u003e\n                            \u003ctd class=\"module-title truncate errors\" id=\"ProducerError\" title=\"ProducerError\"\u003e\n                                \u003ca class=\"errors \" href=\"errors.html#ProducerError\"\u003eProducerError\u003c/a\u003e\n                            \u003c/td\u003e\n                            \u003ctd class=\"module-desc\"\u003e\n                                \n                                \u003cp\u003eError type specific to the \u003ccode\u003ekafka:Producer\u003c/code\u003e object functions.\n                            \u003c/td\u003e\n                        \u003c/tr\u003e\n                    \n                \u003c/table\u003e\n            \u003c/section\u003e\n            \n        \u003c/div\u003e\n    \u003c/div\u003e\n\n\u003c/body\u003e\n\n\u003cscript\u003e\nlet mainNavLinks = document.querySelectorAll(\".primary-list.module ul li a\");\nlet mainSections = document.querySelectorAll(\".main-wrapper section.method-content\");\n\nlet lastId;\nlet cur = [];\n\nlet contentWrapper = document.querySelector(\".content-wrapper\");\ncontentWrapper.addEventListener(\"scroll\", event =\u003e {\n  let fromTop = contentWrapper.scrollTop;\n\n  mainNavLinks.forEach(link =\u003e {\n    let section = document.querySelector(\"#\" + link.attributes.getNamedItem(\"data\").textContent);\n\n    if (\n      section.offsetTop \u003c= fromTop \u0026\u0026\n      section.offsetTop + section.offsetHeight \u003e fromTop\n    ) {\n      link.classList.add(\"current\");\n    } else {\n      link.classList.remove(\"current\");\n    }\n  });\n});\n\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\n\u003cscript\u003e\n    window.onload = (event) =\u003e {\n        ballerinaHighlighter.highlightSnippets();\n    };\n\u003c/script\u003e\n\n\n","id":"index"},"__N_SSG":true},"page":"/1.2/learn/[...slug]","query":{"slug":["api-docs","ballerina","kafka","index"]},"buildId":"geRb0rqzn94SlolO3EdK0","assetPrefix":"/sarani.github.io","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

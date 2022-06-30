@@ -1,0 +1,1162 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-PSL2TX4"></script><script src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-2"></script><meta name="next-head-count" content="5"/><meta name="robots" content="noindex"/><meta name="googlebot" content="noindex"/><meta name="author" content="WSO2, Inc."/><meta property="og:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta property="og:title" content="Ballerina"/><meta property="og:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@ballerinalang"/><meta name="twitter:creator" content="@ballerinalang"/><meta name="twitter:title" content="Ballerina"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><meta property="twitter:image" content="/sarani.github.io/images/ballerina-swan-lake-sm-banner-general.png"/><link rel="shortcut icon" href="/sarani.github.io/images/favicon.ico"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/sarani.github.io/_next/static/css/7841f10ed1920b81.css" as="style"/><link rel="stylesheet" href="/sarani.github.io/_next/static/css/7841f10ed1920b81.css" data-n-g=""/><link rel="preload" href="/sarani.github.io/_next/static/css/30c629d66883cef3.css" as="style"/><link rel="stylesheet" href="/sarani.github.io/_next/static/css/30c629d66883cef3.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/sarani.github.io/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/sarani.github.io/_next/static/chunks/webpack-5eb31c0b92c81f71.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/framework-bb5c596eafb42b22.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/main-98a1a717dae31bf2.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/pages/_app-557e3b4efecd738c.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/410-46d08a682048d6c6.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/722-2cbc26cf7056599d.js" defer=""></script><script src="/sarani.github.io/_next/static/chunks/pages/1.2/learn/%5B...slug%5D-ca93244e23df67fc.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_buildManifest.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_ssgManifest.js" defer=""></script><script src="/sarani.github.io/_next/static/geRb0rqzn94SlolO3EdK0/_middlewareManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrIzQ.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjARc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu52xM.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ABc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBhc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBBc-.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgWxM.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5g.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtvAA.woff) format('woff')}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz0dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzQdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzwdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzMdL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz8dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEz4dL-vwnYh2eg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzAdL-vwnYg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xFIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xMIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xEIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xLIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xHIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xGIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzIXKMny.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc3CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc-CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc2CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc5CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc1CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc0CsTYl4BOQ3o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc6CsTYl4BO.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxFIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxMIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxEIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxLIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxHIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxGIzIXKMnyrYk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzIXKMny.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body><div id="__next" data-reactroot=""><div class="main-wrapper vstack gap-0"><div class="wrap-page-content container-fluid"><div class="row"><div class="mdContent col-12"><div class="container"><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module contains an implementation of the W3C WebSub recommendation, which facilitates a push-based content delivery/notification mechanism between publishers and subscribers.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,websub">
+
+    <title>API Docs - Object : Hub</title>
+    <script src="../../html-template-resources/jquery.min.js"></script>
+
+    <!-- BIO THEME START -->
+<link rel="stylesheet" href="/css/latest-bootstrap.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="/css/latest-bootstrap-theme.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="/js/latest-bootstrap.js"></script>
+
+<script type="text/javascript" src="/js/api-doc-template.js"></script>
+<script type="text/javascript" src="/js/ballerina-common.js"></script>
+<link rel="stylesheet" href="/css/ballerina-io.css">
+<link rel="stylesheet" href="/css/ballerina-io-docs.css">
+<link rel="stylesheet" href="/css/ballerina-io-api-new.css">
+
+<style>
+    .line-numbers-wrap {
+        display: none;
+    }
+     .cVersionChangeBanner{
+    color: #000000;
+    background-color: #fcdf4a !important;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    transition : all 0.3s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 9;
+    }
+    .cInfoBannerLink{
+        color: #000000;
+        text-decoration: underline;
+    }
+     .cInfoBannerLink:hover{
+        color: #545454 !important;
+        text-decoration: underline !important;
+    }
+   
+    .content-wrapper{
+        padding-top: 2em !important;
+    }
+    @media only screen and (max-width: 992px) {
+        .content-wrapper {padding-top: 7em !important}
+
+    }
+</style>
+<!-- BIO THEME END -->
+
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/font.css">
+    <script src="../../html-template-resources/semantic.min.js"></script>
+    <script src="../../syntax-highlighter/highlighter.js"></script>
+
+</head>
+
+
+<body class="cBallerina-io">
+    <div class="row cBallerina-io-top-row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cTopLineContainer">
+        <div class="cTopLine"></div>
+    </div>
+</div>
+<div class="cVersionChangeBanner">
+       This API documentation is for Ballerina 1.2.0. <a href="https://lib.ballerina.io" class="cInfoBannerLink">View API documentation for the latest release</a>.
+    </div>
+    <div class="row cBallerina-io-Nav" id="iMainNavigation" style="top:50px">
+
+</div>
+<div class="clearfix"></div>
+    <div class="navi-wrapper">
+        <div class="navi-wrapper-content">
+            <a href="
+    ../../index.html">
+    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+</a>
+
+            <div class="primary-list">
+                <h3>Objects</h3>
+                <ul>
+                    
+                        <li class="active">
+                            <a href="Hub.html" onclick="menuLinkClick()">Hub</a>
+                        </li>
+                    
+                        <li >
+                            <a href="HubPersistenceStore.html" onclick="menuLinkClick()">HubPersistenceStore</a>
+                        </li>
+                    
+                        <li >
+                            <a href="IntentVerificationRequest.html" onclick="menuLinkClick()">IntentVerificationRequest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Notification.html" onclick="menuLinkClick()">Notification</a>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="ui divider"></div>
+            
+
+    
+        <div class="version">v1.2.14</div>
+    
+
+
+<div class="primary-list module">
+    
+        <a href="../../websub/index.html" onclick="menuLinkClick()">
+            <h3>websub</h3>
+        </a>
+    
+    <ul>
+        
+        <li>
+            <a data="records" href="../../websub/index.html#records" onclick="menuLinkClick()">Records</a>
+        </li>
+        
+        
+            <li>
+                <a  data="objects" href="../../websub/index.html#objects" onclick="menuLinkClick()">Objects</a>
+            </li>
+        
+        
+            <li>
+                <a data="clients" href="../../websub/index.html#clients" onclick="menuLinkClick()">Clients</a>
+            </li>
+        
+        
+            <li>
+                <a data="listeners" href="../../websub/index.html#listeners" onclick="menuLinkClick()">Listeners</a>
+            </li>
+        
+        
+            <li>
+                <a data="functions" href="../../websub/index.html#functions" onclick="menuLinkClick()">Functions</a>
+            </li>
+        
+        
+            <li>
+                <a data="constants" href="../../websub/index.html#constants" onclick="menuLinkClick()">Constants</a>
+            </li>
+        
+        
+            <li>
+                <a data="annotations" href="../../websub/index.html#annotations" onclick="menuLinkClick()">Annotations</a>
+            </li>
+        
+        
+            <li>
+                <a data="types" href="../../websub/index.html#types" onclick="menuLinkClick()">Types</a>
+            </li>
+        
+        
+            <li>
+                <a data="errors" href="../../websub/index.html#errors" onclick="menuLinkClick()">Errors</a>
+            </li>
+        
+    </ul>
+    <div class="ui divider"></div>
+</div>
+
+            <div class="primary-list module-list">
+    
+        <h3>All Modules</h3>
+        <ul>
+            
+                <li>
+                    <a href="../../auth/index.html">auth</a>
+                </li>
+            
+                <li>
+                    <a href="../../cache/index.html">cache</a>
+                </li>
+            
+                <li>
+                    <a href="../../config/index.html">config</a>
+                </li>
+            
+                <li>
+                    <a href="../../crypto/index.html">crypto</a>
+                </li>
+            
+                <li>
+                    <a href="../../email/index.html">email</a>
+                </li>
+            
+                <li>
+                    <a href="../../encoding/index.html">encoding</a>
+                </li>
+            
+                <li>
+                    <a href="../../file/index.html">file</a>
+                </li>
+            
+                <li>
+                    <a href="../../filepath/index.html">filepath</a>
+                </li>
+            
+                <li>
+                    <a href="../../grpc/index.html">grpc</a>
+                </li>
+            
+                <li>
+                    <a href="../../http/index.html">http</a>
+                </li>
+            
+                <li>
+                    <a href="../../io/index.html">io</a>
+                </li>
+            
+                <li>
+                    <a href="../../java/index.html">java</a>
+                </li>
+            
+                <li>
+                    <a href="../../java.arrays/index.html">java.arrays</a>
+                </li>
+            
+                <li>
+                    <a href="../../java.jdbc/index.html">java.jdbc</a>
+                </li>
+            
+                <li>
+                    <a href="../../jsonutils/index.html">jsonutils</a>
+                </li>
+            
+                <li>
+                    <a href="../../jwt/index.html">jwt</a>
+                </li>
+            
+                <li>
+                    <a href="../../kafka/index.html">kafka</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.array/index.html">lang.array</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.boolean/index.html">lang.boolean</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.decimal/index.html">lang.decimal</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.error/index.html">lang.error</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.float/index.html">lang.float</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.future/index.html">lang.future</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.int/index.html">lang.int</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.map/index.html">lang.map</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.object/index.html">lang.object</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.stream/index.html">lang.stream</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.string/index.html">lang.string</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.table/index.html">lang.table</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.typedesc/index.html">lang.typedesc</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.value/index.html">lang.value</a>
+                </li>
+            
+                <li>
+                    <a href="../../lang.xml/index.html">lang.xml</a>
+                </li>
+            
+                <li>
+                    <a href="../../ldap/index.html">ldap</a>
+                </li>
+            
+                <li>
+                    <a href="../../log/index.html">log</a>
+                </li>
+            
+                <li>
+                    <a href="../../math/index.html">math</a>
+                </li>
+            
+                <li>
+                    <a href="../../mime/index.html">mime</a>
+                </li>
+            
+                <li>
+                    <a href="../../nats/index.html">nats</a>
+                </li>
+            
+                <li>
+                    <a href="../../oauth2/index.html">oauth2</a>
+                </li>
+            
+                <li>
+                    <a href="../../observe/index.html">observe</a>
+                </li>
+            
+                <li>
+                    <a href="../../openapi/index.html">openapi</a>
+                </li>
+            
+                <li>
+                    <a href="../../rabbitmq/index.html">rabbitmq</a>
+                </li>
+            
+                <li>
+                    <a href="../../reflect/index.html">reflect</a>
+                </li>
+            
+                <li>
+                    <a href="../../runtime/index.html">runtime</a>
+                </li>
+            
+                <li>
+                    <a href="../../socket/index.html">socket</a>
+                </li>
+            
+                <li>
+                    <a href="../../stringutils/index.html">stringutils</a>
+                </li>
+            
+                <li>
+                    <a href="../../system/index.html">system</a>
+                </li>
+            
+                <li>
+                    <a href="../../task/index.html">task</a>
+                </li>
+            
+                <li>
+                    <a href="../../test/index.html">test</a>
+                </li>
+            
+                <li>
+                    <a href="../../time/index.html">time</a>
+                </li>
+            
+                <li>
+                    <a href="../../transactions/index.html">transactions</a>
+                </li>
+            
+                <li>
+                    <a href="../../websub/index.html">websub</a>
+                </li>
+            
+                <li>
+                    <a href="../../xmlutils/index.html">xmlutils</a>
+                </li>
+            
+                <li>
+                    <a href="../../xslt/index.html">xslt</a>
+                </li>
+            
+        </ul>
+        <div class="ui divider"></div>
+    
+</div>
+        </div>
+    </div>
+    <div class="content-wrapper pusher">
+        <div>
+    <a id="toc" class="toc item" onclick="displayMenu()">
+        <img src="../../html-template-resources/images/menu.svg">
+    </a>
+</div>
+
+        <div class="main-wrapper">
+            <h1>
+                <a class="breadcrumb-home" href="
+    ../../index.html">
+    <img class="breadcrumb-home-icon" src="../../html-template-resources/images/home.svg">
+</a>
+                <span class="title-type">Object - </span>
+                
+                    <a href="../../websub/index.html">websub</a>
+                 :
+                <span class="objects ">Hub</span>
+            </h1>
+            <p>
+                
+                <p>Represents the Ballerina WebSub Hub.</p>
+
+            </p>
+
+            <div class="constants">
+                <div class="method-sum">
+                    
+                        
+                        <h2>Constructor</h2>
+<h3 >__init</h3><p>(<span class="builtin-type">string</span> subscriptionUrl, <span class="builtin-type">string</span> publishUrl, <a href="../../http/listeners/Listener.html">Listener</a> hubHttpListener)</p>
+<div class="data-wrapper">
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>subscriptionUrl</b><span class="type">  <span class="builtin-type">string</span></span> </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>publishUrl</b><span class="type">  <span class="builtin-type">string</span></span> </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>hubHttpListener</b><span class="type">  <a href="../../http/listeners/Listener.html">Listener</a></span> </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+    
+</div>
+                        
+                    
+
+                
+                    
+                        <h2>Methods</h2>
+                        <div class="method-list">
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="stop">
+        <a href="#stop">stop </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Stops the started up Ballerina WebSub Hub.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="publishUpdate">
+        <a href="#publishUpdate">publishUpdate </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Publishes an update against the topic in the initialized Ballerina Hub.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="registerTopic">
+        <a href="#registerTopic">registerTopic </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Registers a topic in the Ballerina Hub.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="unregisterTopic">
+        <a href="#unregisterTopic">unregisterTopic </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Unregisters a topic in the Ballerina Hub.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="removeSubscription">
+        <a href="#removeSubscription">removeSubscription </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Removes a subscription from the Ballerina Hub, without verifying intent.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="getAvailableTopics">
+        <a href="#getAvailableTopics">getAvailableTopics </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Retrieves topics currently recognized by the Hub.
+    </div>
+</div>
+
+                            
+                                
+<div class="param-sum">
+    <div class="param-name " title="getSubscribers">
+        <a href="#getSubscribers">getSubscribers </a>
+    </div>
+    <div class="param-details"> 
+            
+        <p>Retrieves details of subscribers registered to receive updates for a particular topic.
+    </div>
+</div>
+
+                            
+                        </div>
+                    
+
+                    
+                        
+                            <h2>Fields</h2>
+                                <div class="data-wrapper">
+        
+    <div class="params-listing">
+        <ul>
+            <li> 
+                <span >subscriptionUrl</span>
+                <span class="type">  <span class="builtin-type">string</span></span>
+                
+            </li>
+            <li>
+                <p>
+                    
+                    <p>The URL for subscription changes</p>
+
+                </p>
+            </li>
+        </ul>
+    </div>
+        
+    <div class="params-listing">
+        <ul>
+            <li> 
+                <span >publishUrl</span>
+                <span class="type">  <span class="builtin-type">string</span></span>
+                
+            </li>
+            <li>
+                <p>
+                    
+                    <p>The URL for publishing and topic registration</p>
+
+                </p>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<script>
+let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
+let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
+
+let lastId;
+let cur = [];
+
+let contentWrapper = document.querySelector(".content-wrapper");
+contentWrapper.addEventListener("scroll", event => {
+  let fromTop = contentWrapper.scrollTop;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+
+<script>
+    window.onload = (event) => {
+        ballerinaHighlighter.highlightSnippets();
+    };
+</script>
+
+                        
+                    
+                </div>
+
+                
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="stop" title="stop">
+             <a class="url-link" href="#stop">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > stop </h2>
+        <span class="method-types">
+            <p>()</p>
+            
+                <b> returns </b><span class="builtin-type">error?</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Stops the started up Ballerina WebSub Hub.</p>
+<pre><code class="language-ballerina"> error? registrationResponse = webSubHub.stop();
+</code></pre>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">error?</span></span>)</li>
+                <li><p>An <code>error</code> if hub can't be stoped or else <code>()</code></p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="publishUpdate" title="publishUpdate">
+             <a class="url-link" href="#publishUpdate">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > publishUpdate </h2>
+        <span class="method-types">
+            <p>(<span class="builtin-type">string</span> topic, <span class="builtin-type">string</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">json</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> payload, <span class="builtin-type">string?</span> contentType)</p>
+            
+                <b> returns </b><span class="builtin-type">error?</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Publishes an update against the topic in the initialized Ballerina Hub.</p>
+<pre><code class="language-ballerina"> error? publishResponse = webSubHub.publishUpdate(&quot;http://websubpubtopic.com&quot;,{&quot;action&quot;: &quot;publish&quot;,
+ &quot;mode&quot;: &quot;internal-hub&quot;});
+</code></pre>
+
+    </div>
+    
+        <div class="data-wrapper">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >topic</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The topic for which the update should happen</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >payload</span>
+                        <span class="type">  <span class="builtin-type">string</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">json</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The update payload</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >contentType</span>
+                        <span class="type">  <span class="builtin-type">string?</span> </span>
+                        <span class="default"> (default ())</span>
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The content type header to set for the request delivering the payload</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">error?</span></span>)</li>
+                <li><p>An <code>error</code> if the hub is not initialized or does not represent the internal hub or else <code>()</code></p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="registerTopic" title="registerTopic">
+             <a class="url-link" href="#registerTopic">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > registerTopic </h2>
+        <span class="method-types">
+            <p>(<span class="builtin-type">string</span> topic)</p>
+            
+                <b> returns </b><span class="builtin-type">error?</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Registers a topic in the Ballerina Hub.</p>
+<pre><code class="language-ballerina"> error? registrationResponse = webSubHub.registerTopic(&quot;http://websubpubtopic.com&quot;);
+</code></pre>
+
+    </div>
+    
+        <div class="data-wrapper">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >topic</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The topic to register</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">error?</span></span>)</li>
+                <li><p>An <code>error</code> if an error occurred with registration or else <code>()</code></p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="unregisterTopic" title="unregisterTopic">
+             <a class="url-link" href="#unregisterTopic">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > unregisterTopic </h2>
+        <span class="method-types">
+            <p>(<span class="builtin-type">string</span> topic)</p>
+            
+                <b> returns </b><span class="builtin-type">error?</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Unregisters a topic in the Ballerina Hub.</p>
+<pre><code class="language-ballerina"> error? registrationResponse = webSubHub.unregisterTopic(&quot;http://websubpubtopic.com&quot;);
+</code></pre>
+
+    </div>
+    
+        <div class="data-wrapper">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >topic</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The topic to unregister</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">error?</span></span>)</li>
+                <li><p>An <code>error</code> if an error occurred with unregistration or else <code>()</code></p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="removeSubscription" title="removeSubscription">
+             <a class="url-link" href="#removeSubscription">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > removeSubscription </h2>
+        <span class="method-types">
+            <p>(<span class="builtin-type">string</span> topic, <span class="builtin-type">string</span> callback)</p>
+            
+                <b> returns </b><span class="builtin-type">error?</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Removes a subscription from the Ballerina Hub, without verifying intent.</p>
+<pre><code class="language-ballerina"> error? registrationResponse = webSubHub.removeSubscription(&quot;http://websubpubtopic.com&quot;, &quot;removeSubscriptioCallback&quot;);
+</code></pre>
+
+    </div>
+    
+        <div class="data-wrapper">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >topic</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The topic for which the subscription should be removed</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >callback</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The callback for which the subscription should be removed</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">error?</span></span>)</li>
+                <li><p>An <code>error</code> if an error occurred with removal or else <code>()</code></p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="getAvailableTopics" title="getAvailableTopics">
+             <a class="url-link" href="#getAvailableTopics">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getAvailableTopics </h2>
+        <span class="method-types">
+            <p>()</p>
+            
+                <b> returns </b><span class="array-type"><span class="builtin-type">string</span>[]</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Retrieves topics currently recognized by the Hub.</p>
+<pre><code class="language-ballerina"> string[] topic = webSubHub.getAvailableTopics();
+</code></pre>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)</li>
+                <li><p>An array of available topics</p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title here" id="getSubscribers" title="getSubscribers">
+             <a class="url-link" href="#getSubscribers">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getSubscribers </h2>
+        <span class="method-types">
+            <p>(<span class="builtin-type">string</span> topic)</p>
+            
+                <b> returns </b><span class="array-type"><a href="../../websub/records/SubscriberDetails.html">SubscriberDetails</a>[]</span> 
+            
+        </span>
+    </div>
+    <div class="function-desc">
+        
+        <p>Retrieves details of subscribers registered to receive updates for a particular topic.</p>
+<pre><code class="language-ballerina"> string[] topic = webSubHub.getSubscribers(&quot;http://websubpubtopic.com&quot;);
+</code></pre>
+
+    </div>
+    
+        <div class="data-wrapper">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >topic</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <li>
+                        <p>
+                            
+                            <p>The topic for which details need to be retrieved</p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <ul>
+                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><a href="../../websub/records/SubscriberDetails.html">SubscriberDetails</a>[]</span></span>)</li>
+                <li><p>An array of subscriber details</p>
+</li>
+            </ul>
+        </div>
+        
+    
+</div>
+                    
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
+let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
+
+let lastId;
+let cur = [];
+
+let contentWrapper = document.querySelector(".content-wrapper");
+contentWrapper.addEventListener("scroll", event => {
+  let fromTop = contentWrapper.scrollTop;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+<script>
+function menuLinkClick() {
+  if(window.matchMedia("(max-width: 600px)").matches) {
+    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
+  }
+}
+function displayMenu() {
+  var nav = document.getElementsByClassName("navi-wrapper")[0];
+  var content = document.getElementsByClassName("content-wrapper")[0];
+  if (nav.style.display === "none" || nav.style.display === "") {
+    nav.style.display = "block";
+    content.style.marginLeft = "210px";
+  } else {
+    nav.style.display = "none";
+    content.style.marginLeft = "0px";
+  }
+}
+</script>
+
+<script>
+    window.onload = (event) => {
+        ballerinaHighlighter.highlightSnippets();
+    };
+</script>
+
+
+</div></div></div></div><div class="vstack gap-0"><div class="Footer_footer__gXdNn container-fluid"><div class="row"><div class="col-lg-6 col-md-6 col-sm-12 col-12"><div class="Footer_socialMedia__99VpI"><div class="Footer_smIcons__HD9f7"><ul><li></li><li></li><li></li><li></li><li></li></ul></div><div class="Footer_subscribe__6aRU2"><a href="/sarani.github.io/community#subscribe-to-newsletter">Subscribe to our newsletter</a></div></div><div class="Footer_footerLinks__M9jUM"><ul><li><a href="/sarani.github.io/downloads">DOWNLOAD</a></li><li><a href="https://github.com/ballerina-platform/ballerina-lang/issues/new/choose">REPORT ISSUES</a></li></ul></div></div><div class="Footer_inspire__ZAi5V col-lg-6 col-md-6 col-sm-10 col-12"><p>In the creation of Ballerina, we were inspired by many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub, and WSO2.</p></div></div><div class="Footer_policyLinks__q3ge1 row"><div class="col-12"><ul><li><a href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</a></li><li><a href="/sarani.github.io/license-of-site">SITE LICENSE</a></li><li><a href="/sarani.github.io/terms-of-service">TERMS OF SERVICE</a></li><li><a href="/sarani.github.io/privacy-policy">PRIVACY POLICY</a></li><li><a href="/sarani.github.io/cookie-policy">COOKIE POLICY</a></li><li><a href="/sarani.github.io/security-policy">SECURITY POLICY</a></li><li><a href="/sarani.github.io/trademark-usage-policy">TRADEMARK USAGE POLICY</a></li></ul></div></div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"frontmatter":{},"content":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\n\u003chead\u003e\n    \u003cmeta charset=\"utf-8\"/\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"/\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\"\u003e\n    \u003cmeta name=\"description\" content=\"This module contains an implementation of the W3C WebSub recommendation, which facilitates a push-based content delivery/notification mechanism between publishers and subscribers.\n\"\u003e\n    \u003cmeta name=\"keywords\" content=\"ballerina,ballerina lang,api docs,websub\"\u003e\n\n    \u003ctitle\u003eAPI Docs - Object : Hub\u003c/title\u003e\n    \u003cscript src=\"../../html-template-resources/jquery.min.js\"\u003e\u003c/script\u003e\n\n    \u003c!-- BIO THEME START --\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/latest-bootstrap.css\"\u003e\n\u003c!-- Optional theme --\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/latest-bootstrap-theme.css\"\u003e\n\u003c!-- Latest compiled and minified JavaScript --\u003e\n\u003cscript src=\"/js/latest-bootstrap.js\"\u003e\u003c/script\u003e\n\n\u003cscript type=\"text/javascript\" src=\"/js/api-doc-template.js\"\u003e\u003c/script\u003e\n\u003cscript type=\"text/javascript\" src=\"/js/ballerina-common.js\"\u003e\u003c/script\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io.css\"\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io-docs.css\"\u003e\n\u003clink rel=\"stylesheet\" href=\"/css/ballerina-io-api-new.css\"\u003e\n\n\u003cstyle\u003e\n    .line-numbers-wrap {\n        display: none;\n    }\n     .cVersionChangeBanner{\n    color: #000000;\n    background-color: #fcdf4a !important;\n    width: 100%;\n    display: inline-block;\n    padding: 10px 0px;\n    text-align: center;\n    font-weight: 500;\n    font-size: 20px;\n    transition : all 0.3s;\n    position: fixed;\n    top: 0;\n    width: 100%;\n    height: 50px;\n    z-index: 9;\n    }\n    .cInfoBannerLink{\n        color: #000000;\n        text-decoration: underline;\n    }\n     .cInfoBannerLink:hover{\n        color: #545454 !important;\n        text-decoration: underline !important;\n    }\n   \n    .content-wrapper{\n        padding-top: 2em !important;\n    }\n    @media only screen and (max-width: 992px) {\n        .content-wrapper {padding-top: 7em !important}\n\n    }\n\u003c/style\u003e\n\u003c!-- BIO THEME END --\u003e\n\n    \u003clink rel=\"stylesheet\" href=\"../../html-template-resources/semantic.min.css\"\u003e\n    \u003clink rel=\"stylesheet\" href=\"../../html-template-resources/styles/css/styles.css\"\u003e\n    \u003clink rel=\"stylesheet\" href=\"../../html-template-resources/styles/css/font.css\"\u003e\n    \u003cscript src=\"../../html-template-resources/semantic.min.js\"\u003e\u003c/script\u003e\n    \u003cscript src=\"../../syntax-highlighter/highlighter.js\"\u003e\u003c/script\u003e\n\n\u003c/head\u003e\n\n\n\u003cbody class=\"cBallerina-io\"\u003e\n    \u003cdiv class=\"row cBallerina-io-top-row\"\u003e\n    \u003cdiv class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"\u003e\u003c/div\u003e\n    \u003cdiv class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6 cTopLineContainer\"\u003e\n        \u003cdiv class=\"cTopLine\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\"cVersionChangeBanner\"\u003e\n       This API documentation is for Ballerina 1.2.0. \u003ca href=\"https://lib.ballerina.io\" class=\"cInfoBannerLink\"\u003eView API documentation for the latest release\u003c/a\u003e.\n    \u003c/div\u003e\n    \u003cdiv class=\"row cBallerina-io-Nav\" id=\"iMainNavigation\" style=\"top:50px\"\u003e\n\n\u003c/div\u003e\n\u003cdiv class=\"clearfix\"\u003e\u003c/div\u003e\n    \u003cdiv class=\"navi-wrapper\"\u003e\n        \u003cdiv class=\"navi-wrapper-content\"\u003e\n            \u003ca href=\"\n    ../../index.html\"\u003e\n    \u003cimg class=\"logo\" src=\"../../html-template-resources/images/ballerina-logo.png\"\u003e\n\u003c/a\u003e\n\n            \u003cdiv class=\"primary-list\"\u003e\n                \u003ch3\u003eObjects\u003c/h3\u003e\n                \u003cul\u003e\n                    \n                        \u003cli class=\"active\"\u003e\n                            \u003ca href=\"Hub.html\" onclick=\"menuLinkClick()\"\u003eHub\u003c/a\u003e\n                        \u003c/li\u003e\n                    \n                        \u003cli \u003e\n                            \u003ca href=\"HubPersistenceStore.html\" onclick=\"menuLinkClick()\"\u003eHubPersistenceStore\u003c/a\u003e\n                        \u003c/li\u003e\n                    \n                        \u003cli \u003e\n                            \u003ca href=\"IntentVerificationRequest.html\" onclick=\"menuLinkClick()\"\u003eIntentVerificationRequest\u003c/a\u003e\n                        \u003c/li\u003e\n                    \n                        \u003cli \u003e\n                            \u003ca href=\"Notification.html\" onclick=\"menuLinkClick()\"\u003eNotification\u003c/a\u003e\n                        \u003c/li\u003e\n                    \n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\"ui divider\"\u003e\u003c/div\u003e\n            \n\n    \n        \u003cdiv class=\"version\"\u003ev1.2.14\u003c/div\u003e\n    \n\n\n\u003cdiv class=\"primary-list module\"\u003e\n    \n        \u003ca href=\"../../websub/index.html\" onclick=\"menuLinkClick()\"\u003e\n            \u003ch3\u003ewebsub\u003c/h3\u003e\n        \u003c/a\u003e\n    \n    \u003cul\u003e\n        \n        \u003cli\u003e\n            \u003ca data=\"records\" href=\"../../websub/index.html#records\" onclick=\"menuLinkClick()\"\u003eRecords\u003c/a\u003e\n        \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca  data=\"objects\" href=\"../../websub/index.html#objects\" onclick=\"menuLinkClick()\"\u003eObjects\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"clients\" href=\"../../websub/index.html#clients\" onclick=\"menuLinkClick()\"\u003eClients\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"listeners\" href=\"../../websub/index.html#listeners\" onclick=\"menuLinkClick()\"\u003eListeners\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"functions\" href=\"../../websub/index.html#functions\" onclick=\"menuLinkClick()\"\u003eFunctions\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"constants\" href=\"../../websub/index.html#constants\" onclick=\"menuLinkClick()\"\u003eConstants\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"annotations\" href=\"../../websub/index.html#annotations\" onclick=\"menuLinkClick()\"\u003eAnnotations\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"types\" href=\"../../websub/index.html#types\" onclick=\"menuLinkClick()\"\u003eTypes\u003c/a\u003e\n            \u003c/li\u003e\n        \n        \n            \u003cli\u003e\n                \u003ca data=\"errors\" href=\"../../websub/index.html#errors\" onclick=\"menuLinkClick()\"\u003eErrors\u003c/a\u003e\n            \u003c/li\u003e\n        \n    \u003c/ul\u003e\n    \u003cdiv class=\"ui divider\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n            \u003cdiv class=\"primary-list module-list\"\u003e\n    \n        \u003ch3\u003eAll Modules\u003c/h3\u003e\n        \u003cul\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../auth/index.html\"\u003eauth\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../cache/index.html\"\u003ecache\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../config/index.html\"\u003econfig\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../crypto/index.html\"\u003ecrypto\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../email/index.html\"\u003eemail\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../encoding/index.html\"\u003eencoding\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../file/index.html\"\u003efile\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../filepath/index.html\"\u003efilepath\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../grpc/index.html\"\u003egrpc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../http/index.html\"\u003ehttp\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../io/index.html\"\u003eio\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../java/index.html\"\u003ejava\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../java.arrays/index.html\"\u003ejava.arrays\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../java.jdbc/index.html\"\u003ejava.jdbc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../jsonutils/index.html\"\u003ejsonutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../jwt/index.html\"\u003ejwt\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../kafka/index.html\"\u003ekafka\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.array/index.html\"\u003elang.array\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.boolean/index.html\"\u003elang.boolean\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.decimal/index.html\"\u003elang.decimal\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.error/index.html\"\u003elang.error\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.float/index.html\"\u003elang.float\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.future/index.html\"\u003elang.future\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.int/index.html\"\u003elang.int\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.map/index.html\"\u003elang.map\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.object/index.html\"\u003elang.object\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.stream/index.html\"\u003elang.stream\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.string/index.html\"\u003elang.string\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.table/index.html\"\u003elang.table\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.typedesc/index.html\"\u003elang.typedesc\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.value/index.html\"\u003elang.value\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../lang.xml/index.html\"\u003elang.xml\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../ldap/index.html\"\u003eldap\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../log/index.html\"\u003elog\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../math/index.html\"\u003emath\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../mime/index.html\"\u003emime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../nats/index.html\"\u003enats\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../oauth2/index.html\"\u003eoauth2\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../observe/index.html\"\u003eobserve\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../openapi/index.html\"\u003eopenapi\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../rabbitmq/index.html\"\u003erabbitmq\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../reflect/index.html\"\u003ereflect\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../runtime/index.html\"\u003eruntime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../socket/index.html\"\u003esocket\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../stringutils/index.html\"\u003estringutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../system/index.html\"\u003esystem\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../task/index.html\"\u003etask\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../test/index.html\"\u003etest\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../time/index.html\"\u003etime\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../transactions/index.html\"\u003etransactions\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../websub/index.html\"\u003ewebsub\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../xmlutils/index.html\"\u003exmlutils\u003c/a\u003e\n                \u003c/li\u003e\n            \n                \u003cli\u003e\n                    \u003ca href=\"../../xslt/index.html\"\u003exslt\u003c/a\u003e\n                \u003c/li\u003e\n            \n        \u003c/ul\u003e\n        \u003cdiv class=\"ui divider\"\u003e\u003c/div\u003e\n    \n\u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"content-wrapper pusher\"\u003e\n        \u003cdiv\u003e\n    \u003ca id=\"toc\" class=\"toc item\" onclick=\"displayMenu()\"\u003e\n        \u003cimg src=\"../../html-template-resources/images/menu.svg\"\u003e\n    \u003c/a\u003e\n\u003c/div\u003e\n\n        \u003cdiv class=\"main-wrapper\"\u003e\n            \u003ch1\u003e\n                \u003ca class=\"breadcrumb-home\" href=\"\n    ../../index.html\"\u003e\n    \u003cimg class=\"breadcrumb-home-icon\" src=\"../../html-template-resources/images/home.svg\"\u003e\n\u003c/a\u003e\n                \u003cspan class=\"title-type\"\u003eObject - \u003c/span\u003e\n                \n                    \u003ca href=\"../../websub/index.html\"\u003ewebsub\u003c/a\u003e\n                 :\n                \u003cspan class=\"objects \"\u003eHub\u003c/span\u003e\n            \u003c/h1\u003e\n            \u003cp\u003e\n                \n                \u003cp\u003eRepresents the Ballerina WebSub Hub.\u003c/p\u003e\n\n            \u003c/p\u003e\n\n            \u003cdiv class=\"constants\"\u003e\n                \u003cdiv class=\"method-sum\"\u003e\n                    \n                        \n                        \u003ch2\u003eConstructor\u003c/h2\u003e\n\u003ch3 \u003e__init\u003c/h3\u003e\u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e subscriptionUrl, \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e publishUrl, \u003ca href=\"../../http/listeners/Listener.html\"\u003eListener\u003c/a\u003e hubHttpListener)\u003c/p\u003e\n\u003cdiv class=\"data-wrapper\"\u003e\n    \n        \u003cdiv class=\"params-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003cb\u003esubscriptionUrl\u003c/b\u003e\u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e\u003c/span\u003e \u003c/li\u003e\n                \u003cli\u003e\n                    \n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n    \n        \u003cdiv class=\"params-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003cb\u003epublishUrl\u003c/b\u003e\u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e\u003c/span\u003e \u003c/li\u003e\n                \u003cli\u003e\n                    \n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n    \n        \u003cdiv class=\"params-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003cb\u003ehubHttpListener\u003c/b\u003e\u003cspan class=\"type\"\u003e  \u003ca href=\"../../http/listeners/Listener.html\"\u003eListener\u003c/a\u003e\u003c/span\u003e \u003c/li\u003e\n                \u003cli\u003e\n                    \n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n    \n\u003c/div\u003e\n                        \n                    \n\n                \n                    \n                        \u003ch2\u003eMethods\u003c/h2\u003e\n                        \u003cdiv class=\"method-list\"\u003e\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"stop\"\u003e\n        \u003ca href=\"#stop\"\u003estop \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eStops the started up Ballerina WebSub Hub.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"publishUpdate\"\u003e\n        \u003ca href=\"#publishUpdate\"\u003epublishUpdate \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003ePublishes an update against the topic in the initialized Ballerina Hub.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"registerTopic\"\u003e\n        \u003ca href=\"#registerTopic\"\u003eregisterTopic \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eRegisters a topic in the Ballerina Hub.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"unregisterTopic\"\u003e\n        \u003ca href=\"#unregisterTopic\"\u003eunregisterTopic \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eUnregisters a topic in the Ballerina Hub.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"removeSubscription\"\u003e\n        \u003ca href=\"#removeSubscription\"\u003eremoveSubscription \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eRemoves a subscription from the Ballerina Hub, without verifying intent.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"getAvailableTopics\"\u003e\n        \u003ca href=\"#getAvailableTopics\"\u003egetAvailableTopics \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eRetrieves topics currently recognized by the Hub.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                                \n\u003cdiv class=\"param-sum\"\u003e\n    \u003cdiv class=\"param-name \" title=\"getSubscribers\"\u003e\n        \u003ca href=\"#getSubscribers\"\u003egetSubscribers \u003c/a\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"param-details\"\u003e \n            \n        \u003cp\u003eRetrieves details of subscribers registered to receive updates for a particular topic.\n    \u003c/div\u003e\n\u003c/div\u003e\n\n                            \n                        \u003c/div\u003e\n                    \n\n                    \n                        \n                            \u003ch2\u003eFields\u003c/h2\u003e\n                                \u003cdiv class=\"data-wrapper\"\u003e\n        \n    \u003cdiv class=\"params-listing\"\u003e\n        \u003cul\u003e\n            \u003cli\u003e \n                \u003cspan \u003esubscriptionUrl\u003c/span\u003e\n                \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e\u003c/span\u003e\n                \n            \u003c/li\u003e\n            \u003cli\u003e\n                \u003cp\u003e\n                    \n                    \u003cp\u003eThe URL for subscription changes\u003c/p\u003e\n\n                \u003c/p\u003e\n            \u003c/li\u003e\n        \u003c/ul\u003e\n    \u003c/div\u003e\n        \n    \u003cdiv class=\"params-listing\"\u003e\n        \u003cul\u003e\n            \u003cli\u003e \n                \u003cspan \u003epublishUrl\u003c/span\u003e\n                \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e\u003c/span\u003e\n                \n            \u003c/li\u003e\n            \u003cli\u003e\n                \u003cp\u003e\n                    \n                    \u003cp\u003eThe URL for publishing and topic registration\u003c/p\u003e\n\n                \u003c/p\u003e\n            \u003c/li\u003e\n        \u003c/ul\u003e\n    \u003c/div\u003e\n    \n\u003c/div\u003e\n\n\u003cscript\u003e\nlet mainNavLinks = document.querySelectorAll(\".primary-list.module ul li a\");\nlet mainSections = document.querySelectorAll(\".main-wrapper section.method-content\");\n\nlet lastId;\nlet cur = [];\n\nlet contentWrapper = document.querySelector(\".content-wrapper\");\ncontentWrapper.addEventListener(\"scroll\", event =\u003e {\n  let fromTop = contentWrapper.scrollTop;\n\n  mainNavLinks.forEach(link =\u003e {\n    let section = document.querySelector(\"#\" + link.attributes.getNamedItem(\"data\").textContent);\n\n    if (\n      section.offsetTop \u003c= fromTop \u0026\u0026\n      section.offsetTop + section.offsetHeight \u003e fromTop\n    ) {\n      link.classList.add(\"current\");\n    } else {\n      link.classList.remove(\"current\");\n    }\n  });\n});\n\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\n\u003cscript\u003e\n    window.onload = (event) =\u003e {\n        ballerinaHighlighter.highlightSnippets();\n    };\n\u003c/script\u003e\n\n                        \n                    \n                \u003c/div\u003e\n\n                \n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"stop\" title=\"stop\"\u003e\n             \u003ca class=\"url-link\" href=\"#stop\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e stop \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e()\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eStops the started up Ballerina WebSub Hub.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e error? registrationResponse = webSubHub.stop();\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn \u003ccode\u003eerror\u003c/code\u003e if hub can't be stoped or else \u003ccode\u003e()\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"publishUpdate\" title=\"publishUpdate\"\u003e\n             \u003ca class=\"url-link\" href=\"#publishUpdate\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e publishUpdate \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e topic, \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e | \u003cspan class=\"builtin-type\"\u003exml\u003c/span\u003e | \u003cspan class=\"builtin-type\"\u003ejson\u003c/span\u003e | \u003cspan class=\"array-type\"\u003e\u003cspan class=\"builtin-type\"\u003ebyte\u003c/span\u003e[]\u003c/span\u003e | \u003ca href=\"../../io/objects/ReadableByteChannel.html\"\u003eReadableByteChannel\u003c/a\u003e payload, \u003cspan class=\"builtin-type\"\u003estring?\u003c/span\u003e contentType)\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003ePublishes an update against the topic in the initialized Ballerina Hub.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e error? publishResponse = webSubHub.publishUpdate(\u0026quot;http://websubpubtopic.com\u0026quot;,{\u0026quot;action\u0026quot;: \u0026quot;publish\u0026quot;,\n \u0026quot;mode\u0026quot;: \u0026quot;internal-hub\u0026quot;});\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n        \u003cdiv class=\"data-wrapper\"\u003e\n            \u003ch3 class=\"param-title\"\u003eParameters\u003c/h3\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003etopic\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe topic for which the update should happen\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003epayload\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e | \u003cspan class=\"builtin-type\"\u003exml\u003c/span\u003e | \u003cspan class=\"builtin-type\"\u003ejson\u003c/span\u003e | \u003cspan class=\"array-type\"\u003e\u003cspan class=\"builtin-type\"\u003ebyte\u003c/span\u003e[]\u003c/span\u003e | \u003ca href=\"../../io/objects/ReadableByteChannel.html\"\u003eReadableByteChannel\u003c/a\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe update payload\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003econtentType\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring?\u003c/span\u003e \u003c/span\u003e\n                        \u003cspan class=\"default\"\u003e (default ())\u003c/span\u003e\n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe content type header to set for the request delivering the payload\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \n        \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn \u003ccode\u003eerror\u003c/code\u003e if the hub is not initialized or does not represent the internal hub or else \u003ccode\u003e()\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"registerTopic\" title=\"registerTopic\"\u003e\n             \u003ca class=\"url-link\" href=\"#registerTopic\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e registerTopic \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e topic)\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eRegisters a topic in the Ballerina Hub.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e error? registrationResponse = webSubHub.registerTopic(\u0026quot;http://websubpubtopic.com\u0026quot;);\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n        \u003cdiv class=\"data-wrapper\"\u003e\n            \u003ch3 class=\"param-title\"\u003eParameters\u003c/h3\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003etopic\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe topic to register\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \n        \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn \u003ccode\u003eerror\u003c/code\u003e if an error occurred with registration or else \u003ccode\u003e()\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"unregisterTopic\" title=\"unregisterTopic\"\u003e\n             \u003ca class=\"url-link\" href=\"#unregisterTopic\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e unregisterTopic \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e topic)\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eUnregisters a topic in the Ballerina Hub.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e error? registrationResponse = webSubHub.unregisterTopic(\u0026quot;http://websubpubtopic.com\u0026quot;);\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n        \u003cdiv class=\"data-wrapper\"\u003e\n            \u003ch3 class=\"param-title\"\u003eParameters\u003c/h3\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003etopic\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe topic to unregister\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \n        \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn \u003ccode\u003eerror\u003c/code\u003e if an error occurred with unregistration or else \u003ccode\u003e()\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"removeSubscription\" title=\"removeSubscription\"\u003e\n             \u003ca class=\"url-link\" href=\"#removeSubscription\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e removeSubscription \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e topic, \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e callback)\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eRemoves a subscription from the Ballerina Hub, without verifying intent.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e error? registrationResponse = webSubHub.removeSubscription(\u0026quot;http://websubpubtopic.com\u0026quot;, \u0026quot;removeSubscriptioCallback\u0026quot;);\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n        \u003cdiv class=\"data-wrapper\"\u003e\n            \u003ch3 class=\"param-title\"\u003eParameters\u003c/h3\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003etopic\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe topic for which the subscription should be removed\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003ecallback\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe callback for which the subscription should be removed\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \n        \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"builtin-type\"\u003eerror?\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn \u003ccode\u003eerror\u003c/code\u003e if an error occurred with removal or else \u003ccode\u003e()\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"getAvailableTopics\" title=\"getAvailableTopics\"\u003e\n             \u003ca class=\"url-link\" href=\"#getAvailableTopics\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e getAvailableTopics \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e()\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"array-type\"\u003e\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e[]\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eRetrieves topics currently recognized by the Hub.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e string[] topic = webSubHub.getAvailableTopics();\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"array-type\"\u003e\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e[]\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn array of available topics\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                        \u003cdiv class=\"method-content\"\u003e\n    \u003cdiv class=\"main-method-title here\" id=\"getSubscribers\" title=\"getSubscribers\"\u003e\n             \u003ca class=\"url-link\" href=\"#getSubscribers\"\u003e\n                \u003cimg class=\"url-link-img\" src=\"../../html-template-resources/images/link.svg\"\u003e\n            \u003c/a\u003e\n            \u003ch2 \u003e getSubscribers \u003c/h2\u003e\n        \u003cspan class=\"method-types\"\u003e\n            \u003cp\u003e(\u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e topic)\u003c/p\u003e\n            \n                \u003cb\u003e returns \u003c/b\u003e\u003cspan class=\"array-type\"\u003e\u003ca href=\"../../websub/records/SubscriberDetails.html\"\u003eSubscriberDetails\u003c/a\u003e[]\u003c/span\u003e \n            \n        \u003c/span\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\"function-desc\"\u003e\n        \n        \u003cp\u003eRetrieves details of subscribers registered to receive updates for a particular topic.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-ballerina\"\u003e string[] topic = webSubHub.getSubscribers(\u0026quot;http://websubpubtopic.com\u0026quot;);\n\u003c/code\u003e\u003c/pre\u003e\n\n    \u003c/div\u003e\n    \n        \u003cdiv class=\"data-wrapper\"\u003e\n            \u003ch3 class=\"param-title\"\u003eParameters\u003c/h3\u003e\n                \n            \u003cdiv class=\"params-listing\"\u003e\n                \u003cul\u003e\n                    \u003cli\u003e\n                        \u003cspan \u003etopic\u003c/span\u003e\n                        \u003cspan class=\"type\"\u003e  \u003cspan class=\"builtin-type\"\u003estring\u003c/span\u003e \u003c/span\u003e\n                        \n                    \u003c/li\u003e\n                    \u003cli\u003e\n                        \u003cp\u003e\n                            \n                            \u003cp\u003eThe topic for which details need to be retrieved\u003c/p\u003e\n\n                        \u003c/p\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n            \n        \u003c/div\u003e\n    \n\n    \n        \n        \u003cdiv class=\"returns-listing\"\u003e\n            \u003cul\u003e\n                \u003cli\u003e \u003ch3 class=\"type\"\u003eReturn Type\u003c/h3\u003e (\u003cspan class=\"type\"\u003e\u003cspan class=\"array-type\"\u003e\u003ca href=\"../../websub/records/SubscriberDetails.html\"\u003eSubscriberDetails\u003c/a\u003e[]\u003c/span\u003e\u003c/span\u003e)\u003c/li\u003e\n                \u003cli\u003e\u003cp\u003eAn array of subscriber details\u003c/p\u003e\n\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \n    \n\u003c/div\u003e\n                    \n                \n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\n\u003c/body\u003e\n\n\u003cscript\u003e\nlet mainNavLinks = document.querySelectorAll(\".primary-list.module ul li a\");\nlet mainSections = document.querySelectorAll(\".main-wrapper section.method-content\");\n\nlet lastId;\nlet cur = [];\n\nlet contentWrapper = document.querySelector(\".content-wrapper\");\ncontentWrapper.addEventListener(\"scroll\", event =\u003e {\n  let fromTop = contentWrapper.scrollTop;\n\n  mainNavLinks.forEach(link =\u003e {\n    let section = document.querySelector(\"#\" + link.attributes.getNamedItem(\"data\").textContent);\n\n    if (\n      section.offsetTop \u003c= fromTop \u0026\u0026\n      section.offsetTop + section.offsetHeight \u003e fromTop\n    ) {\n      link.classList.add(\"current\");\n    } else {\n      link.classList.remove(\"current\");\n    }\n  });\n});\n\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\u003cscript\u003e\nfunction menuLinkClick() {\n  if(window.matchMedia(\"(max-width: 600px)\").matches) {\n    document.getElementsByClassName(\"navi-wrapper\")[0].style.display = \"none\";\n  }\n}\nfunction displayMenu() {\n  var nav = document.getElementsByClassName(\"navi-wrapper\")[0];\n  var content = document.getElementsByClassName(\"content-wrapper\")[0];\n  if (nav.style.display === \"none\" || nav.style.display === \"\") {\n    nav.style.display = \"block\";\n    content.style.marginLeft = \"210px\";\n  } else {\n    nav.style.display = \"none\";\n    content.style.marginLeft = \"0px\";\n  }\n}\n\u003c/script\u003e\n\n\u003cscript\u003e\n    window.onload = (event) =\u003e {\n        ballerinaHighlighter.highlightSnippets();\n    };\n\u003c/script\u003e\n\n\n","id":"Hub"},"__N_SSG":true},"page":"/1.2/learn/[...slug]","query":{"slug":["api-docs","ballerina","websub","objects","Hub"]},"buildId":"geRb0rqzn94SlolO3EdK0","assetPrefix":"/sarani.github.io","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
