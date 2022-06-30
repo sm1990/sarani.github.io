@@ -16,9 +16,15 @@ const TopNav = (props) => {
   }
   
   const [show, setShow] = React.useState(false);
+  //const [path, setPath] = React.useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  // const router = useRouter();
+  // router.push(path);
+  
 
   return (
     <>
@@ -50,7 +56,7 @@ const TopNav = (props) => {
               <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/">Blog</Nav.Link>
               <NavDropdown title="Swan Lake" id={styles.navbarScrollingDropdown}>
                 <NavDropdown.Item href="#action3">Swan-Lake</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">V 1.2</NavDropdown.Item>
+                <NavDropdown.Item href="/1.2/learn/">V 1.2</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">V 1.1</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">V 1.0</NavDropdown.Item>
               </NavDropdown>
