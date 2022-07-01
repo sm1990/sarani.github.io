@@ -65,9 +65,9 @@ export default function BallerinaNewsLetter({ posts }) {
                       :null
                     }
                     <div key={index} className='newsletterInfo'>
-                        <p className='newsletterDate'>{frontmatter.title}</p>
+                        <p className='newsletterDate'>{frontmatter.issue}</p>
                         <a className='newsletterLink' target="_blank" rel="noreferrer" href={`${prefix}/community/newsletter/${slug}`} >
-                            <h4 className='newsletterTitle'>Ballerina: a data-oriented programming language</h4>
+                            <h4 className='newsletterTitle'>{frontmatter.title}</h4>
                         </a>
                     </div>
                   </>
