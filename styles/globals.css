@@ -556,8 +556,20 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
 }
 
 .newsletterInfo {
-  border-bottom: .3px solid #d9dadb;
+  /* border-bottom: .3px solid #d9dadb; */
   padding: 10px 0;
+}
+
+.newsletterInfo + .newsletterInfo {
+  border-bottom: .3px solid #d9dadb;
+}
+
+.newsletterInfo + :not(.newsletterInfo) {
+  border-bottom: none;
+}
+
+.newsletterInfo:last-of-type {
+  border-bottom: none;
 }
 
 .newsletterDate {

@@ -113,8 +113,6 @@ export default function PostPage({ frontmatter, content, id }) {
         <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col> */}
         <Col xs={12} className='mdContent'>
           <Container dangerouslySetInnerHTML={{__html: content}}/>
-            
-          
         </Col>
        
       </Layout>
