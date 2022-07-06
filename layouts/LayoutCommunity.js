@@ -17,15 +17,11 @@ export default function Layout({ children }) {
       </Head>
       <Stack gap={0} className='main-wrapper community'>
         <TopNav launcher='community'/>
-        <Container className='wrap-page-content' fluid>
+        <div className='wrap-page-content'>
           <Row className='community-wrap-row'>
-            {/* <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-              <LeftNav/>
-            </Col>
-            <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col> */}
             {children}
           </Row>
-        </Container>
+        </div>
 
         <Footer/>
 

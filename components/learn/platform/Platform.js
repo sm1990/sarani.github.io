@@ -14,8 +14,9 @@ export default function Platform() {
         </Col>
       </Row>
 
+
       <Row className="pageContentRow">
-        <Col xs={12} md={6}>
+        <Col xs={12} lg={4}>
           <div className={styles.pGroup}>
             <h3>Source code &amp; dependencies</h3>
 
@@ -88,6 +89,8 @@ export default function Platform() {
           </div>
 
 
+        </Col>
+        <Col xs={12} lg={4}>
           <div className={styles.pGroup}>
             <h3>Run in the cloud</h3>
 
@@ -110,6 +113,7 @@ export default function Platform() {
             </div>
           </div>
 
+
           <div className={styles.pGroup}>
             <h3>Configure &amp; observe</h3>
 
@@ -131,10 +135,30 @@ export default function Platform() {
             </div>
           </div>
 
+          <div className={styles.pGroup}>
+            <h3>Java interoperability</h3>
 
+            <div className={styles.content}>
+              <p className={styles.title}>
+                <a href={`${prefix}/learn/call-java-code-from-ballerina/`} className={styles.titleLink}>
+                  Call Java code from Ballerina
+                </a>
+              </p>
+              <p className={styles.description}>Calling Java code from Ballerina</p>
+            </div>
+
+            <div className={styles.content}>
+              <p className={styles.title}>
+                <a href={`${prefix}/learn/java-interoperability/`} className={styles.titleLink}>
+                  Java interoperability guide
+                </a>
+              </p>
+              <p className={styles.description}>Instructions on the supoorted Java interoperability</p>
+            </div>
+          </div>
         </Col>
+        <Col xs={12} lg={4}>
 
-        <Col xs={12} md={6}>
           <div className={styles.pGroup}>
             <h3>Ballerina Tooling</h3>
 
@@ -190,31 +214,6 @@ export default function Platform() {
               <p className={styles.description}>Details of the CLI commands of the bal tool.</p>
             </div>
           </div>
-
-
-          <div className={styles.pGroup}>
-            <h3>Java interoperability</h3>
-
-            <div className={styles.content}>
-              <p className={styles.title}>
-                <a href={`${prefix}/learn/call-java-code-from-ballerina/`} className={styles.titleLink}>
-                  Call Java code from Ballerina
-                </a>
-              </p>
-              <p className={styles.description}>Calling Java code from Ballerina</p>
-            </div>
-
-            <div className={styles.content}>
-              <p className={styles.title}>
-                <a href={`${prefix}/learn/java-interoperability/`} className={styles.titleLink}>
-                  Java interoperability guide
-                </a>
-              </p>
-              <p className={styles.description}>Instructions on the supoorted Java interoperability</p>
-            </div>
-          </div>
-
-
 
           <div className={styles.pGroup}>
             <h3>Ballerina Central</h3>

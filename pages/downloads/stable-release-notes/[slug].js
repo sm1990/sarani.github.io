@@ -116,7 +116,7 @@ export default function PostPage({ frontmatter, content }) {
         <meta property="twitter:text:description" content="A programming language for the cloud that makes it easier to use, combine, and create network services."/>
       </Head>
       <Layout>
-        <Col sm={7} xxl={8} className='mdContent'>
+        <Col xs={12} sm={10} className='mdContent'>
           <Container>
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>

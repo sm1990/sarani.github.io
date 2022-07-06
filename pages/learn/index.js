@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import Layout from '../../layouts/LayoutDocs';
+import Layout from '../../layouts/LayoutLearn';
 import Intro from '../../components/learn/intro/Intro';
 import LearnTheLanguage from '../../components/learn/language/Language';
 import UseCases from '../../components/learn/use-cases/UseCases';

@@ -30,7 +30,7 @@ nav.docs, nav.downloads, nav.other, nav.docs-learn, nav.community {
     color: #20b6b0 !important;
 }
 
-.topNav a.active {
+.topNav a.active, .topNav a:hover {
     color: #57595d !important;
 }
 

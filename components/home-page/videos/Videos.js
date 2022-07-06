@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Row, Col} from 'react-bootstrap';
+import { Row, Col, Container} from 'react-bootstrap';
 import Image from 'next-image-export-optimizer';
 
 import { prefix } from '../../../utils/prefix';
@@ -9,6 +9,7 @@ export default function Videos() {
 
   return (
     <Col sm={12}>
+      <Container>
       <Row>
         <Col sm={12}>
           <h2 id="featured-videos">Featured videos</h2>
@@ -37,7 +38,7 @@ export default function Videos() {
       </Col>
 
     </Row>
-
+    </Container>
     </Col>
   );
 }
