@@ -413,3 +413,21 @@ ul.eventsTabs {
   padding-top: 20px;
   border-top: #a7a8ab solid 0.3px;
 }
+
+.useRow {
+  margin-bottom: 15px;
+}
+
+.useRow p {
+  margin-bottom: 5px;
+}
+
+.useRow a {
+  text-decoration: none;
+  color: #20b6b0;
+  font-weight: 400;
+}
+
+.useRow a:hover {
+  color: #57595d;
+}
