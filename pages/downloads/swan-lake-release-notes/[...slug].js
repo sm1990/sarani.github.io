@@ -13,9 +13,9 @@ setCDN("https://unpkg.com/shiki/");
 
 import Layout from '../../../layouts/LayoutOther';
 import { prefix } from '../../../utils/prefix';
-import swanlake from '../../../_data/swanlake-latest/metadata.json';
+// import swanlake from '../../../_data/swanlake-latest/metadata.json';
 
-import { Liquid } from 'liquidjs';
+// import { Liquid } from 'liquidjs';
 
 
 var traverseFolder = function(dir) {
@@ -96,33 +96,6 @@ export default function PostPage({ frontmatter, content }) {
   }
 
 
-
-
-
-
-
-
-
-  // const preRenderContent = (content) => {
-  //   const [preRender, setPreRender] = React.useState('');
-  //   const engine = new Liquid();
-  //   const tpl = engine.parse(content)
-    
-  //   React.useEffect( () => { 
-  //       async function fetchData1() {
-          
-  //       engine
-  //       .render(tpl, {version: swanlake['version']})
-  //       .then((e) => {
-  //       setPreRender(e)
-  //       }
-  //       )
-  //       }
-  //       fetchData1();
-  //   }, [tpl]);
-  //   return preRender
-  // }
-
   return (
     <>
       <Head>
@@ -171,7 +144,6 @@ export default function PostPage({ frontmatter, content }) {
             
             rehypePlugins={[rehypeRaw]}
             >
-            {/* {preRenderContent(content)} */}
             {content}
           </ReactMarkdown>
           
