@@ -103,25 +103,25 @@ export default function PostPage({ frontmatter, content }) {
 
 
 
-  const preRenderContent = (content) => {
-    const [preRender, setPreRender] = React.useState('');
-    const engine = new Liquid();
-    const tpl = engine.parse(content)
+  // const preRenderContent = (content) => {
+  //   const [preRender, setPreRender] = React.useState('');
+  //   const engine = new Liquid();
+  //   const tpl = engine.parse(content)
     
-    React.useEffect( () => { 
-        async function fetchData1() {
+  //   React.useEffect( () => { 
+  //       async function fetchData1() {
           
-        engine
-        .render(tpl, {version: swanlake['version']})
-        .then((e) => {
-        setPreRender(e)
-        }
-        )
-        }
-        fetchData1();
-    }, [tpl]);
-    return preRender
-  }
+  //       engine
+  //       .render(tpl, {version: swanlake['version']})
+  //       .then((e) => {
+  //       setPreRender(e)
+  //       }
+  //       )
+  //       }
+  //       fetchData1();
+  //   }, [tpl]);
+  //   return preRender
+  // }
 
   return (
     <>
@@ -171,7 +171,8 @@ export default function PostPage({ frontmatter, content }) {
             
             rehypePlugins={[rehypeRaw]}
             >
-            {preRenderContent(content)}
+            {/* {preRenderContent(content)} */}
+            {content}
           </ReactMarkdown>
           
           <div className='contentNav'>
