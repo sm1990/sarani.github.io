@@ -54,7 +54,7 @@ export default function Search() {
                         role="textbox"
                         spellCheck="false"
                         type="text"
-                        value=""
+                        defaultValue=""
                         className="algolia-search-box"
                         id="algolia-search-box"
                     />
