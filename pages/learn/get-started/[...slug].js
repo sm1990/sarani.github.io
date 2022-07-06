@@ -80,7 +80,9 @@ export default function PostPage({ frontmatter, content, id }) {
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
-    
+    if (language=='proto') {
+      language = 'ballerina';
+    }
     React.useEffect( () => { 
 
       async function fetchData() {
@@ -96,8 +98,6 @@ export default function PostPage({ frontmatter, content, id }) {
 
     return [codeSnippet]
   }
-
-
 
   return (
     <>
@@ -162,7 +162,7 @@ export default function PostPage({ frontmatter, content, id }) {
           <MarkdownNavbar 
           source={content} 
           ordered={false} 
-          headingTopOffset={150} 
+          headingTopOffset={150}
           declarative/>
         </Col>
       </Layout>
