@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 import Layout from '../../layouts/LayoutCommunity';
 import Newsletter from '../../components/community/newsletter/Newsletter';
@@ -11,7 +11,7 @@ import GetInvolved from '../../components/community/get-involved/GetInvolved';
 import Contact from '../../components/community/contact/Contact';
 
 export default function Community() {
- 
+
   return (
     <Layout>
       <Col sm={12}>
@@ -33,49 +33,57 @@ export default function Community() {
              </div>
           </Col>
         </Row> */}
-      
+
         <Row className="pageHeader pageContentRow communityRow">
           <Col xs={12}>
-            <h1>Community</h1> 
+            <Container>
+              <h1>Community</h1>
+            </Container>
           </Col>
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <Col xs={12} md={6}>
-            <p>Welcome to the Ballerina community! Use the below channels to ask questions, find answers, post feedback, and help establish Ballerina as a truly community-owned resource.</p> 
+          <Col xs={12}>
+            <Container>
+              <Row>
+                <Col xs={12} md={12} lg={6}>
+                  <p>Welcome to the Ballerina community! Use the below channels to ask questions, find answers, post feedback, and help establish Ballerina as a truly community-owned resource.</p>
+                </Col>
+              </Row>
+            </Container>
           </Col>
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <Newsletter/>
+          <Newsletter />
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <Events/>
+          <Events />
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <Resources/>
+          <Resources />
         </Row>
 
         <Row className="pageContentRow communityRow slackRow">
-          <Slack/>
+          <Slack />
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <TechTalk/>
+          <TechTalk />
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <GetInvolved/>
+          <GetInvolved />
         </Row>
 
         <Row className="pageContentRow communityRow">
-          <Contact/>
+          <Contact />
         </Row>
 
       </Col>
     </Layout>
-    
+
   );
 }

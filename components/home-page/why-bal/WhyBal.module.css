@@ -1,6 +1,5 @@
 .whyBallerinaBox {
   display: inline-block;
-  /* padding-right: 60px; */
   min-height: 400px;
   text-align: center;
 }
@@ -47,6 +46,7 @@ ul.inlineLinkList li {
 .greenLinkArrow a {
   color: #20b6b0 !important;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .greenLinkArrow a:hover {

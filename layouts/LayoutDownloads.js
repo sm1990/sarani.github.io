@@ -4,6 +4,7 @@ import { Container, Row, Stack } from 'react-bootstrap';
 
 import Footer from '../components/common/footer/Footer';
 
+
 export default function Layout({ children }) {
   const TopNav = dynamic(() => import('../components/common/top-nav/TopNav'), { ssr: false });
 
@@ -38,12 +39,8 @@ export default function Layout({ children }) {
       </Head>
       <Stack gap={0} className='main-wrapper downloads'>
         <TopNav launcher='downloads'/>
-        <Container className='wrap-page-content' fluid>
-          <Row >
-            {/* <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-              <LeftNav/>
-            </Col>
-            <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col> */}
+        <Container className='wrap-page-content'>
+          <Row>
             {children}
           </Row>
         </Container>
@@ -51,8 +48,6 @@ export default function Layout({ children }) {
         <Footer/>
 
       </Stack>
-
-
       
     </>
   );

@@ -30,6 +30,11 @@
     margin-bottom: 15px;
     margin-top: 15px;
     box-shadow: none; */
+    margin-bottom: 10px;
+}
+
+.cardBox:hover {
+    border: #464646 solid 0.1px;;
 }
 
 .cardBody {

@@ -10,6 +10,8 @@
     color: #20b6b0;
     cursor: default;
     background: #f5f5f5;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .balActionTabs li button:focus, .balActionTabs li button:hover {

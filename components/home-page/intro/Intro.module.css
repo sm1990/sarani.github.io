@@ -38,34 +38,21 @@ img.homePageLogo {
     display: inline-block;
     float: right;
     margin-right: 30px;
-    /* width: 240px; */
 }
 
 a.homeIntroButton {
     font-size: 25px;
     background-color: #20b6b0;
     color: #fff;
-    /* color: var(--color-black); */
     padding: 10px 70px 10px 20px;
     display: inline-block;
     float: right;
-    /* background-image: url('/images/main-right-arrow-home.svg'); */
-    /* background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: right center; */
-    /* margin-top: 30px; */
     font-weight: 500;
     text-decoration: none;
-    min-width: 366px;
     margin-bottom: 10px;
     border: 1px solid #20b6b0;
     margin-top: 8px;
-}
-
-@media (min-width: 576px) {
-    a.homeIntroButton {
-        min-width: 400px;
-    }
+    width: 100%;
 }
 
 .homeIntroButton p {
@@ -79,11 +66,9 @@ a.homeIntroButton {
 
 a.playButton {
     background-color: transparent;
-    /* background-image: url("/images/main-right-arrow-home-hover.svg") !important; */
 }
 
 a.homeIntroButton:hover {
     background-color: #eeeeee;
-    /* background-image: url("/images/main-right-arrow-home-hover.svg") !important; */
     color: #494949;
 }

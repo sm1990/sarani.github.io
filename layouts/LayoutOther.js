@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       </Head>
       <Stack gap={0} className='main-wrapper other'>
         <TopNav launcher='other'/>
-        <Container className='wrap-page-content' fluid>
+        <Container className='wrap-page-content'>
           <Row >
             {children}
           </Row>

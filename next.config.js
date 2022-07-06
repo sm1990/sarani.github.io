@@ -18,6 +18,7 @@ const nextConfig = {
   env: {
     storePicturesInWEBP: true,
     generateAndUseBlurImages: true,
+    distServer: 'https://dist.ballerina.io',
   },
   async rewrites() {
     return [

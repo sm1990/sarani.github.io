@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Row, Col, Tabs, Tab } from 'react-bootstrap';
+import { Row, Col, Tabs, Tab, Container } from 'react-bootstrap';
 import Image from 'next-image-export-optimizer';
 
 import { prefix } from '../../../utils/prefix';
@@ -8,13 +8,13 @@ import styles from './BalAction.module.css'
 export default function BalAction() {
   const [key, setKey] = React.useState('consuming-services');
   let hash = global.location.hash;
-  
+
   React.useEffect(() => {
     if (hash !== '') {
       hash = hash.replace('#', '');
       setKey(hash);
-    }    
-  },[hash]);
+    }
+  }, [hash]);
 
 
   const ConsumerServices = `import ballerina/http;
@@ -318,162 +318,164 @@ service / on new http:Listener(8080) {
 
   return (
     <Col sm={12}>
-      <Row>
-        <Col sm={12}>
-          <h2 id="ballerina-in-action">Ballerina in action</h2>
-        </Col>
-      </Row>
+      <Container>
+        <Row>
+          <Col sm={12}>
+            <h2 id="ballerina-in-action">Ballerina in action</h2>
+          </Col>
+        </Row>
 
-      <Row>
-        <Col sm={12}>
-          <Tabs
-            id="controlled-tab-example"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}  
-            className={styles.balActionTabs}         
-          >
+        <Row>
+          <Col sm={12}>
+            <Tabs
+              id="controlled-tab-example"
+              activeKey={key}
+              onSelect={(k) => setKey(k)}
+              className={styles.balActionTabs}
+            >
 
-            <Tab eventKey="consuming-services" title="Consuming services">
-              <Row>
-                <Col lg={7} md={12} sm={12} className={styles.col1} id="column1" >
-                  <div className={styles.focusPane}>
-                    <div className="highlight"> 
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina" >
-                          {ConsumerServices}
-                        </code>
-                      </pre>
-                    </div>
-                  </div>
-                </Col>
-                <Col lg={5} md={12} sm={12} className={styles.col2} id="column2" >
-                  <div className={styles.focusPane}>
-                    <Image src={`${prefix}images/consuming-services-diagram.svg`} width={433} height={655} alt="consuming-services-diagram"/>
-                  </div>
-                </Col>
-               </Row>
-            </Tab>
-            
-
-            <Tab eventKey="working-with-data" title="Working with data">
-              <Row>
-                <Col lg={7} md={12} sm={12} className={styles.col1}>
+              <Tab eventKey="consuming-services" title="Consuming services">
+                <Row>
+                  <Col lg={7} md={12} sm={12} className={styles.col1} id="column1" >
                     <div className={styles.focusPane}>
-                      <div className="highlight"> 
-                          <pre className="language-ballerina basic ballerina">
-                            <code className="language-ballerina ballerina">
-                              {workingWithData}
-                            </code>
-                          </pre>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina" >
+                            {ConsumerServices}
+                          </code>
+                        </pre>
                       </div>
                     </div>
-                </Col>
-                <Col lg={5} md={12} sm={12} className={styles.col2}>
-                  <div className={styles.focusPane}>
-                    <Image src={`${prefix}/images/working-with-data-diagram.svg`} width={433} height={456} alt="working-with-data-diagram"/>
-                    <a target="_blank" href="https://play.ballerina.io/?gist=30a51792b6b4d46c2cbdfdd424fb3b45&file=play.bal" rel="noreferrer">
-                      <button className={styles.playgroundButton}  id="simple11" > Try in Playground</button>
-                    </a> 
-                  </div> 
-                </Col>
-              </Row>
-            </Tab>
-
-            <Tab eventKey="restful-api" title="RESTful API">
-              <Row>
-                <Col sm={12}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight"> 
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina">
-                          {restfulApi}
-                        </code>
-                      </pre>
+                  </Col>
+                  <Col lg={5} md={12} sm={12} className={styles.col2} id="column2" >
+                    <div className={styles.focusPane}>
+                      <Image src={`${prefix}images/consuming-services-diagram.svg`} width={433} height={655} alt="consuming-services-diagram" />
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Tab>
+                  </Col>
+                </Row>
+              </Tab>
 
-            <Tab eventKey="grpc-api" title="gRPC API">
-              <Row>
-                <Col lg={7} md={12} sm={7} className={styles.col1}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight">
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina">
-                          {grpcCode1}
-                        </code>
-                      </pre>
+
+              <Tab eventKey="working-with-data" title="Working with data">
+                <Row>
+                  <Col lg={7} md={12} sm={12} className={styles.col1}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {workingWithData}
+                          </code>
+                        </pre>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col lg={5} md={12} sm={12} id="grpc-api-proto" className={styles.col2}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight">
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina" >
-                          {grpcCode2}
-                        </code>
-                      </pre>
+                  </Col>
+                  <Col lg={5} md={12} sm={12} className={styles.col2}>
+                    <div className={styles.focusPane}>
+                      <Image src={`${prefix}/images/working-with-data-diagram.svg`} width={433} height={456} alt="working-with-data-diagram" />
+                      <a target="_blank" href="https://play.ballerina.io/?gist=30a51792b6b4d46c2cbdfdd424fb3b45&file=play.bal" rel="noreferrer">
+                        <button className={styles.playgroundButton} id="simple11" > Try in Playground</button>
+                      </a>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Tab>
+                  </Col>
+                </Row>
+              </Tab>
 
-            <Tab eventKey="graphql-api" title="GraphQL API">
-              <Row>
-                <Col sm={12}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight">
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina">
-                          {graphqlApi}
-                        </code>
-                      </pre>
+              <Tab eventKey="restful-api" title="RESTful API">
+                <Row>
+                  <Col sm={12}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {restfulApi}
+                          </code>
+                        </pre>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Tab>
+                  </Col>
+                </Row>
+              </Tab>
 
-            <Tab eventKey="kafka-consumer" title="Kafka consumer/producer">
-              <Row>
-                <Col sm={12}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight">
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina">
-                          {kafkaConsumer}
-                        </code>
-                      </pre>
+              <Tab eventKey="grpc-api" title="gRPC API">
+                <Row>
+                  <Col lg={7} md={12} sm={7} className={styles.col1}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {grpcCode1}
+                          </code>
+                        </pre>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Tab>
-
-            <Tab eventKey="working-with-databases" title="Working with databases">
-              <Row>
-                <Col sm={12}>
-                  <div className={styles.focusPane}>
-                    <div className="highlight">
-                      <pre className="language-ballerina basic ballerina">
-                        <code className="language-ballerina ballerina">
-                          {workingWithDataBases}
-                        </code>
-                      </pre>
+                  </Col>
+                  <Col lg={5} md={12} sm={12} id="grpc-api-proto" className={styles.col2}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina" >
+                            {grpcCode2}
+                          </code>
+                        </pre>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Tab>
+                  </Col>
+                </Row>
+              </Tab>
 
-          </Tabs>
+              <Tab eventKey="graphql-api" title="GraphQL API">
+                <Row>
+                  <Col sm={12}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {graphqlApi}
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Tab>
 
-        </Col>
-      </Row>
+              <Tab eventKey="kafka-consumer" title="Kafka consumer/producer">
+                <Row>
+                  <Col sm={12}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {kafkaConsumer}
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Tab>
+
+              <Tab eventKey="working-with-databases" title="Working with databases">
+                <Row>
+                  <Col sm={12}>
+                    <div className={styles.focusPane}>
+                      <div className="highlight">
+                        <pre className="language-ballerina basic ballerina">
+                          <code className="language-ballerina ballerina">
+                            {workingWithDataBases}
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Tab>
+
+            </Tabs>
+
+          </Col>
+        </Row>
+      </Container>
     </Col>
   );
 }

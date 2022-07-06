@@ -1,4 +1,3 @@
-import Image from 'next-image-export-optimizer';
 import dynamic from 'next/dynamic';
 import { Col, Row } from 'react-bootstrap';
 
@@ -7,43 +6,42 @@ import Intro from '../components/home-page/intro/Intro';
 import WhyBal from '../components/home-page/why-bal/WhyBal';
 import Videos from '../components/home-page/videos/Videos';
 import Events from '../components/home-page/events/Events';
-import { prefix } from '../utils/prefix';
 import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
   const BalAction = dynamic(() => import('../components/home-page/bal-action/BalAction'), { ssr: false });
-  
+
   return (
     <Layout>
       <Col sm={12}>
 
         <Row className={styles.homeIntro}>
-          <Intro/>
+          <Intro />
         </Row>
 
 
 
         <Row className={styles.homeBalAction}>
-          <BalAction/>
+          <BalAction />
         </Row>
 
 
 
         <Row className={styles.homeWhyBal}>
-          <WhyBal/>
+          <WhyBal />
         </Row>
 
 
         <Row className={styles.homeVideos}>
-          <Videos/>
+          <Videos />
         </Row>
 
 
         <Row className={styles.homeEvents}>
-          <Events/>
+          <Events />
         </Row>
-        
+
       </Col>
     </Layout>
   );

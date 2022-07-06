@@ -20,10 +20,10 @@ a {
   font-weight: 300;
 }
 
-/* .contentRow {
+.contentRow, .community-wrap-row {
   margin-left: 0 !important;
   margin-right: 0 !important;
-} */
+}
 
 .leftNav {
   position: -webkit-sticky;
@@ -31,7 +31,6 @@ a {
   top: 4rem;
   height: calc(100vh - 4rem);
   overflow-y: auto;
- 
   padding-right: 0 !important;
   padding-left: 0 !important;
   font-size: 13px;
@@ -68,41 +67,36 @@ a {
 }
 
 .mdContent h1, .policyContent h1 {
-  /* font-size: 38px; */
-  /* color: #585a5e; */
   color: #464646;
-  /* font-weight: 600; */
-  /* margin-bottom: 30px; */
+  font-size: 2rem;
+
 }
 
 .mdContent h2, .policyContent h2 {
-  /* font-size: 32px; */
-  margin-top: 40px;
-  /* margin-bottom: 30px;
-  font-weight: 200; */
-  /* color: #464646; */
+  /* margin-top: 40px; */
+  margin-top: 20px;
   color: #585a5e;
-  /* border-bottom: 1px solid #464646;
-  display: inline-block;
-  padding-bottom: 10px;
-  scroll-margin-top: 60px; */
-  /* text-transform: uppercase; */
+  font-size: 1.5rem;
 }
 
 .mdContent h3, .policyContent h3 {
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  margin-top: 20px;
   color: #585a5e;
+  font-size: 1rem;
 }
 
 .community h3 {
   color: #585a5e;
+  /* font-size: 1rem; */
+  font-size: 1.4rem;
 }
 
 .mdContent p, .mdContent li, .policyContent p, .communityRow p {
   font-size: 16px;
   color: #57595d;
   line-height: 24px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 10px 0;
   line-height: 27px;
   letter-spacing: 0.4px;
@@ -183,21 +177,16 @@ pre.shiki {
 } */
 
 .pageToc {
-  /* background-color: cadetblue; */
-  /* font-size: 14px;
-  padding-top: 5px; */
-
   position: -webkit-sticky;
   position: sticky;
   top: 4rem;
   height: calc(100vh - 4rem);
   overflow-y: auto;
-  /* background-color: aqua; */
   padding-right: 0 !important;
   padding-left: 0 !important;
   padding-top: 25px;
   font-size: 13px;
-  /* border-right: 1px solid #e6e6e6; */
+  font-weight: 400;
 }
 
 .pageToc h6 {
@@ -206,13 +195,10 @@ pre.shiki {
 
 .pageToc::-webkit-scrollbar {
   display: none;
-  /* width: 7px;
-  background-color: #ffffff; */
 }
 
 .markdown-navigation {
   border-left: 1px solid #20b6b0;
-  /* padding-left: 10px; */
 }
 
 .markdown-navigation .title-anchor {
@@ -236,21 +222,6 @@ pre.shiki {
 .home .wrap-page-content {
   padding-bottom: 0;
 }
-
-
-
-/* .home-wrap-row, .community-wrap-row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-} */
-
-
-
-
-
-
-
-
 
 ul.cInlinelinklist {
   margin: 20px 0 0 0;
@@ -277,17 +248,13 @@ a.cGreenLinkArrow:hover {
   color: #000 !important;
 }
 
-
-
-
-
-
 .pageContentRow {
   margin-bottom: 20px;
 }
 
 .pageContentRow h2 {
   color: #585a5e;
+  font-size: 1.5rem;
 }
 
 .pageHeader h1 {
@@ -295,252 +262,32 @@ a.cGreenLinkArrow:hover {
   color: #464646;
   /* color: #585a5e; */
   font-weight: 500;
+  font-size: 2rem;
 }
 
-.donwloadVersion h2 {
-  /* font-size: 24px; */
-  /* color: #464646; */
-  color: #585a5e;
-  font-size: 32px;
-  margin-top: 15px;
-}
-
-.downloads .alert {
-  /* border: 1px solid #20b6b0; */
-  border: 1px solid #f5f5f5;
-}
-
+/*--------downloads page -------*/
 .downloads :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background: #f5f5f5 !important;
 }
 
-.dVersions {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dVersion:not(:last-child) { 
-  margin-right: 1px;
-}
 
 
-.dVersion {
-  width: 50%;
-}
-
-@media (min-width: 576px) { 
-  .dVersion {
-    width: 100%;
-  }
-}
-
-a.cDownload {
-  display: block;
-  /* margin: 0 15px; */
-  transition: none !important;
-  font-size: 25px;
-  font-weight: 200;
-  background-color: #57595d;
-  color: #ffffff !important;
-  padding: 20px 8px 20px 60px;
-  /* background-image: url("/images/download-bg.svg");
-  background-repeat: no-repeat;
-  background-position: left 20px top 20px; */
-  text-decoration: none;
-  min-height: 60px;
-  line-height: 35px;
-}
-
-.releaseLinks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.cReleaseNotes a {
-  font-size: 16px;
-  color: #20b6b0;
-  display: inline-block;
-  letter-spacing: 1px;
-  line-height: 24px;
-}
-
-ul.cDiwnloadSubLinks {
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  padding: 10px 15px;
-  margin: 0;
-  text-align: right;
-}
-
-ul.cDiwnloadSubLinks li {
-  list-style: none;
-  float: right;
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 13px;
-}
-
-ul.cDiwnloadSubLinks li:first-child {
-  margin-right: 0;
-}
-
-ul.cDiwnloadSubLinks li a, .donwloadInstructions a,
-.downloadsContent a, .cReleaseNotes a, .downloadsVSCode a  {
-  color: #20b6b0;
-  text-decoration: none;
-}
-
-.cReleaseNotes a:hover, .cDiwnloadSubLinks a:hover, 
-.donwloadInstructions a:hover, .downloadsContent a:hover,
-.downloadsVSCode a:hover {
-  color: #57595d;
-}
-
-.downloadsContent {
-  margin-top: 20px;
-}
-
-
-
-/* special Tabs */
-.downloads-tabs .nav-tabs {
-  width: 100%;
-  justify-content: space-around;
-}
-
-.downloads-tabs .nav-tabs .nav-link {
-  color: #20b6b0;
-  cursor: default;
-}
-
-.downloads-tabs .nav-tabs .nav-link:focus, 
-.downloads-tabs .nav-tabs .nav-link:hover {
-  color: #555 !important;
-  border-color: #ffffff !important;
-  isolation: isolate;
-}
-
-.downloads-tabs .nav-tabs .nav-link.active,
-.downloads-tabs .nav-tabs .nav-link.active:focus,
-.downloads-tabs .nav-tabs .nav-link.active:hover {
-  color: #555 !important;
-  cursor: default;
-  border: transparent;
-  border-bottom: #20b6b0 3px solid !important;
-}
-
-a.cDownload .cSize {
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 14px;
-  color: #d9dadb;
-  margin-top: -4px;
-}
-
-.cArchived a, .cArchived a:hover,
-.cArchived a:focus {
-  font-size: 16px;
-  font-weight: 300;
-  background-color: #57595d;
-  color: #ffffff;
-  /* font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif; */
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.cArchived a:hover {
-  background-color: #20b6b0;
-}
-
-.cInstallers table {
-  width: 100%;
-  border-top: solid 0.5px #a7a8ab;
-  margin: 0;
-}
-
-.cInstallers table tr td {
-  padding: 3px 7px 3px 7px !important;
-  font-size: 13px;
-  font-weight: 400;
-  color: #585a5e;
-  border: none !important;
-  vertical-align: top;
-  border-bottom: solid 0.5px #a7a8ab !important;
-}
-
-.cInstallers table tr td a {
-  color: #20b6b0;
-}
-
-/* a.cDownload:hover {
-  background-image: url("/images/download-bg-white.svg");
-  background-color: #20b6b0;
-  background-image: url("/images/download-bg-white.svg");
-} */
-
-.cWindows, .cLinux, .cMac, .cVSCode {
-  background-repeat: no-repeat;
-  padding-left: 40px;
-  line-height: 32px;
-  background-size: 30px;
-}
-
-p.cWindows, p.cLinux, p.cMac, p.cVSCode {
-  line-height: 32px;
-}
-
-/* .cWindows {
-  background-image: url("/images/downloads/windows.svg");
-  background-size: contain;
-  padding-left: 25px;
-}
-
-.cLinux {
-  background-image: url("/images/downloads/linux.svg");
-  background-size: contain;
-  padding-left: 25px;
-}
-
-.cMac {
-    background-image: url("/images/downloads/mac.svg");
-    background-size: contain;
-    padding-left: 25px;
-} */
-
-/* .cVSCode {
-  background-image: url("/images/downloads/vs-code.svg");
-} */
 
 .other .cHomeWhyBallerinaBox h4 {
   height: 50px;
 }
 
-
-
-
-/* .mdContent .toc {
-  position: fixed;
-  right: 0;
-  top: 114px;
-  overflow: scroll;
-} */
-/* .container-fluid, .communityRow {
-  padding-right: var(--bs-gutter-x,2.25rem) !important;
-  padding-left: var(--bs-gutter-x,2.25rem) !important;
-} */
-
 .communityRow {
   padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
+  /* margin-bottom: 0 !important; */
 }
 
 .communityRow h2 {
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  margin-top: 10px;
   margin-bottom: 30px;
+  font-size: 1.5rem;
 }
 
 .slackRow {
@@ -573,7 +320,6 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
 }
 
 .newsletterTitle {
-  /* color:#20b6b0; */
   margin:0px auto;
   line-height: 30px;
   padding-bottom:10px
@@ -591,8 +337,6 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
 
 .newsletter {
   border-right: 1px solid #d1d4da;
-  /* padding-right: 15px;
-  margin-right: 15px; */
   display: inline-block;
   min-height: 390px;
 }
@@ -607,9 +351,6 @@ p.cWindows, p.cLinux, p.cMac, p.cVSCode {
   top: 4rem;
   height: calc(100vh - 4rem);
   overflow-y: auto;
-  /* background-color: aqua; */
-  /* padding-right: 0 !important;
-  padding-left: 0 !important; */
   padding-top: 25px;
   padding-left: 30px !important;
   padding-right: 30px !important;
@@ -652,7 +393,6 @@ ul.eventsTabs {
   border-bottom: #20b6b0 3px solid !important;
 }
 
-
 .formLink {
   color: #20b6b0;
   text-decoration: none;
@@ -666,14 +406,10 @@ ul.eventsTabs {
 .formEmbedded {
   width: 100%;
   height: 350px;
-  /* overflow: auto; */
 }
-
-
 
 .learnRow {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: #a7a8ab solid 1px;
+  border-top: #a7a8ab solid 0.3px;
 }
-
