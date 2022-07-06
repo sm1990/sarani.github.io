@@ -1,5 +1,4 @@
 import Head from 'next/head';
-// import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Row, Stack } from 'react-bootstrap';
 
@@ -7,6 +6,8 @@ import Footer from '../components/common/footer/Footer';
 
 export default function Layout({ children }) {
   const TopNav = dynamic(() => import('../components/common/top-nav/TopNav'), { ssr: false });
+
+  
 
   return (
     <>
@@ -26,6 +27,7 @@ export default function Layout({ children }) {
 
         {/* <script async src="/jquery/jquery.min.js"/>
         <script async src="/shiki/shiki.js" /> */}
+        <script type="text/javascript" crossorigin src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"/>
 
       </Head>
       <Stack gap={0} className='main-wrapper home'>

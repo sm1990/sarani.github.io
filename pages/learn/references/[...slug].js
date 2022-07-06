@@ -66,7 +66,9 @@ export default function PostPage({ frontmatter, content, id }) {
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
-    
+    if (language=='proto') {
+      language = 'ballerina';
+    }
     React.useEffect( () => { 
         async function fetchData() {
             getHighlighter({
