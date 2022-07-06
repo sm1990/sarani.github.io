@@ -431,3 +431,62 @@ ul.eventsTabs {
 .useRow a:hover {
   color: #57595d;
 }
+
+
+.releasesRow {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px
+}
+
+.installers h3.releaseVersion {
+  font-size: 22px;
+  color: #555;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  /* font-family: "pragmatica", sans-serif; */
+  line-height: 28px;
+  font-weight: 400;
+  padding: 0;
+  margin: 20px 0 15px 0;
+  border: none;
+}
+
+.installers {
+  padding: 32px 0px;
+}
+
+.releasesRow table {
+  width: 100%;
+}
+
+.installers table tr td {
+  padding: 3px 7px 3px 7px !important;
+  font-size: 13px;
+  font-weight: 400;
+  color: #585a5e;
+  border: none !important;
+  vertical-align: top;
+  border-bottom: solid 0.5px #a7a8ab !important;
+}
+
+.installers table tr td a {
+  color: #20b6b0;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.archivedReleaseNotesLink {
+  font-size: 16;
+  text-decoration: none;
+  color: #20b6b0;
+  font-weight: 400;
+}
+
+.archivedReleaseNotesLink:hover, .installers table tr td a:hover {
+  color: #57595d;
+}
+
+.archivedReleaseNotes {
+  margin: 0 0 0 21px;
+}
