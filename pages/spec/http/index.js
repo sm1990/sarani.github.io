@@ -4,15 +4,11 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col, Row } from 'react-bootstrap';
 import remarkGfm from 'remark-gfm';
-// import MarkdownNavbar from 'react-markdown-navbar';
-// import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
-// import dynamic from 'next/dynamic';
-// import slug from 'rehype-slug';
-// import toc from 'rehype-toc';
-// import autoheadings from 'rehype-autolink-headings';
+import Link from 'next/link';
+
 
 import { getHighlighter, setCDN } from "shiki";
 
@@ -39,8 +35,6 @@ export async function getStaticProps() {
 
 
 export default function PostPage({ frontmatter, content, id }) {
-
-  // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -101,7 +95,7 @@ export default function PostPage({ frontmatter, content, id }) {
           <Container>
             <Row className='topRowSpec'>
               <Col xs={12}>
-                <a href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo"/></a>
+                <Link href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo"/></Link>
               </Col>
             </Row>
             

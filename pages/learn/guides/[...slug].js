@@ -6,7 +6,7 @@ import MarkdownNavbar from 'markdown-navbar';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Image from 'next-image-export-optimizer';
-import { Container, Col } from 'react-bootstrap';
+import { Container, Col, Button, Offcanvas } from 'react-bootstrap';
 import Head from 'next/head';
 import { getHighlighter, setCDN } from "shiki";
 

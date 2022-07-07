@@ -599,3 +599,28 @@ ul.eventsTabs {
 .mdContentSpec a {
   text-decoration: none;
 }
+
+.mdContentSpec .balLogo {
+  margin-bottom: 20px;
+}
+
+.mdContentSpec h1 {
+  margin-bottom: 20px;
+}
+
+.mdContentSpec h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif;
+  color: #20b6b0;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  padding: 0;
+  margin: 20px 0 15px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #20b6b0;
+}
+
+.mdContentSpec pre {
+  font-size: 13px;
+}
