@@ -13,7 +13,8 @@ export default function SwanLakeArchived() {
         <Layout>
 
             <Col sm={12}>
-                <Row classNameName="cDownloadsHeader pageHeader pageContentRow">
+
+                <Row className="cDownloadsHeader pageHeader pageContentRow">
                     <Col xs={12}>
                         <h1>1.2.x Archived Versions</h1>
                     </Col>
