@@ -3,7 +3,6 @@ import matter from 'gray-matter';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col, Row } from 'react-bootstrap';
-import MarkdownNavbar from 'markdown-navbar';
 import remarkGfm from 'remark-gfm';
 // import MarkdownNavbar from 'react-markdown-navbar';
 // import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min';
