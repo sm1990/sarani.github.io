@@ -4,7 +4,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
-// import remarkGfm from 'remark-gfm';
+import remarkGfm from 'remark-gfm';
 // import MarkdownNavbar from 'react-markdown-navbar';
 // import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min';
 import Image from 'next-image-export-optimizer';
@@ -26,11 +26,6 @@ import PrevNext from '../../components/common/prev-next/PrevNext';
 import { prefix } from '../../utils/prefix';
 
 
-
-
-import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkGfm from 'remark-gfm'
 
 
 
@@ -125,8 +120,8 @@ export default function PostPage({ frontmatter, content, id }) {
                   )
                 }
               }}
-              rehypePlugins={[rehypeRaw]} 
               remarkPlugins={[remarkGfm]} 
+              rehypePlugins={[rehypeRaw]}    
             >
               {content}
             </ReactMarkdown>

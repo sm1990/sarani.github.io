@@ -4,6 +4,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
+import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Image from 'next-image-export-optimizer';
 import Head from 'next/head';
@@ -141,7 +142,7 @@ export default function PostPage({ frontmatter, content }) {
                 )
               }
             }}
-            
+            remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
             >
             {content}
