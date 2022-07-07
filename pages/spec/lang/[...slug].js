@@ -2,14 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import Image from 'next-image-export-optimizer';
 import Head from 'next/head';
-import Link from 'next/link';
-
-
-import { getHighlighter, setCDN } from "shiki";
-
-setCDN("https://unpkg.com/shiki/");
 
 
 import Layout from '../../../layouts/LayoutSpec';
@@ -93,10 +86,6 @@ export default function PostPage({ frontmatter, content }) {
       </Head>
       <Layout>
         <Col xs={12} className='mdContentSpec'>
-          
-          <div xs={12} className='balLogo'>
-            <Link href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo" /></Link>
-          </div>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </Col>
 
