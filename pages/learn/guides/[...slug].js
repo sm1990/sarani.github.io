@@ -85,6 +85,11 @@ export default function PostPage({ frontmatter, content, id }) {
     return [codeSnippet]
   }
 
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Head>
@@ -110,7 +115,18 @@ export default function PostPage({ frontmatter, content, id }) {
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
           <LeftNav launcher='learn' id={id}/>
         </Col>
-        <Col xs={12} className='d-block d-sm-none'>Mobile Left Nav</Col>
+        <Col xs={12} className='d-block d-sm-none'>
+          <Button className='learnMob' onClick={handleShow}>
+            Learn documentation
+          </Button>
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <LeftNav launcher='learn' id={id} />
+            </Offcanvas.Body>
+          </Offcanvas>
+        </Col>
         <Col xs={12} sm={7} xxl={8} className='mdContent'>
           <Container>
             <div className='topRow'>
