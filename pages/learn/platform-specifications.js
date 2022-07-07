@@ -4,8 +4,9 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
-import remarkGfm from 'remark-gfm';
+// import remarkGfm from 'remark-gfm';
 // import MarkdownNavbar from 'react-markdown-navbar';
+// import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
@@ -25,6 +26,11 @@ import PrevNext from '../../components/common/prev-next/PrevNext';
 import { prefix } from '../../utils/prefix';
 
 
+
+
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkGfm from 'remark-gfm'
 
 
 
@@ -89,6 +95,8 @@ export default function PostPage({ frontmatter, content, id }) {
         <meta property="twitter:description" content={frontmatter.description}/>
         <meta property="twitter:text:description" content={frontmatter.description}/>
 
+
+        
       </Head>
       <Layout>     
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
