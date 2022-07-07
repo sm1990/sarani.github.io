@@ -367,7 +367,7 @@ service / on new http:Listener(8080) {
                   </Col>
                   <Col lg={5} md={12} sm={12} className={styles.col2} id="column2" >
                     <div className={styles.focusPane}>
-                      <Image src={`${prefix}images/consuming-services-diagram.svg`} width={433} height={655} alt="consuming-services-diagram" />
+                      <Image src={`${prefix}/images/consuming-services-diagram.svg`} width={433} height={655} alt="consuming-services-diagram" />
                     </div>
                   </Col>
                 </Row>
