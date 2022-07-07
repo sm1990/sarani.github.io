@@ -9,8 +9,8 @@ import styles from './Footer.module.css';
 export default function Footer() {
 
   return (
-    <Stack gap={0}>
-      <Container className={styles.footer} fluid>
+    <Stack gap={0} className={styles.stack}>
+      <Container className={styles.footer}>
         <Row >
           {/* <Col xs={12} sm={12} md={3} lg={3} className="footerLinks">
             <ul>
