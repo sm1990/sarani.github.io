@@ -490,3 +490,22 @@ ul.eventsTabs {
 .archivedReleaseNotes {
   margin: 0 0 0 21px;
 }
+
+.DocSearch-Button-Placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 12px 0 14px;
+  letter-spacing: 0.2px;
+}
+
+.home .highlight {
+  font-size: 12px !important;
+}
+
+.home pre.shiki{
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  background-color: #f5f5f5 !important;
+}
