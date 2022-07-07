@@ -8,13 +8,19 @@ import remarkGfm from 'remark-gfm';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
+
+
 import { getHighlighter, setCDN } from "shiki";
 
 setCDN("https://unpkg.com/shiki/");
 
-import Layout from '../../../layouts/LayoutDocs';
+
+import Layout from '../../../layouts/LayoutSpec';
 import LeftNav from '../../../components/common/left-nav/LeftNav';
+import PrevNext from '../../../components/common/prev-next/PrevNext';
 import { prefix } from '../../../utils/prefix';
+
+
 
 var traverseFolder = function(dir) {
   var results = [];
@@ -27,7 +33,8 @@ var traverseFolder = function(dir) {
           results = results.concat(traverseFolder(filex));
       } else { 
           /* Is a file */
-          filex = filex.replace(/swan-lake\/references\//g, "");
+          filex = filex.replace(/spec\/lang\//g, "");
+          console.log(filex);
           results.push(filex);
       }
   });
@@ -36,12 +43,12 @@ var traverseFolder = function(dir) {
 
 export async function getStaticPaths() {
   // Retrieve all our slugs
-  const files = traverseFolder('swan-lake/references');
+  const files = traverseFolder('spec/lang');
   const paths = files.map((fileName) => ({
     params: {
-      slug: fileName.replace('.md', '').split("/"),
+      slug: fileName.replace('index.html', '').split("/"),
     },
-  }));
+}));
 
   return {
     paths,
@@ -50,20 +57,22 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const id = slug[slug.length-1];
   slug=slug.join('/');
-  const fileName = fs.readFileSync(`swan-lake/references/${slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`spec/lang/${slug}/index.html`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
+  // const source = {source:'learn'};
   return {
     props: {
       frontmatter,
-      content,
-      id
+      content
     },
   };
 }
 
-export default function PostPage({ frontmatter, content, id }) {
+
+export default function PostPage({ frontmatter, content }) {
+
+  // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -71,23 +80,20 @@ export default function PostPage({ frontmatter, content, id }) {
       language = 'ballerina';
     }
     React.useEffect( () => { 
-        async function fetchData() {
-            getHighlighter({
-              theme: "nord",
-              langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
-            }).then((highlighter) => {
-              setCodeSnippet(highlighter.codeToHtml(code,language));
-            })
-        }
-        fetchData();
+
+      async function fetchData() {
+          getHighlighter({
+            theme: "nord",
+            langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
+          }).then((highlighter) => {
+            setCodeSnippet(highlighter.codeToHtml(code,language));
+          })
+      }
+      fetchData();
     }, [code,language]);
+
     return [codeSnippet]
   }
-
-  const [show, setShow] = React.useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -109,32 +115,21 @@ export default function PostPage({ frontmatter, content, id }) {
         <meta property="twitter:description" content={frontmatter.description}/>
         <meta property="twitter:text:description" content={frontmatter.description}/>
 
+
+        <link rel="stylesheet" href={`${prefix}/spec/ballerina-language-specification.css`}/>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+{/* <script src={`${prefix}/spec/ballerina-language-specification.js`}></script> */}
       </Head>
-      <Layout>
-        <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-          <LeftNav launcher='learn' id={id}/>
-        </Col>
-        <Col xs={12} className='d-block d-sm-none'>
-          <Button className='learnMob' onClick={handleShow}>
-            Learn documentation
-          </Button>
-          <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <LeftNav launcher='learn' id={id} />
-            </Offcanvas.Body>
-          </Offcanvas>
-        </Col>
-        <Col xs={12} sm={7} xxl={8} className='mdContent'>
-          <Container>
-            <div className='topRow'>
-              <Col xs={11}><h1>{frontmatter.title}</h1></Col>
-              <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github"/>
+      <Layout>     
+        <Col xs={12} className='mdContentSpec'>
+          {/* <Container>
+            <Row className='topRowSpec'>
+              <Col xs={12}>
+                <a href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo"/></a>
               </Col>
-            </div>
+            </Row>
             
+            <Row className='specContent'>
             <ReactMarkdown 
               components={{
                 code({node, inline, className, children, ...props}) {
@@ -148,32 +143,20 @@ export default function PostPage({ frontmatter, content, id }) {
                   )
                 }
               }}
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]}
+              remarkPlugins={[remarkGfm]} 
+              rehypePlugins={[rehypeRaw]}    
             >
               {content}
             </ReactMarkdown>
+            </Row>
+          </Container> */}
 
-            <div className='contentNav'>
-              <Col xs={6} className='prevLink'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#20b6b0" className="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                </svg> &nbsp;
-                <a href='#'>Install Ballerina</a>
-              </Col>
-              <Col xs={6} className='nextLink'>
-                <a href='#'>Language basics</a> &nbsp;
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#20b6b0" className="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-              </Col>
-            </div>
-          </Container>
+<div xs={12}>
+                <a href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo"/></a>
+              </div>
+          <div dangerouslySetInnerHTML={{__html: content}}/>
         </Col>
-        <Col sm={2} className='pageToc d-none d-sm-block'>
-          <h6>On this page</h6>
-          <MarkdownNavbar source={content} ordered={false} headingTopOffset={150} declarative/>
-        </Col>
+
       </Layout>
     </>
   );
