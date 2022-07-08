@@ -39,7 +39,6 @@ export default function LeftNav(props) {
   function SubDir(props) {
     let directories = props.directories.sort(comparePositions);
     let activeKey = props.activeKey;
-    console.log(activeKey);
     return directories.map((directory) => (
       <>
       {

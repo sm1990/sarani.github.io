@@ -73,7 +73,7 @@ ul.firstTier .acBody {
 }
 
 ul.firstTier button {
-    padding: 0 0.75rem 0 1.25rem;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
     font-size: 13px;
     /* padding-left: 45px; */
 }
@@ -87,7 +87,7 @@ ul.secondTier li {
 }
 
 ul.secondTier button {
-    padding: 0 0.75rem 0 1.25rem;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
     font-size: 13px;
     /* padding-left: 45px; */
 }
@@ -97,3 +97,6 @@ ul.secondTier li a.active, ul.secondTier li a:hover {
     color: #20b6b0;
     text-decoration: none;
 }
+/* .accordion + .accordion {
+    margin-top:50px;
+} */
