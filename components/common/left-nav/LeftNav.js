@@ -8,6 +8,9 @@ import styles from './LeftNav.module.css';
 export default function LeftNav(props) {
   const launcher = props.launcher;
   let id = props.id;
+  let mainDir = props.mainDir;
+  let sub = props.sub;
+  let third = props.third;
   const Elements = LearnToc.subDirectories;
 
   function comparePositions(a, b) {
@@ -20,12 +23,12 @@ export default function LeftNav(props) {
     let category = props.category;
     
     return  <Accordion.Item eventKey={category.id}>
-              <Accordion.Header>{category.dirName}</Accordion.Header>
+              <Accordion.Header className={styles.mainDir}>{category.dirName}</Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <ul className={styles.firstTier}>
                 {
                 (category.subDirectories) ?
-                  <SubDir directories={category.subDirectories}/>
+                  <SubDir directories={category.subDirectories} activeKey={sub}/>
                 : null
                 }
                 </ul>
@@ -35,17 +38,62 @@ export default function LeftNav(props) {
 
   function SubDir(props) {
     let directories = props.directories.sort(comparePositions);
+    let activeKey = props.activeKey;
+    console.log(activeKey);
     return directories.map((directory) => (
       <>
       {
       (directory.isDir && directory.position > 0) ?
       <>
-        <Accordion>
+        <Accordion defaultActiveKey={activeKey}>
           <Accordion.Item eventKey={directory.id}>
             <Accordion.Header>{directory.dirName}</Accordion.Header>
             <Accordion.Body className={styles.acBody}>
               <ul className={styles.secondTier}>
-                <SubDir directories={directory.subDirectories}/>
+              {
+                (directory.subDirectories) ?
+                <ThirdDir directories={directory.subDirectories} activeKey={third}/>
+                : null
+              }
+                
+              </ul>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </> 
+        : 
+          (directory.position > 0) ?
+            <li key={directory.id}>
+              <a id={directory.id} className={(id === directory.id)? styles.active:null} 
+                href={(`${prefix}`)? `${prefix}` + directory.url : directory.url}>
+                {directory.dirName}
+              </a>
+            </li>
+          : null
+      }
+      </>
+      
+    ));
+  }
+
+  function ThirdDir(props) {
+    let tdirectories = props.directories.sort(comparePositions);
+    let activeKey = props.activeKey;
+    return tdirectories.map((directory) => (
+      <>
+      {
+      (directory.isDir && directory.position > 0) ?
+      <>
+        <Accordion defaultActiveKey={activeKey}>
+          <Accordion.Item eventKey={directory.id}>
+            <Accordion.Header>{directory.dirName}</Accordion.Header>
+            <Accordion.Body className={styles.acBody}>
+              <ul className={styles.secondTier}> 
+              {
+                (directory.subDirectories) ?
+                <ThirdDir directories={directory.subDirectories} activeKey={third}/>
+                : null
+              }
               </ul>
             </Accordion.Body>
           </Accordion.Item>
@@ -69,7 +117,7 @@ export default function LeftNav(props) {
   return (
     <>
     
-    <Accordion defaultActiveKey="get-started" flush className={styles.leftNavAccordian}>
+    <Accordion defaultActiveKey={mainDir} flush className={styles.leftNavAccordian}>
       {SortedDir.map((category) => (
 
         (launcher === 'learn' && category.position > 0) ?

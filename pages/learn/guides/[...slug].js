@@ -29,6 +29,7 @@ var traverseFolder = function(dir) {
       } else { 
           /* Is a file */
           filex = filex.replace(/swan-lake\/guides\//g, "");
+          console.log(filex);
           results.push(filex);
       }
   });
@@ -52,6 +53,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const id = slug[slug.length-1];
+  let sub = '';
+  let third = '';
+  if (slug.length == 2 ) {
+    sub = slug[slug.length - 2];
+  } 
+  if (slug.length == 3) {
+    sub = slug[slug.length - 3];
+    third =  slug[slug.length - 2];
+  }
+
   slug=slug.join('/');
   const fileName = fs.readFileSync(`swan-lake/guides/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
@@ -59,12 +70,14 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       frontmatter,
       content,
-      id
+      id,
+      sub,
+      third
     },
   };
 }
 
-export default function PostPage({ frontmatter, content, id }) {
+export default function PostPage({ frontmatter, content, id, sub, third }) {
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -113,7 +126,7 @@ export default function PostPage({ frontmatter, content, id }) {
       </Head>
       <Layout>
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-          <LeftNav launcher='learn' id={id}/>
+          <LeftNav launcher='learn' id={id} mainDir='guides' sub={sub} third={third}/>
         </Col>
         <Col xs={12} className='d-block d-sm-none'>
           <Button className='learnMob' onClick={handleShow}>

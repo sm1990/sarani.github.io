@@ -2024,7 +2024,7 @@ listener http:Listener echoListener = new http:Listener(9090, config = {intercep
 
 ##### 8.1.4.3 Execution order of interceptors
 
-![img.png](/spec/http/resources/img.png)
+![img.png](resources/img.png)
 In the above example blue dashed box represents the `RequestErrorInterceptor` and blue boxes simply represent the 
 `RequestInterceptors`, whereas green dashed box represents the `ResponseErrorInterceptor` and green boxes simply represent the 
 `ResponseInterceptors`. 

@@ -112,7 +112,7 @@ export default function PostPage({ frontmatter, content, id }) {
       </Head>
       <Layout>
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-          <LeftNav launcher='why-bal' id={id}/>
+          <LeftNav launcher='why-bal' id={id} mainDir='why-ballerina'/>
         </Col>
         <Col xs={12} className='d-block d-sm-none'>
           <Button className='learnMob' onClick={handleShow}>
