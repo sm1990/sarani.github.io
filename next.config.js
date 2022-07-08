@@ -110,8 +110,8 @@ const nextConfig = {
         destination: `/${redirectBase}learn/guides/distinctive-language-features/:slug`,
       },
       {
-        source: `/${redirectBase}learn/run-ballerina-programs-in-the-cloud/:slug`,
-        destination: `/${redirectBase}learn/guides/run-ballerina-programs-in-the-cloud/:slug`,
+        source: `/${redirectBase}learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda`,
+        destination: `/${redirectBase}learn/guides/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda`,
       },
       {
         source: `/${redirectBase}learn/test-ballerina-code/:slug`,

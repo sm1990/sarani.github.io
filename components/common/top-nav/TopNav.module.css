@@ -8,7 +8,8 @@ nav.home {
     color: #fff;
 }
 
-nav.docs, nav.downloads, nav.other, nav.docs-learn, nav.community {
+nav.docs, nav.downloads, nav.other, nav.docs-learn, 
+nav.community, .brokenLink, .brokenLink-learn {
     background-color: #fff;
 }
 
