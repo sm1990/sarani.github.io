@@ -26,7 +26,20 @@ export async function getStaticProps() {
 }
 
 export default function CookiePolicyPage({ frontmatter, content }) {
+  const extractText = (value) => {
+    if (typeof value === 'string') {
+      return value
+    } else {
+      return value.props.children
+    }
+  }
 
+  const scanArray = (array) => {
+    const newArray = array.map(extractText);
+    let newId = newArray.join('').replace(/[&\/\\#,+()!$~%.'":*?<>{}]/g, '').toLowerCase();
+    newId = newId.replace(/ /g, '-');
+    return newId
+  }
   return (
     <>
       <Head>
@@ -59,7 +72,62 @@ export default function CookiePolicyPage({ frontmatter, content }) {
 
           <Row className='pageContentRow'>
             <Col xs={12}>
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+              <ReactMarkdown 
+                components={{
+                  h2({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  },
+                  h3({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  },
+                  h4({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  },
+                  h5({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  },
+                  h6({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  }
+                }}
+                rehypePlugins={[rehypeRaw]}>
+                {content}
+              </ReactMarkdown>
             </Col>
           </Row>
         </Col>

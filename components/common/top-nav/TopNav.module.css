@@ -114,3 +114,20 @@ nav.community, .brokenLink, .brokenLink-learn {
         margin-left: 0.5rem;
     }
 }
+
+.oldBanner {
+    text-align: center;
+    color: #000000;
+    background-color: #fcdf4a !important;
+    padding: 10px 0 0 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.oldBanner a {
+    color: #000000;
+}
+
+.oldBanner a:hover{
+    color: #545454 !important;
+}

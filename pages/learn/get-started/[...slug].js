@@ -23,6 +23,7 @@ import Layout from '../../../layouts/LayoutDocs';
 import LeftNav from '../../../components/common/left-nav/LeftNav';
 import PrevNext from '../../../components/common/prev-next/PrevNext';
 import { prefix } from '../../../utils/prefix';
+import LearnToc from '../../../files1.json';
 
 
 
@@ -63,12 +64,12 @@ export async function getStaticProps({ params: { slug } }) {
   const id = slug[slug.length - 1];
   let sub = '';
   let third = '';
-  if (slug.length == 2 ) {
+  if (slug.length == 2) {
     sub = slug[slug.length - 2];
-  } 
+  }
   if (slug.length == 3) {
     sub = slug[slug.length - 3];
-    third =  slug[slug.length - 2];
+    third = slug[slug.length - 2];
   }
 
   slug = slug.join('/');
@@ -118,6 +119,22 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
+  const extractText = (value) => {
+    if (typeof value === 'string') {
+      return value
+    } else {
+      return value.props.children
+    }
+  }
+
+  const scanArray = (array) => {
+    const newArray = array.map(extractText);
+    let newId = newArray.join('').replace(/[&\/\\#,+()!$~%.'":*?<>{}]/g, '').toLowerCase();
+    newId = newId.replace(/ /g, '-');
+    return newId
+  }
+
   return (
     <>
       <Head>
@@ -141,7 +158,10 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
       </Head>
       <Layout>
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
-          <LeftNav launcher='learn' id={id} mainDir='get-started' sub={sub} third={third}/>
+          <LeftNav launcher='learn' id={id}
+            mainDir='get-started'
+            sub={sub} third={third}
+            LearnToc={LearnToc} />
         </Col>
         <Col xs={12} className='d-block d-sm-none'>
           <Button className='learnMob' onClick={handleShow}>
@@ -151,7 +171,10 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
             <Offcanvas.Header closeButton>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <LeftNav launcher='learn' id={id} />
+              <LeftNav launcher='learn' id={id}
+                mainDir='get-started'
+                sub={sub} third={third}
+                LearnToc={LearnToc} />
             </Offcanvas.Body>
           </Offcanvas>
         </Col>
@@ -166,6 +189,56 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
 
             <ReactMarkdown
               components={{
+                h2({ node, inline, className, children, ...props }) {
+                  let id = '';
+                  if (children.length === 1) {
+                    id = children[0].toLowerCase().replace(/ /g, '-');
+                  }
+                  else {
+                    id = scanArray(children);
+                  }
+                  return <h2 data-id={id}>{children}</h2>
+                },
+                h3({ node, inline, className, children, ...props }) {
+                  let id = '';
+                  if (children.length === 1) {
+                    id = children[0].toLowerCase().replace(/ /g, '-');
+                  }
+                  else {
+                    id = scanArray(children);
+                  }
+                  return <h2 data-id={id}>{children}</h2>
+                },
+                h4({ node, inline, className, children, ...props }) {
+                  let id = '';
+                  if (children.length === 1) {
+                    id = children[0].toLowerCase().replace(/ /g, '-');
+                  }
+                  else {
+                    id = scanArray(children);
+                  }
+                  return <h2 data-id={id}>{children}</h2>
+                },
+                h5({ node, inline, className, children, ...props }) {
+                  let id = '';
+                  if (children.length === 1) {
+                    id = children[0].toLowerCase().replace(/ /g, '-');
+                  }
+                  else {
+                    id = scanArray(children);
+                  }
+                  return <h2 data-id={id}>{children}</h2>
+                },
+                h6({ node, inline, className, children, ...props }) {
+                  let id = '';
+                  if (children.length === 1) {
+                    id = children[0].toLowerCase().replace(/ /g, '-');
+                  }
+                  else {
+                    id = scanArray(children);
+                  }
+                  return <h2 data-id={id}>{children}</h2>
+                },
                 code({ node, inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || '')
                   return !inline && match ? (

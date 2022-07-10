@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
-import LearnToc from '../../../files1.json';
+// import LearnToc from '../../../files1.json';
 import { prefix } from '../../../utils/prefix';
 import styles from './LeftNav.module.css';
 
@@ -11,7 +11,7 @@ export default function LeftNav(props) {
   let mainDir = props.mainDir;
   let sub = props.sub;
   let third = props.third;
-  const Elements = LearnToc.subDirectories;
+  const Elements = props.LearnToc.subDirectories;
 
   function comparePositions(a, b) {
     return a.position - b.position;

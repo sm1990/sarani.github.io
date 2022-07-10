@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Row, Col } from 'react-bootstrap';
 import Image from 'next-image-export-optimizer';
 
 import Search from '../search/Search';
@@ -10,14 +10,30 @@ const pages = ['Download', 'Playground', 'Learn', 'Central', 'Community', 'Blog'
 
 const TopNav = (props) => {
   const launcher = props.launcher;
+  const versionPicker = 'Swan-Lake';
+  const version = '';
   
-  if(global.location.pathname.indexOf('learn') > 0) {
+  if (global.location.pathname.indexOf('learn') > 0) {
     launcher = launcher + '-learn';
+  } 
+
+  if (global.location.pathname.indexOf('1.2/learn') > 0) {
+    versionPicker = 'v1.2';
+    version = '1.2.0.';
   }  
 
   return (
     <>
-      <Navbar className={styles[launcher]} expand="lg" fixed='top'>
+    {
+      (version === '1.2.0.' || version === '1.1.0.') ?
+      <Row className={styles.oldBanner}>
+        <Col xs={12}>
+          <p>This documentation is for Ballerina {version} <a href={`${prefix}/learn`}>View documentation for the latest release</a>.</p>
+        </Col>
+      </Row>
+    : null
+}
+      <Navbar className={styles[launcher]} expand="lg" sticky='top'>
         <Container fluid>
           <Navbar.Brand href={`${prefix}/`}>
             {(launcher !== "home") ? 
@@ -43,7 +59,7 @@ const TopNav = (props) => {
               <Nav.Link className={styles.navItem} href="https://central.ballerina.io/">Central</Nav.Link>
               <Nav.Link className={(launcher === 'community')? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/community`}>Community</Nav.Link>
               <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/">Blog</Nav.Link>
-              <NavDropdown title="Swan Lake" id={styles.navbarScrollingDropdown}>
+              <NavDropdown title={versionPicker} id={styles.navbarScrollingDropdown}>
                 <NavDropdown.Item href={`${prefix}/learn/`}>Swan-Lake</NavDropdown.Item>
                 <NavDropdown.Item href={`${prefix}/1.2/learn/`}>V 1.2</NavDropdown.Item>
                 <NavDropdown.Item href={`${prefix}/1.1/learn/`}>V 1.1</NavDropdown.Item>

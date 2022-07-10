@@ -14,7 +14,7 @@ a {
 }
 
 .wrap-page-content {
-  margin-top: 74px;
+  /* margin-top: 74px; */
   padding-bottom: 30px;
   font-size: 16px;
   font-weight: 300;
@@ -232,6 +232,10 @@ pre.shiki {
 .markdown-navigation .active {
   color: #20b6b0;
   border-left: 3px solid #20b6b0;
+}
+
+.mdContent iframe {
+  width: -webkit-fill-available;
 }
 
 .home {
@@ -529,6 +533,16 @@ ul.eventsTabs {
   background-color: #f5f5f5 !important;
 }
 
+
+
+
+
+
+
+
+
+/*--------------------Specifications------------*/
+
 .spec {
   background: #e7eaeb;
   color: #57595d;
@@ -624,3 +638,71 @@ ul.eventsTabs {
 .mdContentSpec pre {
   font-size: 13px;
 }
+
+
+/*------------------- Old Versions ------------------*/
+
+/* .cLearnPageContentCol {
+  display: inline;
+} */
+
+ul.cLearnLandingLinks {
+    list-style: none;
+}
+
+ul.cLearnLandingLinks li {
+  list-style: none !important;
+  padding-left: 40px;
+  background-image: url(/images/toc-bg.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin: 0 0 10px 0;
+  margin-left: 0 !important;
+}
+
+.cGreenLinkArrow {
+  text-decoration: none;
+}
+
+.cLanguageFeatures {
+  float:left;
+  margin-right: 15px;
+  width: 22% !important;
+}
+
+.cBallerina-io-Gray-row {
+  padding-top: 0;
+}
+
+.row.cBallerina-io-Gray-row {
+  padding-top: 0;
+}
+
+.cTopButtonContainer {
+  display: none;
+}
+
+table.cTopControlsContainer tbody {
+  /* border: none; */
+  border-bottom-color: none;
+}
+
+.cBallerinaBySampleContainer table td {
+  border: none !important;
+}
+
+.cBallerinaBySampleContainer .highlight, 
+.cBallerinaBySampleContainer .highlight code  {
+  border: none;
+}
+
+.cBallerinaBySampleContainer .highlight pre:hover, 
+.cOutput .highlight pre:hover {
+  background-color: #cceeec;
+}
+
+.cOutput .highlight pre {
+  background-color: #585a5e !important;
+}
+
+
