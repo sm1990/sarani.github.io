@@ -36,16 +36,18 @@ export default function Language() {
             <a href={`${prefix}/learn/#`} className={styles.linkText}>Completeing the picture</a>
           </div>
 
-          <div className={styles.langRow}>
+          {/* <div className={styles.langRow}>
+          <a href={`${prefix}/learn/#`} className={styles.linkBtn}>Complete language guide slides</a>
+          <a href="https://www.youtube.com/watch?list=PL7JOecNWBb0KX8RGAjF-oRknb_YIYN-dR&v=My_uqtHvXV8" className={styles.linkBtn}>Watch video</a>
+          </div> */}
+        </Col>
+
+        <Col xs={12} lg={6} className={styles.btnCol}>
+          <div className={styles.btnWrapper}>
           <a href={`${prefix}/learn/#`} className={styles.linkBtn}>Complete language guide slides</a>
           <a href="https://www.youtube.com/watch?list=PL7JOecNWBb0KX8RGAjF-oRknb_YIYN-dR&v=My_uqtHvXV8" className={styles.linkBtn}>Watch video</a>
           </div>
         </Col>
-
-        {/* <Col xs={12} lg={6} className={styles.btnCol}>
-          <div><a href={`${prefix}/learn/#`} className={styles.langSlides}>Complete language guide slides</a></div>
-          <div><a href="https://www.youtube.com/watch?list=PL7JOecNWBb0KX8RGAjF-oRknb_YIYN-dR&v=My_uqtHvXV8" className={styles.linkVideo}>Watch video</a></div>
-        </Col> */}
       </Row>
     </>
   );
