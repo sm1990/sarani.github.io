@@ -2,12 +2,13 @@
     padding: 1rem 0.75rem;
     font-size: 13px;
     font-weight: 400;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     /* padding-left: 38px; */
 }
 
 .leftNavAccordian h2 {
     margin-top: 0;
+    line-height: 0;
 }
 
 .mainDir button {
