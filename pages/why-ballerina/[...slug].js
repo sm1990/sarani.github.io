@@ -74,7 +74,7 @@ export default function PostPage({ frontmatter, content, id }) {
     React.useEffect(() => {
       async function fetchData() {
         getHighlighter({
-          theme: "nord",
+          theme: "github-light",
           langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
         }).then((highlighter) => {
           setCodeSnippet(highlighter.codeToHtml(code, language));
