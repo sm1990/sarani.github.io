@@ -9,7 +9,7 @@ nav.home {
 }
 
 nav.docs, nav.downloads, nav.other, nav.docs-learn, 
-nav.community, .brokenLink, .brokenLink-learn {
+nav.community, .brokenLink, .brokenLink-learn, nav.rn {
     background-color: #fff;
 }
 
