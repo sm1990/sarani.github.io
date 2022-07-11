@@ -15,7 +15,7 @@ a {
 }
 
 .wrap-page-content {
-  margin-top: 74px;
+  /* margin-top: 74px; */
   padding-bottom: 30px;
   font-size: 16px;
   font-weight: 300;
@@ -53,6 +53,11 @@ a {
   padding-top: 35px;
   padding-left: 1% !important;
   padding-right: 1% !important;
+}
+
+.learnMob {
+  background-color: #20b6b0 !important;
+  border: #20b6b0 !important;
 }
 
 .policyContent {
@@ -242,6 +247,10 @@ pre.shiki {
 .markdown-navigation .active {
   color: #20b6b0;
   border-left: 3px solid #20b6b0;
+}
+
+.mdContent iframe {
+  width: -webkit-fill-available;
 }
 
 .home {
@@ -540,7 +549,169 @@ ul.eventsTabs {
   background-color: #f5f5f5 !important;
 }
 
+/*--------------------Specifications------------*/
+
+.spec {
+  background: #e7eaeb;
+  color: #57595d;
+  font-weight: 300;
+}
+
+.topRowSpec {
+  margin-bottom: 20px;
+}
+
+.spec h1 {
+  font-size: 30px;
+  color: #585a5e;
+  font-weight: 200;
+}
+
+.spec p {
+  font-weight: 300;
+}
+
+.spec .specContent {
+  background-color: #ffffff;
+  padding: 40px 30px;
+}
+
+.stdLib a {
+  font-weight: 300;
+}
+
+.stdLib ul {
+  list-style: none;
+}
+
+.stdLib ul li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stdLib h1 {
+  font-size: 30px;
+  color: #585a5e;
+  font-weight: 200;
+}
+
+.stdLib h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif;
+  color: #20b6b0;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  padding: 0;
+  margin: 20px 0 15px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #20b6b0;
+}
+
+.stdlib table {
+  width: 100% !important;
+}
+
+.stdlib td {
+  border: 1px solid #cecfd0;
+}
+
+.mdContentSpec a {
+  text-decoration: none;
+}
+
+/* .mdContentSpec .balLogo {
+  margin-bottom: 20px;
+} */
+
+.mdContentSpec h1 {
+  margin-bottom: 20px;
+}
+
+.mdContentSpec h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif;
+  color: #20b6b0;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  padding: 0;
+  margin: 20px 0 15px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #20b6b0;
+}
+
+.mdContentSpec pre {
+  font-size: 13px;
+}
+
+/*------------------- Old Versions ------------------*/
+
+/* .cLearnPageContentCol {
+  display: inline;
+} */
+
+ul.cLearnLandingLinks {
+  list-style: none;
+}
+
+ul.cLearnLandingLinks li {
+  list-style: none !important;
+  padding-left: 40px;
+  background-image: url(/images/toc-bg.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin: 0 0 10px 0;
+  margin-left: 0 !important;
+}
+
+.cGreenLinkArrow {
+  text-decoration: none;
+}
+
+.cLanguageFeatures {
+  float: left;
+  margin-right: 15px;
+  width: 22% !important;
+}
+
+.cBallerina-io-Gray-row {
+  padding-top: 0;
+}
+
+.row.cBallerina-io-Gray-row {
+  padding-top: 0;
+}
+
+.cTopButtonContainer {
+  display: none;
+}
+
+table.cTopControlsContainer tbody {
+  /* border: none; */
+  border-bottom-color: none;
+}
+
+.cBallerinaBySampleContainer table td {
+  border: none !important;
+}
+
+.cBallerinaBySampleContainer .highlight,
+.cBallerinaBySampleContainer .highlight code {
+  border: none;
+}
+
+.cBallerinaBySampleContainer .highlight pre:hover,
+.cOutput .highlight pre:hover {
+  background-color: #cceeec;
+}
+
+.cOutput .highlight pre {
+  background-color: #585a5e !important;
+}
+
 /* BBE Related */
+
 :root {
   --shiki-color-text: #eeeeee;
   --shiki-color-background: #263238;

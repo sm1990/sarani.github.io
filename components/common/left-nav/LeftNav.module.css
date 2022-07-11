@@ -6,6 +6,15 @@
     /* padding-left: 38px; */
 }
 
+.leftNavAccordian h2 {
+    margin-top: 0;
+}
+
+.mainDir button {
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
 .leftNavAccordian button:focus {
     border: none;
     box-shadow: none;
@@ -55,16 +64,16 @@ ul.firstTier li a {
     text-decoration: none;
 }
 
-ul.firstTier li + li {
+/* ul.firstTier li + li {
     margin-bottom: 10px;
-}
+} */
 
 ul.firstTier .acBody {
     padding-right: 0;
 }
 
 ul.firstTier button {
-    padding: 1rem 0.75rem 1rem 1.25rem;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
     font-size: 13px;
     /* padding-left: 45px; */
 }
@@ -78,7 +87,7 @@ ul.secondTier li {
 }
 
 ul.secondTier button {
-    padding: 1rem 0.75rem 1rem 1.25rem;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
     font-size: 13px;
     /* padding-left: 45px; */
 }
@@ -88,3 +97,6 @@ ul.secondTier li a.active, ul.secondTier li a:hover {
     color: #20b6b0;
     text-decoration: none;
 }
+/* .accordion + .accordion {
+    margin-top:50px;
+} */

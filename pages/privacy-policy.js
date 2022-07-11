@@ -26,6 +26,20 @@ export async function getStaticProps() {
 }
 
 export default function PrivacyPolicyPage({ frontmatter, content }) {
+  const extractText = (value) => {
+    if (typeof value === 'string') {
+      return value
+    } else {
+      return value.props.children
+    }
+  }
+
+  const scanArray = (array) => {
+    const newArray = array.map(extractText);
+    let newId = newArray.join('').replace(/[&\/\\#,+()!$~%.'":*?<>{}]/g, '').toLowerCase();
+    newId = newId.replace(/ /g, '-');
+    return newId
+  }
 
   return (
     <>
@@ -59,7 +73,62 @@ export default function PrivacyPolicyPage({ frontmatter, content }) {
 
           <Row className='pageContentRow'>
             <Col xs={12}>
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+              <ReactMarkdown 
+                components={{
+                  h2({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h2 data-id={id}>{children}</h2>
+                  },
+                  h3({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h3 data-id={id}>{children}</h3>
+                  },
+                  h4({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h4 data-id={id}>{children}</h4>
+                  },
+                  h5({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h5 data-id={id}>{children}</h5>
+                  },
+                  h6({ node, inline, className, children, ...props }) {
+                    let id = '';
+                    if (children.length === 1) {
+                      id = children[0].toLowerCase().replace(/ /g, '-');
+                    }
+                    else {
+                      id = scanArray(children);
+                    }
+                    return <h6 data-id={id}>{children}</h6>
+                  }
+                }}
+                rehypePlugins={[rehypeRaw]}>
+                {content}
+              </ReactMarkdown>
             </Col>
           </Row>
         </Col>

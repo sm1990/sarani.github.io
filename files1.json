@@ -3599,7 +3599,7 @@
                 {
                     "dirName": "language walkthrough",
                     "level": 2,
-                    "position": 0,
+                    "position": 1,
                     "isDir": true,
                     "url": "/learn/language-walkthrough",
                     "id": "language-walkthrough",
@@ -3607,7 +3607,7 @@
                         {
                             "dirName": "Language walkthrough",
                             "level": 3,
-                            "position": 0,
+                            "position": 1,
                             "isDir": false,
                             "url": "/learn/language-walkthrough/language-walkthrough",
                             "id": "language-walkthrough"

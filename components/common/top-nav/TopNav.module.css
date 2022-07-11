@@ -8,7 +8,8 @@ nav.home {
     color: #fff;
 }
 
-nav.docs, nav.downloads, nav.other, nav.docs-learn, nav.community {
+nav.docs, nav.downloads, nav.other, nav.docs-learn, 
+nav.community, .brokenLink, .brokenLink-learn {
     background-color: #fff;
 }
 
@@ -112,4 +113,21 @@ nav.docs, nav.downloads, nav.other, nav.docs-learn, nav.community {
         padding-left: 0.5rem; */
         margin-left: 0.5rem;
     }
+}
+
+.oldBanner {
+    text-align: center;
+    color: #000000;
+    background-color: #fcdf4a !important;
+    padding: 10px 0 0 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.oldBanner a {
+    color: #000000;
+}
+
+.oldBanner a:hover{
+    color: #545454 !important;
 }
