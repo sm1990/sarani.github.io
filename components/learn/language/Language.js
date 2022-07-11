@@ -17,15 +17,15 @@ export default function Language() {
       <Row className="pageContentRow">
         <Col xs={12} lg={6}>
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/language-basics/`} className={styles.linkText}>Language basics</a>
+            <a href={`${prefix}/learn/language-basics`} className={styles.linkText}>Language basics</a>
           </div>
 
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/distinctive-language-features/network-interaction/`} className={styles.linkText}>Network interaction</a>
+            <a href={`${prefix}/learn/distinctive-language-features/network-interaction`} className={styles.linkText}>Network interaction</a>
           </div>
 
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/distinctive-language-features/data/`} className={styles.linkText}>Data</a>
+            <a href={`${prefix}/learn/distinctive-language-features/data`} className={styles.linkText}>Data</a>
           </div>
 
           <div className={styles.langRow}>
@@ -33,7 +33,7 @@ export default function Language() {
           </div>
 
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/distinctive-language-features/advanced-general-purpose-language-features/`} className={styles.linkText}>Advanced general purpose language features</a>
+            <a href={`${prefix}/learn/distinctive-language-features/advanced-general-purpose-language-features`} className={styles.linkText}>Advanced general purpose language features</a>
           </div>
 
 

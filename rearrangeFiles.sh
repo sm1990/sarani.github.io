@@ -9,10 +9,9 @@ cp -r ./out/learn/ballerina-central/* ./out/learn
 cp -r ./out/learn/ballerina-tooling/* ./out/learn
 cp -r ./out/learn/configure-observe/* ./out/learn
 cp -r ./out/learn/java-interoperability/* ./out/learn
-cp -r ./out/learn/run-in-the-cloud/* ./out/learn
 cp -r ./out/learn/test-document-the-code/* ./out/learn
 cp -r ./out/learn/source-code-dependencies/* ./out/learn
 
 #Remove duplicated files
 rm -rf ./out/learn/get-started/ ./out/learn/featured-use-cases/ ./out/learn/learn-the-language/ ./out/learn/learn-the-platform/
-rm -rf ./out/learn/ballerina-central/ ./out/learn/ballerina-tooling/ ./out/learn/configure-observe/ ./out/learn/java-interoperability/ ./out/learn/run-in-the-cloud/ ./out/learn/test-document-the-code/ ./out/learn/source-code-dependencies/
+rm -rf ./out/learn/ballerina-central/ ./out/learn/ballerina-tooling/ ./out/learn/configure-observe/ ./out/learn/java-interoperability/ ./out/learn/test-document-the-code/ ./out/learn/source-code-dependencies/
