@@ -162,7 +162,7 @@ const nextConfig = {
       }
     ]
   },
-  
+  trailingSlash: true,
   resolve: [{"path":false,"fs": false}],
 
 

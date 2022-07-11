@@ -22,7 +22,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/organize-ballerina-code/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/organize-ballerina-code`} className={styles.titleLink}>
                   Organize Ballerina code
                 </a>
               </p>
@@ -31,7 +31,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/package-references/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/package-references`} className={styles.titleLink}>
                   Package references
                 </a>
               </p>
@@ -40,7 +40,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/manage-dependencies/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/manage-dependencies`} className={styles.titleLink}>
                   Manage dependencies
                 </a>
               </p>
@@ -62,7 +62,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/test-ballerina-code/test-a-simple-function/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/test-ballerina-code/test-a-simple-function`} className={styles.titleLink}>
                   Test Ballerina code
                 </a>
               </p>
@@ -71,7 +71,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/debug-ballerina-programs/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/debug-ballerina-programs`} className={styles.titleLink}>
                   Debug Ballerina Programs
                 </a>
               </p>
@@ -80,7 +80,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/generate-code-documentation/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/generate-code-documentation`} className={styles.titleLink}>
                   Document Ballerina code
                 </a>
               </p>
@@ -128,7 +128,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/observe-ballerina-programs/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/observe-ballerina-programs`} className={styles.titleLink}>
                   Observe Ballerina programs</a>
               </p>
               <p className={styles.description}>Basics of the observability functionalities that are provided for Ballerina programs.</p>
@@ -140,7 +140,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/call-java-code-from-ballerina/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/call-java-code-from-ballerina`} className={styles.titleLink}>
                   Call Java code from Ballerina
                 </a>
               </p>
@@ -149,7 +149,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/java-interoperability/java-interoperability`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/java-interoperability-guide/java-interoperability`} className={styles.titleLink}>
                   Java interoperability guide
                 </a>
               </p>
@@ -172,7 +172,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/ballerina-shell/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/ballerina-shell`} className={styles.titleLink}>
                   Ballerina Shell
                 </a>
               </p>
@@ -181,7 +181,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/openapi-tool/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/openapi-tool`} className={styles.titleLink}>
                   OpenAPI tool</a>
               </p>
               <p className={styles.description}>Details of the Ballerina OpenAPI tool.</p>
@@ -189,7 +189,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/graphql-client-tool/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/graphql-client-tool`} className={styles.titleLink}>
                   GraphQL client tool
                 </a>
               </p>
@@ -198,7 +198,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/asyncapi-tool/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/asyncapi-tool`} className={styles.titleLink}>
                   AsyncAPI tool
                 </a>
               </p>
@@ -207,7 +207,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/cli-documentation/cli-commands/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/cli-documentation/cli-commands`} className={styles.titleLink}>
                   CLI documentation
                 </a>
               </p>
@@ -220,7 +220,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/publish-packages-to-ballerina-central/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/publish-packages-to-ballerina-central`} className={styles.titleLink}>
                   Publish packages to Ballerina Central
                 </a>
               </p>
