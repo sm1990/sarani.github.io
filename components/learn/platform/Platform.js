@@ -96,7 +96,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/run-ballerina-programs-in-the-cloud/code-to-cloud/code-to-cloud-deployment`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/run-in-the-cloud/code-to-cloud/code-to-cloud-deployment`} className={styles.titleLink}>
                   Code to cloud
                 </a>
               </p>
@@ -105,7 +105,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/run-in-the-cloud/function-as-a-service/aws-lambda/`} className={styles.titleLink}>
                   Functions as a service
                 </a>
               </p>
@@ -149,7 +149,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/learn/java-interoperability/`} className={styles.titleLink}>
+                <a href={`${prefix}/learn/java-interoperability/java-interoperability`} className={styles.titleLink}>
                   Java interoperability guide
                 </a>
               </p>
@@ -164,7 +164,7 @@ export default function Platform() {
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href={`${prefix}/https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina`} className={styles.titleLink}>
+                <a href="https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina" className={styles.titleLink}>
                   Visual Studio Code extension</a>
               </p>
               <p className={styles.description}>Details of the Ballerina Visual Studio Code extension.</p>

@@ -33,7 +33,7 @@ var traverseFolder = function (dir) {
       results = results.concat(traverseFolder(filex));
     } else {
       /* Is a file */
-      filex = filex.replace(/swan-lake\/get-started\//g, "");
+      filex = filex.replace(/swan-lake\/learn-the-language\//g, "");
       results.push(filex);
     }
   });
@@ -42,7 +42,7 @@ var traverseFolder = function (dir) {
 
 export async function getStaticPaths() {
   // Retrieve all our slugs
-  const files = traverseFolder('swan-lake/get-started');
+  const files = traverseFolder('swan-lake/learn-the-language');
   const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace('.md', '').split("/"),
@@ -68,7 +68,7 @@ export async function getStaticProps({ params: { slug } }) {
   }
 
   slug = slug.join('/');
-  const fileName = fs.readFileSync(`swan-lake/get-started/${slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`swan-lake/learn-the-language/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
 
   return {
@@ -154,7 +154,7 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
       <Layout>
         <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
           <LeftNav launcher='learn' id={id}
-            mainDir='get-started'
+            mainDir='learn-the-language'
             sub={sub} third={third}
             LearnToc={LearnToc} />
         </Col>
@@ -167,7 +167,7 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <LeftNav launcher='learn' id={id}
-                mainDir='get-started'
+                mainDir='learn-the-language'
                 sub={sub} third={third}
                 LearnToc={LearnToc} />
             </Offcanvas.Body>
