@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Container, Col } from 'react-bootstrap';
+import { Container, Col, Button, Offcanvas } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -12,8 +12,10 @@ import { getHighlighter, setCDN } from "shiki";
 
 setCDN("https://unpkg.com/shiki/");
 
-import Layout from '../../../layouts/LayoutDocs';
+import Layout from '../../../layouts/LayoutRN';
+import LeftNav from '../../../components/common/left-nav/LeftNav';
 import { prefix } from '../../../utils/prefix';
+import LearnToc from '../../../rl.json';
 
 
 var traverseFolder = function (dir) {
@@ -53,7 +55,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-
+  const id = slug[slug.length - 1];
   slug = slug.join('/');
 
   const fileName = fs.readFileSync(`downloads/1.2.x-release-notes/${slug}.md`, 'utf-8');
@@ -61,12 +63,13 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       frontmatter,
-      content
+      content,
+      id
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, id }) {
 
   const HighlightSyntax = (code, language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -85,6 +88,11 @@ export default function PostPage({ frontmatter, content }) {
 
     return [codeSnippet]
   }
+
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const extractText = (value) => {
     if (typeof value === 'string') {
@@ -123,7 +131,26 @@ export default function PostPage({ frontmatter, content }) {
         <meta property="twitter:text:description" content="A programming language for the cloud that makes it easier to use, combine, and create network services." />
       </Head>
       <Layout>
-        <Col xs={12} sm={10} className='mdContent'>
+      <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
+          <LeftNav launcher='rn' id={id}
+            mainDir='1.2.x-release-notes'
+            LearnToc={LearnToc} />
+        </Col>
+        <Col xs={12} className='d-block d-sm-none'>
+          <Button className='learnMob' onClick={handleShow}>
+            Learn documentation
+          </Button>
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <LeftNav launcher='rn' id={id}
+                mainDir='1.2.x-release-notes'
+                LearnToc={LearnToc} />
+            </Offcanvas.Body>
+          </Offcanvas>
+        </Col>
+        <Col xs={12} sm={7} xxl={8} className='mdContent'>
           <Container>
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
