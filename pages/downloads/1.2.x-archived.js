@@ -125,7 +125,7 @@ export default function SwanLakeArchived() {
                                     </Col>
                                 </Row>
                                 <div className="archivedReleaseNotes">
-                                    <a className="archivedReleaseNotesLink" id={`${item.version}notes`} href={`${prefix}/downloads/swan-lake-release-notes/swan-lake-${item.version}`}>RELEASE NOTES</a>
+                                    <a className="archivedReleaseNotesLink" id={`${item.version}notes`} href={`${prefix}/downloads/1.2.x-release-notes/${item.version}`}>RELEASE NOTES</a>
                                 </div>
                             </div>
                         ))}
