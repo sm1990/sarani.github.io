@@ -9,8 +9,7 @@ import SLArchive from '../../_data/swanlake_release_notes_versions.json';
 
 export default function SwanLakeArchived() {
     const distServer = process.env.distServer;
-    // const ss = SLArchive.reverse();
-    // console.log(ss);
+    const ss = SLArchive.reverse();
     return (
         <Layout>
 
@@ -26,7 +25,7 @@ export default function SwanLakeArchived() {
                     <Col xs={12}>
 
 
-                        {SLArchive.reverse().map((item, index) => (
+                        {ss.map((item, index) => (
                             <div className="installers" key={index}>
                                 <h3 className="releaseVersion" id={item.version}>{item.version} ({item['release-date']})</h3>
                                 <Row className="releasesRow">
