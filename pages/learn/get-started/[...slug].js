@@ -81,13 +81,14 @@ export async function getStaticProps({ params: { slug } }) {
       content,
       id,
       sub,
-      third
+      third,
+      slug
     },
   };
 }
 
 
-export default function PostPage({ frontmatter, content, id, sub, third }) {
+export default function PostPage({ frontmatter, content, id, sub, third, slug }) {
 
   // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
 
@@ -95,21 +96,21 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
   const AddLiquid = (content) => {
     const [newContent, setNewContent] = React.useState('');
     const md = engine.parse(content)
-        engine.render(md, {
-          v: "Liquid", 
-          'windows-installer-size': SwanLake['windows-installer-size'],
-          dist_server: process.env.distServer,
-          version: SwanLake.version,
-          'windows-installer': SwanLake['windows-installer'],
-          'linux-installer': SwanLake['linux-installer'],
-          'linux-installer-size': SwanLake['linux-installer-size'],
-          'rpm-installer': SwanLake['rpm-installer'],
-          'rpm-installer-size' : SwanLake['rpm-installer-size'],
-          'macos-installer' : SwanLake['macos-installer'],
-          'macos-installer-size' : SwanLake['macos-installer-size']
-          }).then((md) => {
-          setNewContent(md);
-        })
+    engine.render(md, {
+      v: "Liquid",
+      'windows-installer-size': SwanLake['windows-installer-size'],
+      dist_server: process.env.distServer,
+      version: SwanLake.version,
+      'windows-installer': SwanLake['windows-installer'],
+      'linux-installer': SwanLake['linux-installer'],
+      'linux-installer-size': SwanLake['linux-installer-size'],
+      'rpm-installer': SwanLake['rpm-installer'],
+      'rpm-installer-size': SwanLake['rpm-installer-size'],
+      'macos-installer': SwanLake['macos-installer'],
+      'macos-installer-size': SwanLake['macos-installer-size']
+    }).then((md) => {
+      setNewContent(md);
+    })
     return newContent
   }
 
@@ -204,7 +205,9 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}swan-lake/get-started/${slug}.md`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 
