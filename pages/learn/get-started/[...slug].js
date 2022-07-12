@@ -5,25 +5,24 @@ import ReactMarkdown from 'react-markdown';
 import { Container, Col, Button, Offcanvas } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
 import remarkGfm from 'remark-gfm';
-// import MarkdownNavbar from 'react-markdown-navbar';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
-// import dynamic from 'next/dynamic';
-// import slug from 'rehype-slug';
-// import toc from 'rehype-toc';
-// import autoheadings from 'rehype-autolink-headings';
+import { Liquid } from 'liquidjs';
 
 import { getHighlighter, setCDN } from "shiki";
 
 setCDN("https://unpkg.com/shiki/");
 
-
 import Layout from '../../../layouts/LayoutDocs';
 import LeftNav from '../../../components/common/left-nav/LeftNav';
-import PrevNext from '../../../components/common/prev-next/PrevNext';
+// import PrevNext from '../../../components/common/prev-next/PrevNext';
 import { prefix } from '../../../utils/prefix';
-import LearnToc from '../../../files1.json';
+import LearnToc from '../../../learn-lm.json';
+import SwanLake from '../../../_data/swanlake-latest/metadata.json';
+
+
+
 
 
 
@@ -75,22 +74,45 @@ export async function getStaticProps({ params: { slug } }) {
   slug = slug.join('/');
   const fileName = fs.readFileSync(`swan-lake/get-started/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
-  // const source = {source:'learn'};
+
   return {
     props: {
       frontmatter,
       content,
       id,
       sub,
-      third
+      third,
+      slug
     },
   };
 }
 
 
-export default function PostPage({ frontmatter, content, id, sub, third }) {
+export default function PostPage({ frontmatter, content, id, sub, third, slug }) {
 
   // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
+
+  const engine = new Liquid();
+  const AddLiquid = (content) => {
+    const [newContent, setNewContent] = React.useState('');
+    const md = engine.parse(content)
+    engine.render(md, {
+      v: "Liquid",
+      'windows-installer-size': SwanLake['windows-installer-size'],
+      dist_server: process.env.distServer,
+      version: SwanLake.version,
+      'windows-installer': SwanLake['windows-installer'],
+      'linux-installer': SwanLake['linux-installer'],
+      'linux-installer-size': SwanLake['linux-installer-size'],
+      'rpm-installer': SwanLake['rpm-installer'],
+      'rpm-installer-size': SwanLake['rpm-installer-size'],
+      'macos-installer': SwanLake['macos-installer'],
+      'macos-installer-size': SwanLake['macos-installer-size']
+    }).then((md) => {
+      setNewContent(md);
+    })
+    return newContent
+  }
 
   const HighlightSyntax = (code, language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -183,7 +205,9 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}swan-lake/get-started/${slug}.md`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 
@@ -253,12 +277,13 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
             >
-              {content}
+              {/* {content} */}
+              {AddLiquid(content)}
             </ReactMarkdown>
 
-            <div className='contentNav'>
+            {/* <div className='contentNav'>
               <PrevNext />
-            </div>
+            </div> */}
           </Container>
         </Col>
         <Col sm={2} className='pageToc d-none d-sm-block'>

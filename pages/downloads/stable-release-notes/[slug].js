@@ -70,12 +70,13 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       frontmatter,
-      content
+      content,
+      slug
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, slug }) {
 
   const HighlightSyntax = (code, language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -83,7 +84,7 @@ export default function PostPage({ frontmatter, content }) {
     React.useEffect(() => {
       async function fetchData() {
         getHighlighter({
-          theme: "nord",
+          theme: "github-light",
           langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
         }).then((highlighter) => {
           setCodeSnippet(highlighter.codeToHtml(code, language));
@@ -137,7 +138,9 @@ export default function PostPage({ frontmatter, content }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}downloads/stable-release-notes/${slug}/RELEASE_NOTE.html`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 

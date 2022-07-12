@@ -5,15 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import { Container, Col, Button, Offcanvas } from 'react-bootstrap';
 import MarkdownNavbar from 'markdown-navbar';
 import remarkGfm from 'remark-gfm';
-// import MarkdownNavbar from 'react-markdown-navbar';
-// import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min';
 import Image from 'next-image-export-optimizer';
 import rehypeRaw from 'rehype-raw';
 import Head from 'next/head';
-// import dynamic from 'next/dynamic';
-// import slug from 'rehype-slug';
-// import toc from 'rehype-toc';
-// import autoheadings from 'rehype-autolink-headings';
+
 
 import { getHighlighter, setCDN } from "shiki";
 
@@ -22,12 +17,9 @@ setCDN("https://unpkg.com/shiki/");
 
 import Layout from '../../layouts/LayoutDocs';
 import LeftNav from '../../components/common/left-nav/LeftNav';
-import PrevNext from '../../components/common/prev-next/PrevNext';
+// import PrevNext from '../../components/common/prev-next/PrevNext';
 import { prefix } from '../../utils/prefix';
-import LearnToc from '../../files1.json';
-
-
-
+import LearnToc from '../../learn-lm.json';
 
 
 export async function getStaticProps() {
@@ -59,7 +51,7 @@ export default function PostPage({ frontmatter, content, id }) {
 
       async function fetchData() {
         getHighlighter({
-          theme: "nord",
+          theme: "github-light",
           langs: ['bash', 'ballerina', 'toml', 'yaml', 'sh', 'json', 'graphql', 'sql']
         }).then((highlighter) => {
           setCodeSnippet(highlighter.codeToHtml(code, language));
@@ -139,7 +131,9 @@ export default function PostPage({ frontmatter, content, id }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}spec/spec.md`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 
@@ -212,9 +206,9 @@ export default function PostPage({ frontmatter, content, id }) {
               {content}
             </ReactMarkdown>
 
-            <div className='contentNav'>
+            {/* <div className='contentNav'>
               <PrevNext />
-            </div>
+            </div> */}
           </Container>
         </Col>
         <Col sm={2} className='pageToc d-none d-sm-block'>

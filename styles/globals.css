@@ -138,6 +138,10 @@ a {
   border: 1px solid #e1e4e5 !important;
 }
 
+.mdContent table td {
+  font-weight: 400;
+}
+
 .mdContent table th {
   padding: 10px;
 }

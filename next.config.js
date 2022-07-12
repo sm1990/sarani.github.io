@@ -19,16 +19,17 @@ const nextConfig = {
     storePicturesInWEBP: true,
     generateAndUseBlurImages: true,
     distServer: 'https://dist.ballerina.io',
+    gitHubPath: 'https://github.com/sm1990/sarani.github.io/blob/main/'
   },
   async rewrites() {
     return [
       {
         source: `/learn/build-a-data-service-in-ballerina`,
-        destination: `/learn/get-started/build-a-data-service-in-ballerina`,
+        destination: `/learn/featured-use-cases/build-a-data-service-in-ballerina`,
       },
       {
         source: `/${redirectBase}learn/deploy-ballerina-on-kubernetes`,
-        destination: `/${redirectBase}learn/get-started/deploy-ballerina-on-kubernetes`,
+        destination: `/${redirectBase}learn/featured-use-cases/deploy-ballerina-on-kubernetes`,
       },
       {
         source: `/${redirectBase}learn/get-started-with-ballerina`,
@@ -36,23 +37,27 @@ const nextConfig = {
       },
       {
         source: `/${redirectBase}learn/language-basics`,
-        destination: `/${redirectBase}learn/get-started/language-basics`,
+        destination: `/${redirectBase}learn/learn-the-language/language-basics`,
       },
       {
-        source: `/${redirectBase}learn/work-with-data-in-ballerina`,
-        destination: `/${redirectBase}learn/get-started/work-with-data-in-ballerina`,
+        source: `/${redirectBase}learn/language-walkthrough`,
+        destination: `/${redirectBase}learn/learn-the-language/language-walkthrough`,
+      },
+      {
+        source: `/${redirectBase}learn/work-with-data-using-queries-in-ballerina`,
+        destination: `/${redirectBase}learn/featured-use-cases/work-with-data-using-queries-in-ballerina`,
       },
       {
         source: `/${redirectBase}learn/write-a-graphql-api-with-ballerina`,
-        destination: `/${redirectBase}learn/get-started/write-a-graphql-api-with-ballerina`,
+        destination: `/${redirectBase}learn/featured-use-cases/write-a-graphql-api-with-ballerina`,
       },
       {
         source: `/${redirectBase}learn/write-a-grpc-service-with-ballerina`,
-        destination: `/${redirectBase}learn/get-started/write-a-grpc-service-with-ballerina`,
+        destination: `/${redirectBase}learn/featured-use-cases/write-a-grpc-service-with-ballerina`,
       },
       {
         source: `/${redirectBase}learn/write-a-restful-api-with-ballerina`,
-        destination: `/${redirectBase}learn/get-started/write-a-restful-api-with-ballerina`,
+        destination: `/${redirectBase}learn/featured-use-cases/write-a-restful-api-with-ballerina`,
       },
       {
         source: `/${redirectBase}learn/install-ballerina/:slug`,
@@ -66,74 +71,86 @@ const nextConfig = {
 
 
       {
-        source: `/${redirectBase}learn/ballerina-openapi-support`,
-        destination: `/${redirectBase}learn/guides/ballerina-openapi-support`,
+        source: `/${redirectBase}learn/openapi-tool`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/openapi-tool`,
+      },
+      {
+        source: `/${redirectBase}learn/graphql-client-tool`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/graphql-client-tool`,
+      },
+      {
+        source: `/${redirectBase}learn/asyncapi-tool`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/asyncapi-tool`,
       },
       {
         source: `/${redirectBase}learn/ballerina-shell`,
-        destination: `/${redirectBase}learn/guides/ballerina-shell`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/ballerina-shell`,
       },
       {
         source: `/${redirectBase}learn/call-java-code-from-ballerina`,
-        destination: `/${redirectBase}learn/guides/call-java-code-from-ballerina`,
+        destination: `/${redirectBase}learn/learn-the-platform/java-interoperability/call-java-code-from-ballerina`,
       },
       {
         source: `/${redirectBase}learn/debug-ballerina-programs`,
-        destination: `/${redirectBase}learn/guides/debug-ballerina-programs`,
+        destination: `/${redirectBase}learn/learn-the-platform/test-document-the-code/debug-ballerina-programs`,
       },
       {
         source: `/${redirectBase}learn/generate-code-documentation`,
-        destination: `/${redirectBase}learn/guides/generate-code-documentation`,
+        destination: `/${redirectBase}learn/learn-the-platform/test-document-the-code/generate-code-documentation`,
       },
       {
         source: `/${redirectBase}learn/manage-dependencies`,
-        destination: `/${redirectBase}learn/guides/manage-dependencies`,
+        destination: `/${redirectBase}learn/learn-the-platform/source-code-dependencies/manage-dependencies`,
       },
       {
         source: `/${redirectBase}learn/observe-ballerina-programs`,
-        destination: `/${redirectBase}learn/guides/observe-ballerina-programs`,
+        destination: `/${redirectBase}learn/learn-the-platform/configure-observe/observe-ballerina-programs`,
       },
       {
         source: `/${redirectBase}learn/organize-ballerina-code`,
-        destination: `/${redirectBase}learn/guides/organize-ballerina-code`,
+        destination: `/${redirectBase}learn/learn-the-platform/source-code-dependencies/organize-ballerina-code`,
       },
       {
         source: `/${redirectBase}learn/publish-packages-to-ballerina-central`,
-        destination: `/${redirectBase}learn/guides/publish-packages-to-ballerina-central`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-central/publish-packages-to-ballerina-central`,
       },
       {
         source: `/${redirectBase}learn/configure-ballerina-programs/:slug`,
-        destination: `/${redirectBase}learn/guides/configure-ballerina-programs/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/configure-observe/configure-ballerina-programs/:slug`,
       },
       {
         source: `/${redirectBase}learn/distinctive-language-features/:slug`,
-        destination: `/${redirectBase}learn/guides/distinctive-language-features/:slug`,
+        destination: `/${redirectBase}learn/learn-the-language/distinctive-language-features/:slug`,
       },
       {
-        source: `/${redirectBase}learn/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda`,
-        destination: `/${redirectBase}learn/guides/run-ballerina-programs-in-the-cloud/function-as-a-service-with-ballerina/aws-lambda`,
+        source: `/${redirectBase}learn/run-in-the-cloud/code-to-cloud/code-to-cloud-deployment`,
+        destination: `/${redirectBase}learn/learn-the-platform/run-in-the-cloud/code-to-cloud/code-to-cloud-deployment`,
+      },
+      {
+        source: `/${redirectBase}learn/run-in-the-cloud/function-as-a-service/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/run-in-the-cloud/function-as-a-service/:slug`,
       },
       {
         source: `/${redirectBase}learn/test-ballerina-code/:slug`,
-        destination: `/${redirectBase}learn/guides/test-ballerina-code/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/test-document-the-code/test-ballerina-code/:slug`,
       },
 
 
       {
         source: `/${redirectBase}learn/package-references`,
-        destination: `/${redirectBase}learn/references/package-references`,
+        destination: `/${redirectBase}learn/learn-the-platform/source-code-dependencies/package-references`,
       },
       {
         source: `/${redirectBase}learn/cli-documentation/:slug`,
-        destination: `/${redirectBase}learn/references/cli-documentation/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/cli-documentation/:slug`,
       },
       {
-        source: `/${redirectBase}learn/java-interoperability/:slug`,
-        destination: `/${redirectBase}learn/references/java-interoperability/:slug`,
+        source: `/${redirectBase}learn/java-interoperability-guide/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/java-interoperability/java-interoperability-guide/:slug`,
       },
       {
-        source: `/${redirectBase}learn/style-guide/coding-conventions`,
-        destination: `/${redirectBase}learn/references/style-guide/coding-conventions`,
+        source: `/${redirectBase}learn/style-guide/:slug`,
+        destination: `/${redirectBase}learn/learn-the-platform/source-code-dependencies/style-guide/:slug`,
       },
       {
         source: `/${redirectBase}learn/style-guide/coding-conventions/:slug`,
@@ -146,7 +163,7 @@ const nextConfig = {
       }
     ]
   },
-  
+  trailingSlash: true,
   resolve: [{"path":false,"fs": false}],
 
 
