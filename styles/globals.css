@@ -784,3 +784,30 @@ table.cTopControlsContainer tbody {
   margin: 0 !important;
   background-color: var(--code-color-background) !important;
 }
+
+/* BBE landing page */
+.bbeHomeTitle {
+  width: fit-content;
+  border-bottom: 2px solid #464646;
+}
+
+.bbeTable {
+  background-color: #f5f6f6;
+}
+
+.bbeTable hr {
+  border-top: 1px solid #d1d4da;
+  opacity: 1;
+}
+
+.bbeTable ul {
+  list-style: none;
+}
+
+.bbeTable li {
+  border-bottom: 1px solid #cecfd0;
+}
+
+.bbeTable a {
+  color: #57595d !important;
+}
