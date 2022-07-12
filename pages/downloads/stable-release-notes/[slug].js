@@ -70,12 +70,13 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       frontmatter,
-      content
+      content,
+      slug
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, slug }) {
 
   const HighlightSyntax = (code, language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -137,7 +138,7 @@ export default function PostPage({ frontmatter, content }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <a href={`${process.env.gitHubPath}downloads/stable-release-notes/${id}/RELEASE_NOTE.html`}>
+                <a href={`${process.env.gitHubPath}downloads/stable-release-notes/${slug}/RELEASE_NOTE.html`}>
                   <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
                 </a>
               </Col>
