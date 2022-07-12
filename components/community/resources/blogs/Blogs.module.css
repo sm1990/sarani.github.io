@@ -7,6 +7,14 @@
     padding: 30px;
 }
 
+.fBlogs h2, .blogs h2 {
+    font-size: 1.5rem;
+}
+
+.fBlogs h4, .blogs h4 {
+    font-size: 1.25rem;
+}
+
 .blogWrapper {
     height:528px; 
     overflow-y: scroll;

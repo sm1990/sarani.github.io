@@ -9,6 +9,9 @@ import archive from '../../_data/release_notes_versions.json';
 
 export default function SwanLakeArchived() {
 
+    const [releases, setReleases] = React.useState(archive)
+    React.useEffect(() => setReleases(archive.reverse()), [])
+
     return (
         <Layout>
 
@@ -24,8 +27,8 @@ export default function SwanLakeArchived() {
                     <Col xs={12}>
 
 
-                        {archive.reverse().map((item, index) => (
-                            <div className="installers" key={index}>
+                        {releases.map((item, index) => (
+                            <div className="installers" key={item.version}>
                                 <h3 className="releaseVersion" id={item.version}>{item.version} ({item['release-date']})</h3>
                                 <Row className="releasesRow">
                                     <Col xs={12} md={6} lg={6} className="leftTable">

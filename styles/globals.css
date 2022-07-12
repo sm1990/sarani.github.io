@@ -351,6 +351,10 @@ pre[class*="language-"] {
   border-bottom: 0.3px solid #d9dadb;
 }
 
+.newsletterInfo h4 {
+  font-size: 1.3rem;
+}
+
 .newsletterInfo:last-of-type {
   border-bottom: none;
 }
