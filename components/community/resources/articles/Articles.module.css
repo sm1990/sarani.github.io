@@ -7,6 +7,14 @@
     padding: 30px;
 }
 
+.fArticles h2, .articles h2 {
+    font-size: 1.5rem;
+}
+
+.fArticles h4, .articles h4 {
+    font-size: 1.25rem;
+}
+
 .articleWrapper {
     height:528px; 
     overflow-y: scroll;

@@ -7,6 +7,14 @@
     padding: 30px;
 }
 
+.fVideos h2, .videos h2 {
+    font-size: 1.5rem;
+}
+
+.fVideos h4, .videos h4 {
+    font-size: 1.25rem;
+}
+
 .videoWrapper {
     height:528px; 
     overflow-y: scroll;
