@@ -77,13 +77,14 @@ export async function getStaticProps({ params: { slug } }) {
       content,
       id,
       sub,
-      third
+      third,
+      slug
     },
   };
 }
 
 
-export default function PostPage({ frontmatter, content, id, sub, third }) {
+export default function PostPage({ frontmatter, content, id, sub, third, slug }) {
 
   // const MarkdownNavbar = dynamic(() => import('react-markdown-navbar'), { ssr: false });
 
@@ -182,7 +183,9 @@ export default function PostPage({ frontmatter, content, id, sub, third }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}swan-lake/learn-the-platform/${slug}.md`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 

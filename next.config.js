@@ -19,6 +19,7 @@ const nextConfig = {
     storePicturesInWEBP: true,
     generateAndUseBlurImages: true,
     distServer: 'https://dist.ballerina.io',
+    gitHubPath: 'https://github.com/sm1990/sarani.github.io/blob/main/'
   },
   async rewrites() {
     return [
@@ -144,7 +145,7 @@ const nextConfig = {
         destination: `/${redirectBase}learn/learn-the-platform/ballerina-tooling/cli-documentation/:slug`,
       },
       {
-        source: `/${redirectBase}learn/java-interoperability/:slug`,
+        source: `/${redirectBase}learn/java-interoperability-guide/:slug`,
         destination: `/${redirectBase}learn/learn-the-platform/java-interoperability/java-interoperability-guide/:slug`,
       },
       {

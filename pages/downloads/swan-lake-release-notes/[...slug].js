@@ -141,7 +141,7 @@ export default function PostPage({ frontmatter, content, id }) {
         <meta property="twitter:text:description" content="A programming language for the cloud that makes it easier to use, combine, and create network services." />
       </Head>
       <Layout>
-      <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
+        <Col sm={3} xxl={2} className='leftNav d-none d-sm-block'>
           <LeftNav launcher='rn' id={id}
             mainDir='swan-lake-release-notes'
             LearnToc={LearnToc} />
@@ -165,7 +165,9 @@ export default function PostPage({ frontmatter, content, id }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}downloads/swan-lake-release-notes/${id}/RELEASE_NOTE.md`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 

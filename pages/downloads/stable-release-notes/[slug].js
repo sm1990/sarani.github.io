@@ -137,7 +137,9 @@ export default function PostPage({ frontmatter, content }) {
             <div className='topRow'>
               <Col xs={11}><h1>{frontmatter.title}</h1></Col>
               <Col xs={1} className="gitIcon">
-                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                <a href={`${process.env.gitHubPath}downloads/stable-release-notes/${id}/RELEASE_NOTE.html`}>
+                  <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+                </a>
               </Col>
             </div>
 
