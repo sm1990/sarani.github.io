@@ -36,7 +36,7 @@ export default function Layout({ children }) {
 
         {/* <script async src="/jquery/jquery.min.js"/>
         <script async src="/shiki/shiki.js" /> */}
-        <script type="text/javascript" crossorigin src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"/>
+        {/* <script type="text/javascript" crossorigin src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"/> */}
       </Head>
       <Stack gap={0} className='main-wrapper downloads'>
         <TopNav launcher='downloads'/>

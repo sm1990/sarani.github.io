@@ -30,10 +30,12 @@ export default function Footer() {
               <div className={styles.smIcons}>
                 <ul>
                 <li><Link className={styles.footerLinkSM} href="https://github.com/ballerina-platform" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/github.svg`} width={18} height={18} alt="GitHub"/></Link></li>
-                <li><Link className={styles.footerLinkSM} href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/stackoverflow.svg`} width={15} height={18} alt="Stackoverflow"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href="https://twitter.com/ballerinalang" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/twitter.svg`} width={19} height={15} alt="Twitter"/></Link></li>
+                <li><Link className={styles.footerLinkSM} href="https://groups.google.com/g/ballerina-dev" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/google-groups.svg`} width={17} height={17} alt="Google Groups"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href={`/community/#ballerina-slack-community`} passHref><Image src={`${prefix}/images/slack.svg`} width={17} height={17} alt="Slack"/></Link></li>
+                <li><Link className={styles.footerLinkSM} href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank" rel="noreferrer" passHref><Image src={`${prefix}/images/stackoverflow.svg`} width={15} height={18} alt="Stackoverflow"/></Link></li>
                 <li><Link className={styles.footerLinkSM} href="https://www.youtube.com/c/Ballerinalang" passHref><Image src={`${prefix}/images/youtube-icon.svg`} width={15} height={18} alt="Youtube"/></Link></li>
+                <li><Link className={styles.footerLinkSM} href="https://www.linkedin.com/company/79080790" passHref><Image src={`${prefix}/images/linkedin.svg`} width={16} height={16} alt="LinkedIn"/></Link></li>
                 </ul>
               </div>
               <div className={styles.subscribe}>
