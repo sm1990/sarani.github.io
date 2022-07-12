@@ -8,7 +8,9 @@ import SLArchive from '../../_data/swanlake_release_notes_versions.json';
 
 
 export default function SwanLakeArchived() {
-
+    const distServer = process.env.distServer;
+    // const ss = SLArchive.reverse();
+    // console.log(ss);
     return (
         <Layout>
 
@@ -25,7 +27,7 @@ export default function SwanLakeArchived() {
 
 
                         {SLArchive.reverse().map((item, index) => (
-                            <div className="installers" key={item.version}>
+                            <div className="installers" key={index}>
                                 <h3 className="releaseVersion" id={item.version}>{item.version} ({item['release-date']})</h3>
                                 <Row className="releasesRow">
                                     <Col xs={12} md={6} lg={6} className="leftTable">
@@ -33,45 +35,44 @@ export default function SwanLakeArchived() {
                                             <tbody>
                                                 <tr>
                                                     <td >{item['linux-installer']}</td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['linux-installer']}`}
+                                                    <td><a href={distServer + '/downloads/' + item['version'] + '/' + item['linux-installer']}
                                                         name={item['linux-installer']} data-pack={item['linux-installer']} target="">
                                                         <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={item['linux-installer']} />
                                                     </a>
                                                     </td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['linux-installer']}.md5`}>md5</a></td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['linux-installer']}.sha1`}>SHA-1</a></td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['linux-installer']}.asc`}>asc</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['linux-installer'] + '.md5'}>md5</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['linux-installer'] + '.sha1'}>SHA-1</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['linux-installer'] + '.asc'}>asc</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td >{item['windows-installer']}</td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['windows-installer']}`}
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['windows-installer']}
                                                         name={item['windows-installer']} data-pack={item['windows-installer']} target="">
                                                         <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={item['windows-installer']} />
                                                     </a>
                                                     </td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['windows-installer']}.md5`}>md5</a></td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['windows-installer']}.sha1`}>SHA-1</a></td>
-                                                    <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['windows-installer']}.asc`}>asc</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['windows-installer'] + '.md5'}>md5</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['windows-installer'] + '.sha1'}>SHA-1</a></td>
+                                                    <td><a href={distServer + '/downloads/' + item.version + '/' + item['windows-installer'] + '.asc'}>asc</a></td>
                                                 </tr>
 
                                                 {
                                                     (item['other-artefacts'].length > 1) ?
                                                         <tr>
                                                             <td >{item['macos-installer']}</td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}`}
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer']}
                                                                 name={item['macos-installer']} data-pack={item['macos-installer']} target="">
                                                                 <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={item['macos-installer']} />
                                                             </a>
                                                             </td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.md5`}>md5</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.sha1`}>SHA-1</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.asc`}>asc</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.md5'}>md5</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.sha1'}>SHA-1</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.asc'}>asc</a></td>
                                                         </tr>
                                                         : null
-
                                                 }
-                                            </tbody></table>
-
+                                            </tbody>
+                                        </table>
                                     </Col>
                                     <Col xs={12} md={6} lg={6} className="rightTable">
                                         <table>
@@ -80,14 +81,14 @@ export default function SwanLakeArchived() {
                                                     (item['other-artefacts'].length <= 1) ?
                                                         <tr>
                                                             <td >{item['macos-installer']}</td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}`}
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer']}
                                                                 name={item['macos-installer']} data-pack={item['macos-installer']} target="">
                                                                 <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={item['macos-installer']} />
                                                             </a>
                                                             </td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.md5`}>md5</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.sha1`}>SHA-1</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['macos-installer']}.asc`}>asc</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.md5'}>md5</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.sha1'}>SHA-1</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['macos-installer'] + '.asc'}>asc</a></td>
                                                         </tr>
                                                         : null
                                                 }
@@ -97,35 +98,35 @@ export default function SwanLakeArchived() {
                                                         item['other-artefacts'].map((ot, index) => (
                                                             <tr key={ot}>
                                                                 <td >{ot}</td>
-                                                                <td><a href={`${process.env.distServer}/downloads/${item.version}/${ot}`}
+                                                                <td><a href={distServer + '/downloads/' + item.version + '/' + ot}
                                                                     name={ot} data-pack={ot} target="">
                                                                     <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={ot} />
                                                                 </a>
                                                                 </td>
-                                                                <td><a href={`${process.env.distServer}/downloads/${item.version}/${ot}.md5`}>md5</a></td>
-                                                                <td><a href={`${process.env.distServer}/downloads/${item.version}/${ot}.sha1`}>SHA-1</a></td>
-                                                                <td><a href={`${process.env.distServer}/downloads/${item.version}/${ot}.asc`}>asc</a></td>
+                                                                <td><a href={distServer + '/downloads/' + item.version + '/' + ot + '.md5'}>md5</a></td>
+                                                                <td><a href={distServer + '/downloads/' + item.version + '/' + ot + '.sha1'}>SHA-1</a></td>
+                                                                <td><a href={distServer + '/downloads/' + item.version + '/' + ot + '.asc'}>asc</a></td>
                                                             </tr>
                                                         ))
                                                         :
                                                         <tr>
                                                             <td >{item['other-artefacts']}</td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['other-artefacts']}`}
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['other-artefacts']}
                                                                 name={item['other-artefacts']} data-pack={item['other-artefacts']} target="">
                                                                 <Image src={`${prefix}/images/download-bg-green-fill.svg`} width={13} height={13} alt={item['other-artefacts']} />
                                                             </a>
                                                             </td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['other-artefacts']}.md5`}>md5</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['other-artefacts']}.sha1`}>SHA-1</a></td>
-                                                            <td><a href={`${process.env.distServer}/downloads/${item.version}/${item['other-artefacts']}.asc`}>asc</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['other-artefacts'] + '.md5'}>md5</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['other-artefacts'] + '.sha1'}>SHA-1</a></td>
+                                                            <td><a href={distServer + '/downloads/' + item.version + '/' + item['other-artefacts'] + '.asc'}>asc</a></td>
                                                         </tr>
-
                                                 }
-                                            </tbody></table>
+                                            </tbody>
+                                        </table>
                                     </Col>
                                 </Row>
                                 <div className="archivedReleaseNotes">
-                                    <a className="archivedReleaseNotesLink" id={`${item.version}notes`} href={`${prefix}/downloads/swan-lake-release-notes/swan-lake-${item.version}`}>RELEASE NOTES</a>
+                                    <a className="archivedReleaseNotesLink" id={item.version + 'notes'} href={prefix + '/downloads/swan-lake-release-notes/swan-lake-' + item.version}>RELEASE NOTES</a>
                                 </div>
                             </div>
                         ))}

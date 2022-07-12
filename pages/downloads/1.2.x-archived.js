@@ -25,7 +25,7 @@ export default function SwanLakeArchived() {
 
 
                         {archive.reverse().map((item, index) => (
-                            <div className="installers" key={item.version}>
+                            <div className="installers" key={index}>
                                 <h3 className="releaseVersion" id={item.version}>{item.version} ({item['release-date']})</h3>
                                 <Row className="releasesRow">
                                     <Col xs={12} md={6} lg={6} className="leftTable">
