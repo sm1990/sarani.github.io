@@ -2053,3 +2053,9 @@ ul li.line-numbers pre code span.line-numbers-rows span:before {
         padding-right: 10px;
     }
 }
+
+
+/*---------------Old versions-----------*/
+.wy-breadcrumbs-aside .icon-github {
+    display: none;
+}
