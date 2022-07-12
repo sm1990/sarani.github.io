@@ -60,6 +60,15 @@ a {
   border: #20b6b0 !important;
 }
 
+.learnMob:focus, .learnMob:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.offcanvas .accordion, .offcanvas .accordion button {
+  font-size: 14px !important;
+}
+
 .policyContent {
   padding-right: 1% !important;
 }
@@ -330,6 +339,35 @@ pre[class*="language-"] {
   font-size: 1.5rem;
 }
 
+.communitySubRow {
+  background-color: #F8F8F8;
+}
+
+.communitySub {
+  background-color: #F8F8F8;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.communitySub ul {
+  flex-direction: row;
+  justify-content: end;
+}
+
+.communitySub ul li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.communitySub a {
+  color: #20b6b0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.communitySub a:hover {
+  color: #464646;
+}
+
 .slackRow {
   background-color: #e6eaeb;
 }
@@ -556,6 +594,7 @@ ul.eventsTabs {
   margin-top: 0;
   background-color: #f5f5f5 !important;
 }
+
 
 /*--------------------Specifications------------*/
 
