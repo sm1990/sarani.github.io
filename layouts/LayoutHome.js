@@ -14,11 +14,7 @@ export default function Layout({ children }) {
       <Head>
         {/* <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script async src="https://unpkg.com/shiki" /> */}
-
-        {/* <script src="/prism/prism.js"></script>
-        <script src="/prism/prism-ballerina.js"></script> */}
-
-        {/* <link rel="stylesheet" href="/prism/prism.css"/> */}
+        <title>Ballerina Home</title>
 
         {/* Google analytics */}
         <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js" />

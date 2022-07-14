@@ -17,30 +17,20 @@ const TopNav = (props) => {
     launcher = launcher + '-learn';
   }
 
-  if (global.location.pathname.indexOf('1.2/learn') > 0) {
-    versionPicker = 'v1.2';
-    version = '1.2.0.';
-  }
 
   return (
     <>
-      {
-        (version === '1.2.0.' || version === '1.1.0.') ?
-          <Row className={styles.oldBanner}>
-            <Col xs={12}>
-              <p>This documentation is for Ballerina {version} <a href={`${prefix}/learn`}>View documentation for the latest release</a>.</p>
-            </Col>
-          </Row>
-          : null
-      }
-      <Navbar className={styles[launcher]} expand="lg" sticky='top'>
-        <Container fluid>
+      <Navbar className={(launcher === 'home') ? `${styles[launcher]} navbar-dark` : styles[launcher]} expand="lg" sticky='top'>
+        <Container fluid className={(launcher === 'home') ? styles.toggleFloat : null}>
+        {(launcher !== "home") ?
           <Navbar.Brand href={`${prefix}/`}>
-            {(launcher !== "home") ?
+            
               <Image src={`${prefix}/images/ballerina-logo.svg`} height={28} width={150} alt="Ballerina Logo" />
-              : null
-            }
+              
+            
           </Navbar.Brand>
+          : null
+          }
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             {/* <Nav

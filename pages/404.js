@@ -4,6 +4,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 import Layout from '../layouts/Layout404';
+import Meta from '../components/common/meta/meta';
 import { prefix } from '../utils/prefix';
 
 
@@ -44,8 +45,11 @@ export default function FourOHFour() {
           <Row className='pageContentRow'>
             <Col xs={12}>
                 <p><strong>Page not found. :(</strong></p>
+                <Meta/>
                 <p>You can either <a href="#" onClick={goBack}>go back</a> to the previous page, <a className="getStartLinks" href='https://github.com/ballerina-platform/ballerina-lang/issues/new/choose'>report your issue,</a> or contact the <a href={`${prefix}/community/#ballerina-slack-community`}>Ballerina
       Team</a>.</p>
+
+
             </Col>
           </Row>
         </Col>
