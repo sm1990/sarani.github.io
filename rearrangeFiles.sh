@@ -11,6 +11,7 @@ cp -r ./out/learn/configure-observe/* ./out/learn
 cp -r ./out/learn/java-interoperability/* ./out/learn
 cp -r ./out/learn/test-document-the-code/* ./out/learn
 cp -r ./out/learn/source-code-dependencies/* ./out/learn
+cp ./out/404/index.html ./out/404.html
 
 #Remove duplicated files
 rm -rf ./out/learn/get-started/ ./out/learn/featured-use-cases/ ./out/learn/learn-the-language/ ./out/learn/learn-the-platform/
