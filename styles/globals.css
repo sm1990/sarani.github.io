@@ -60,12 +60,14 @@ a {
   border: #20b6b0 !important;
 }
 
-.learnMob:focus, .learnMob:hover {
+.learnMob:focus,
+.learnMob:hover {
   border: none !important;
   box-shadow: none !important;
 }
 
-.offcanvas .accordion, .offcanvas .accordion button {
+.offcanvas .accordion,
+.offcanvas .accordion button {
   font-size: 14px !important;
 }
 
@@ -340,11 +342,11 @@ pre[class*="language-"] {
 }
 
 .communitySubRow {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .communitySub {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -595,7 +597,6 @@ ul.eventsTabs {
   background-color: #f5f5f5 !important;
 }
 
-
 /*--------------------Specifications------------*/
 
 .spec {
@@ -803,12 +804,14 @@ table.cTopControlsContainer tbody {
 
 .btnTitle {
   font-size: 16px;
+  font-weight: 400;
   color: var(--button-color-text);
   cursor: pointer;
 }
 
 .btnTitleHover {
   font-size: 16px;
+  font-weight: 400;
   text-decoration: underline;
   color: var(--button-hover-color-text);
   cursor: pointer;
