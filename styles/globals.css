@@ -791,24 +791,24 @@ table.cTopControlsContainer tbody {
 
 .btnNext {
   text-align: end;
-  font-size: 1.1rem;
+  font-size: 12px;
   cursor: pointer;
 }
 
 .btnPrev {
   text-align: start;
-  font-size: 1.1rem;
+  font-size: 12px;
   cursor: pointer;
 }
 
 .btnTitle {
-  font-size: 1.3rem;
+  font-size: 16px;
   color: var(--button-color-text);
   cursor: pointer;
 }
 
 .btnTitleHover {
-  font-size: 1.3rem;
+  font-size: 16px;
   text-decoration: underline;
   color: var(--button-hover-color-text);
   cursor: pointer;
