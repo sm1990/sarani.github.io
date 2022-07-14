@@ -98,7 +98,7 @@ export default function BBEPage({ frontmatter, navContent, bbe }) {
         <Col xs={12} className="d-block d-sm-none">
           Mobile Left Nav
         </Col>
-        <Col xs={12} sm={7} xxl={8} className="mdContent">
+        <Col xs={12} sm={9} xxl={10} className="mdContent">
           <Container className="h-100">
             {bbeComponent != null && bbeComponent}
           </Container>
