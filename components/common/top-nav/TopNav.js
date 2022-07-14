@@ -17,7 +17,6 @@ const TopNav = (props) => {
     launcher = launcher + '-learn';
   }
 
-
   return (
     <>
       <Navbar className={(launcher === 'home') ? `${styles[launcher]} navbar-dark` : styles[launcher]} expand="lg" sticky='top'>

@@ -12,8 +12,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        {/* <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script async src="https://unpkg.com/shiki" /> */}
+        
         <title>Ballerina Home</title>
 
         {/* Google analytics */}
