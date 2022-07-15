@@ -15,7 +15,7 @@ setCDN("https://unpkg.com/shiki/");
 import Layout from '../../layouts/LayoutDocs';
 import LeftNav from '../../components/common/left-nav/LeftNav';
 import { prefix } from '../../utils/prefix';
-import LearnToc from '../../files1.json';
+import LearnToc from '../../utils/learn-lm.json';
 
 
 var traverseFolder = function (dir) {
