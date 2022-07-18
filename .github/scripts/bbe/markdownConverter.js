@@ -154,7 +154,7 @@ const generateEditOnGithubLink = (exampleDir) => {
   const metadataJson = JSON.parse(metadataString);
   const releaseTag = metadataJson["version"];
 
-  return `${editOnGithubBaseUrl}v${releaseTag}`;
+  return `${editOnGithubBaseUrl}v${releaseTag}/examples`;
 };
 
 // markdown-it containers

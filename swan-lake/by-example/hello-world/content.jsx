@@ -65,7 +65,7 @@ export default function HelloWorld() {
             className="btn rounded ms-auto"
             onClick={() => {
               window.open(
-                "https://play.ballerina.io/?gist=2ee3318d2ceb3344e3bcbc284ce41123&file=hello_world.bal",
+                "https://play.ballerina.io/?gist=d82b48ae8f6c182169fdf78de7cd2555&file=hello_world.bal",
                 "_blank"
               );
             }}
@@ -88,7 +88,7 @@ export default function HelloWorld() {
             className="btn rounded"
             onClick={() => {
               window.open(
-                "https://github.com/ballerina-platform/ballerina-distribution/tree/v2201.1.0/hello-world",
+                "https://github.com/ballerina-platform/ballerina-distribution/tree/v2201.1.1/examples/hello-world",
                 "_blank"
               );
             }}
@@ -155,7 +155,7 @@ export default function HelloWorld() {
       <Row className="bbeOutput mx-0 px-2 rounded">
         <Col className="my-2" sm={10}>
           <pre className="m-0" ref={ref1}>
-            <code className="d-flex flex-column justify-content-center">
+            <code className="d-flex flex-column">
               <span>{`# To run this sample, place the source code in `}</span>
               <span>
                 {`# `}

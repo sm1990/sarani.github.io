@@ -75,7 +75,7 @@ export default function HelloWorldService() {
             className="btn rounded ms-auto"
             onClick={() => {
               window.open(
-                "https://github.com/ballerina-platform/ballerina-distribution/tree/v2201.1.0/hello-world-service",
+                "https://github.com/ballerina-platform/ballerina-distribution/tree/v2201.1.1/examples/hello-world-service",
                 "_blank"
               );
             }}
