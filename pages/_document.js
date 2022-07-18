@@ -4,7 +4,7 @@ import { prefix } from '../utils/prefix';
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <meta name="robots" content="noindex" />
         <meta name="googlebot" content="noindex"></meta>
@@ -30,10 +30,6 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-
-        {/* <script src="/prism/prism.js"></script>
-        <script src="/prism/prism-ballerina.js"></script> 
-        <link rel="stylesheet" href="/prism/prism.css"/> */}
 
         {/* <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"/>
         <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PSL2TX4"/>

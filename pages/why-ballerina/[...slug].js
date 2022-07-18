@@ -15,7 +15,7 @@ setCDN("https://unpkg.com/shiki/");
 import Layout from '../../layouts/LayoutDocs';
 import LeftNav from '../../components/common/left-nav/LeftNav';
 import { prefix } from '../../utils/prefix';
-import LearnToc from '../../files1.json';
+import LearnToc from '../../utils/learn-lm.json';
 
 
 var traverseFolder = function (dir) {
@@ -165,7 +165,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   else {
                     id = scanArray(children);
                   }
-                  return <h2 data-id={id}>{children}</h2>
+                  return <h2 id={id}>{children}</h2>
                 },
                 h3({ node, inline, className, children, ...props }) {
                   let id = '';
@@ -175,7 +175,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   else {
                     id = scanArray(children);
                   }
-                  return <h3 data-id={id}>{children}</h3>
+                  return <h3 id={id}>{children}</h3>
                 },
                 h4({ node, inline, className, children, ...props }) {
                   let id = '';
@@ -185,7 +185,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   else {
                     id = scanArray(children);
                   }
-                  return <h4 data-id={id}>{children}</h4>
+                  return <h4 id={id}>{children}</h4>
                 },
                 h5({ node, inline, className, children, ...props }) {
                   let id = '';
@@ -195,7 +195,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   else {
                     id = scanArray(children);
                   }
-                  return <h5 data-id={id}>{children}</h5>
+                  return <h5 id={id}>{children}</h5>
                 },
                 h6({ node, inline, className, children, ...props }) {
                   let id = '';
@@ -205,7 +205,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   else {
                     id = scanArray(children);
                   }
-                  return <h6 data-id={id}>{children}</h6>
+                  return <h6 id={id}>{children}</h6>
                 },
                 code({ node, inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || '')
@@ -224,7 +224,7 @@ export default function PostPage({ frontmatter, content, id }) {
               {content}
             </ReactMarkdown>
 
-            <div className='contentNav'>
+            {/* <div className='contentNav'>
               <Col xs={6} className='prevLink'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#20b6b0" className="bi bi-chevron-left" viewBox="0 0 16 16">
                   <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
@@ -237,7 +237,7 @@ export default function PostPage({ frontmatter, content, id }) {
                   <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                 </svg>
               </Col>
-            </div>
+            </div> */}
           </Container>
         </Col>
         <Col sm={2} className='pageToc d-none d-sm-block'>

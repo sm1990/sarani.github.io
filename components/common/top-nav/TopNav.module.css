@@ -23,6 +23,10 @@ nav.community, .brokenLink, .brokenLink-learn, nav.rn {
     color: #57595d !important;
 }
 
+.toggleFloat {
+    justify-content: end !important;
+}
+
 .home .topNav a.navItem, .home #navbarScrollingDropdown {
     color: #fff !important;
 }
