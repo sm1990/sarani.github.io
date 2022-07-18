@@ -3,6 +3,10 @@ const md = require("markdown-it")();
 const container = require("markdown-it-container");
 const fs = require("fs");
 const axios = require("axios");
+const os = require("os");
+
+// OS
+const platform = os.platform();
 
 // converts kebab case to pascal case
 const kebabCaseToPascalCase = (convertable) => {
@@ -698,7 +702,9 @@ const generate = async (examplesDir, outputDir) => {
 
     // metadata extract regex
     const metaReg =
-      /description:\s*(?<description>.+)\nkeywords:\s*(?<keywords>.+)/;
+      platform.indexOf("win") !== -1
+        ? /description:\s*(?<description>.+)\r\nkeywords:\s*(?<keywords>.+)/
+        : /description:\s*(?<description>.+)\nkeywords:\s*(?<keywords>.+)/;
 
     // edit on github base url
     const editOnGithubBaseUrl = generateEditOnGithubLink(examplesDir);
