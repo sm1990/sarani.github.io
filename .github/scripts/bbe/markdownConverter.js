@@ -162,7 +162,7 @@ md.use(container, "code", {
   },
   render: function (tokens, idx, options, env, self) {
     if (tokens[idx].nesting === 1) {
-      return `<Row className="bbeCode px-2 py-0 rounded" style={{ marginLeft: "${
+      return `<Row className="bbeCode mx-0 px-2 py-0 rounded" style={{ marginLeft: "${
         env.marginLeftMultiplier * 8
       }px" }}>
   <Col sm={10}>
@@ -222,7 +222,7 @@ md.use(container, "code", {
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
     </button>
-    {click${env.codeCount} ? (
+    {codeClick${env.codeCount} ? (
       <button className="btn rounded" disabled aria-label="Copy to Clipboard Check">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -239,10 +239,10 @@ md.use(container, "code", {
       <button
         className="btn rounded"
         onClick={() => {
+          updateCodeClick${env.codeCount}(true);
           copyToClipboard(codeSnippetData[${env.codeCount - 1}]);
-          updateClick${env.codeCount}(true);
           setTimeout(() => {
-            updateClick${env.codeCount}(false);
+            updateCodeClick${env.codeCount}(false);
           }, 3000);
         }}
         aria-label="Copy to Clipboard"
@@ -281,14 +281,61 @@ md.use(container, "out", {
       let outputSplitted = outputRead.split("\n");
       let output = `<br />
 
-<Row className="bbeOutput p-2 rounded">
-  <pre className="m-0">
-    <code className="d-flex flex-column">`.trim();
+<Row className="bbeOutput mx-0 px-2 rounded">
+  <Col className="my-2" sm={10}>
+    <pre className="m-0" ref={ref${env.outputCount}}>
+      <code className="d-flex flex-column">`.trim();
       outputSplitted.forEach((line) => {
         line = `{\`${escapeCharacterAdder(line, "out")}\`}`;
         output += `<span>${line}</span>\n`;
       });
-      output += `</code></pre></Row>`;
+      output += `</code></pre>
+          </Col>
+          <Col sm={2} className="d-flex align-items-start">
+            {outputClick${env.outputCount} ? (
+              <button
+                className="btn rounded ms-auto"
+                aria-label="Copy to Clipboard Check"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#00FF19"
+                  className="output-btn bi bi-check"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+              </button>
+            ) : (
+              <button
+                className="btn rounded ms-auto"
+                onClick={() => {
+                  updateOutputClick${env.outputCount}(true);
+                  const extractedText = extractOutput(ref${env.outputCount}.current.innerText);
+                  copyToClipboard(extractedText);
+                  setTimeout(() => {
+                    updateOutputClick${env.outputCount}(false);
+                  }, 3000);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#EEEEEE"
+                  className="output-btn bi bi-clipboard"
+                  viewBox="0 0 16 16"
+                  aria-label="Copy to Clipboard"
+                >
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+              </button>
+            )}
+          </Col>
+        </Row>`;
 
       return output;
     } else {
@@ -437,6 +484,7 @@ const generateContent = (
   codeSection,
   codeCount,
   codeContentArray,
+  outputCount,
   outputDir
 ) => {
   // navigation
@@ -548,20 +596,32 @@ const generateContent = (
       : "";
 
   // click states
-  let clicks = "";
+  let codeClicks = "";
+  let outputClicks = "";
+
   for (let i = 0; i < codeCount; i++) {
-    clicks += `const [click${i + 1}, updateClick${i + 1}] = useState(false);\n`;
+    codeClicks += `const [codeClick${i + 1}, updateCodeClick${
+      i + 1
+    }] = useState(false);\n`;
   }
-  clicks = clicks.trim();
+
+  for (let i = 0; i < outputCount; i++) {
+    outputClicks += `const [outputClick${i + 1}, updateOutputClick${
+      i + 1
+    }] = useState(false);\nconst ref${i + 1} = createRef()\n`;
+  }
+
+  codeClicks = codeClicks.trim();
+  outputClicks = outputClicks.trim();
 
   // outputFormat
-  output = `import React, { useState, useEffect } from "react";
+  output = `import React, { useState, useEffect, createRef } from "react";
 import { setCDN } from "shiki";
 import { Container, Row, Col } from "react-bootstrap";
 import DOMPurify from "dompurify";
 import {
   copyToClipboard,
-  removeEscapes,
+  extractOutput,
   shikiTokenizer,
 } from "../../../utils/bbe";
 import Link from "next/link";
@@ -571,7 +631,10 @@ setCDN("https://unpkg.com/shiki/");
 const codeSnippetData = [${codeContentArray.join(",")}]
 
 export default function ${kebabCaseToPascalCase(bbeName)}() {
-  ${clicks}
+  ${codeClicks}
+
+  ${outputClicks}
+
   const [codeSnippets, updateSnippets] = useState([]);
   const [btnHover, updateBtnHover] = useState([false, false]);
 
@@ -665,6 +728,7 @@ const generate = async (examplesDir, outputDir) => {
         let codeSection;
         let playground = true;
         let codeCount = 0;
+        let outputCount = 0;
         let codeContentArray = [];
 
         console.log(`\tProcessing BBE : ${name}`);
@@ -701,7 +765,7 @@ const generate = async (examplesDir, outputDir) => {
                 // Ballerina content
                 if (line.includes("::: code")) {
                   let playgroundLink;
-                  codeCount += 1;
+                  codeCount++;
 
                   let { marginLeftMultiplier, fileName, codeContent } =
                     extractCode(relPath, line);
@@ -727,7 +791,9 @@ const generate = async (examplesDir, outputDir) => {
 
                   // Ballerina output
                 } else if (line.includes("::: out")) {
+                  outputCount++;
                   convertedLine = md.render(line, {
+                    outputCount,
                     relPath,
                   });
                 } else {
@@ -754,6 +820,7 @@ const generate = async (examplesDir, outputDir) => {
           codeSection,
           codeCount,
           codeContentArray,
+          outputCount,
           outputDir
         );
       }
