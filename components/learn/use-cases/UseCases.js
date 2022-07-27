@@ -9,16 +9,16 @@ export default function UseCases() {
   return (
     <>
 
-      <Row className="pageContentRow learnRow">
+      <Row className="pageContentRow learnRow llanding">
         <Col xs={12} md={12}>
           <h2>Featured use cases</h2>
         </Col>
       </Row>
 
-      <Row className="pageContentRow">
+      <Row className="pageContentRow llanding">
         <Col xs={12} lg={4}>
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/write-a-restful-api-with-ballerina/`} className={styles.linkText}>Write RESTful API</a>
+            <a href={`${prefix}/learn/write-a-restful-api-with-ballerina/`} className={styles.linkText}>Write a RESTful API</a>
             {/* <div className={styles.linkRow}>
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(HTTP API Docs)</a>&nbsp;&nbsp;
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(Spec)</a>
@@ -26,7 +26,7 @@ export default function UseCases() {
           </div>
 
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/write-a-grpc-service-with-ballerina/`} className={styles.linkText}>Write gRPC service</a>
+            <a href={`${prefix}/learn/write-a-grpc-service-with-ballerina/`} className={styles.linkText}>Write a gRPC service</a>
             {/* <div className={styles.linkRow}>
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(gRPC API Docs)</a>&nbsp;&nbsp;
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(Spec)</a>
@@ -36,7 +36,7 @@ export default function UseCases() {
 
         <Col xs={12} lg={4}>
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/write-a-graphql-api-with-ballerina/`} className={styles.linkText}>Write GraphQL API</a>
+            <a href={`${prefix}/learn/write-a-graphql-api-with-ballerina/`} className={styles.linkText}>Write a GraphQL API</a>
             {/* <div className={styles.linkRow}>
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(GraphQL API Docs)</a>&nbsp;&nbsp;
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(Spec)</a>
@@ -44,7 +44,7 @@ export default function UseCases() {
           </div>
 
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/work-with-data-using-queries-in-ballerina/`} className={styles.linkText}>Working with data using queries</a>
+            <a href={`${prefix}/learn/work-with-data-using-queries-in-ballerina/`} className={styles.linkText}>Work with data using queries</a>
             {/* <div className={styles.linkRow}>
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(Spec)</a>
             </div> */}
@@ -53,7 +53,7 @@ export default function UseCases() {
 
         <Col xs={12} lg={4}>
           <div className={styles.langRow}>
-            <a href={`${prefix}/learn/build-a-data-service-in-ballerina/`} className={styles.linkText}>Work with databases</a>
+            <a href={`${prefix}/learn/build-a-data-service-in-ballerina/`} className={styles.linkText}>Build a data service</a>
             {/* <div className={styles.linkRow}>
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(SQL API Docs)</a>&nbsp;&nbsp;
               <a href={`${prefix}/learn/language-basics/`} className={styles.linkSubText}>(Spec)</a>
@@ -73,11 +73,11 @@ export default function UseCases() {
         </Col> */}
       </Row>
 
-      <Row className="pageContentRow">
+      {/* <Row className="pageContentRow llanding">
         <Col xs={12}>
-        <p>See more for standard library and other <a href={`${prefix}/learn/use-cases/`} className={styles.linkText}>use cases</a></p>
+        <p>See more standard library and other <a href={`${prefix}/learn/use-cases/`} className={styles.linkText}>use cases</a></p>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 }

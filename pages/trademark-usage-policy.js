@@ -26,6 +26,8 @@ export async function getStaticProps() {
 }
 
 export default function TrademarkPolicyPage({ frontmatter, content }) {
+
+  // Add id attributes to headings
   const extractText = (value) => {
     if (typeof value === 'string') {
       return value
@@ -40,6 +42,9 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
     newId = newId.replace(/ /g, '-');
     return newId
   }
+
+  // Show page toc
+  const [showToc, setShowToc] = React.useState(false);
 
   return (
     <>
@@ -64,18 +69,21 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
       </Head>
       <Layout>
         <Col xs={12} sm={10} className="policyContent">
-          <Row className="pageHeader">
+          <Row className='topRow innerRow'>
             <Col xs={11}><h1>{frontmatter.title}</h1></Col>
             <Col xs={1} className="gitIcon">
-              <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+              <a href={`${process.env.gitHubPath}policy/trademark-usage-policy.md`}>
+                <Image src={`${prefix}/images/github.svg`} height={20} width={20} alt="Edit in github" />
+              </a>
             </Col>
           </Row>
 
-          <Row className='pageContentRow'>
+          <Row className='pageContentRow innerRow'>
             <Col xs={12}>
               <ReactMarkdown components={{
                 h2({ node, inline, className, children, ...props }) {
                   let id = '';
+                  setShowToc(true);
                   if (children.length === 1) {
                     id = children[0].toLowerCase().replace(/ /g, '-');
                   }
@@ -86,6 +94,7 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
                 },
                 h3({ node, inline, className, children, ...props }) {
                   let id = '';
+                  setShowToc(true);
                   if (children.length === 1) {
                     id = children[0].toLowerCase().replace(/ /g, '-');
                   }
@@ -96,6 +105,7 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
                 },
                 h4({ node, inline, className, children, ...props }) {
                   let id = '';
+                  setShowToc(true);
                   if (children.length === 1) {
                     id = children[0].toLowerCase().replace(/ /g, '-');
                   }
@@ -106,6 +116,7 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
                 },
                 h5({ node, inline, className, children, ...props }) {
                   let id = '';
+                  setShowToc(true);
                   if (children.length === 1) {
                     id = children[0].toLowerCase().replace(/ /g, '-');
                   }
@@ -116,6 +127,7 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
                 },
                 h6({ node, inline, className, children, ...props }) {
                   let id = '';
+                  setShowToc(true);
                   if (children.length === 1) {
                     id = children[0].toLowerCase().replace(/ /g, '-');
                   }
@@ -132,8 +144,18 @@ export default function TrademarkPolicyPage({ frontmatter, content }) {
           </Row>
         </Col>
         <Col sm={2} className='pageToc d-none d-sm-block'>
-          <h6>On this page</h6>
-          <MarkdownNavbar source={content} ordered={false} headingTopOffset={150} declarative />
+          {
+            (showToc) ?
+              <>
+                <h6>On this page</h6>
+                <MarkdownNavbar
+                  source={content}
+                  ordered={false}
+                  headingTopOffset={150}
+                  declarative />
+              </>
+              : null
+          }
         </Col>
       </Layout>
     </>

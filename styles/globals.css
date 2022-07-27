@@ -14,16 +14,40 @@ a {
   box-sizing: border-box;
 }
 
-.main-wrapper {
+/* .main-wrapper {
   justify-content: space-between;
   min-height: 100vh;
-}
+} */
 
 .wrap-page-content {
   /* margin-top: 74px; */
   padding-bottom: 30px;
   font-size: 16px;
   font-weight: 300;
+
+  /* padding-left: 0.4rem !important;
+  padding-right: 0.4rem !important; */
+}
+
+.llanding {
+  padding-left: 0.4rem !important;
+  padding-right: 0.4rem !important;
+}
+
+.innerRow {
+  padding-left: 0.4rem !important;
+}
+
+@media (min-width: 1200px) {
+  .short {
+    margin-bottom: 83px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .short {
+    margin-bottom: 473px;
+  }
 }
 
 .contentRow,
@@ -39,7 +63,7 @@ a {
   height: calc(100vh - 4rem);
   overflow-y: auto;
   padding-right: 0 !important;
-  padding-left: 0 !important;
+  padding-left: 0.4 !important;
   font-size: 13px;
   border-right: 1px solid #e6e6e6;
 }
@@ -77,7 +101,8 @@ a {
 }
 
 .policyContent {
-  padding-right: 1% !important;
+  padding-top: 35px;
+  padding-right: 3% !important;
 }
 
 .topRow {
@@ -96,25 +121,58 @@ a {
 }
 
 .mdContent h2,
-.policyContent h2 {
-  /* margin-top: 40px; */
-  margin-top: 20px;
+.policyContent h2,
+.downloads h2 {
+  margin-top: 40px;
+  /* margin-top: 20px; */
   color: #585a5e;
   font-size: 1.5rem;
+  scroll-margin-top: 60px;
 }
 
+/* .mdContent h2:hover:after, .mdContent h3:hover:after, .mdContent h4:hover:after,
+.mdContent h5:hover:after, .mdContent h6:hover:after,
+.sectionTitle:hover:after {
+  content: "";
+  display:inline-block;
+  height:16px;
+  width:16px;
+  margin-left: 5px;
+  background-size: 16px 16px;
+  background-image: url('/img/icons/permilink.svg');
+  background-repeat: no-repeat;
+} */
+
 .mdContent h3,
-.policyContent h3 {
-  /* margin-top: 40px; */
-  margin-top: 20px;
+.policyContent h3,
+.downloads h3 {
+  margin-top: 40px;
+  /* margin-top: 20px; */
   color: #585a5e;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  scroll-margin-top: 60px;
 }
 
 .community h3 {
   color: #585a5e;
   /* font-size: 1rem; */
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+}
+
+.mdContent h4,
+.mdContent h5,
+.mdContent h6,
+.policyContent h4,
+.policyContent h5,
+.policyContent h6 {
+  margin-top: 40px;
+  /* margin-top: 20px; */
+  color: #585a5e;
+}
+
+.mdContent h4,
+.policyContent h4 {
+  font-size: 1.1rem;
 }
 
 .mdContent p,
@@ -162,7 +220,8 @@ a {
   padding: 10px;
 }
 
-.mdContent table thead tr {
+.mdContent table thead tr,
+.cCodeTable tr th {
   background-color: #464646;
   /* font-weight: 400; */
   color: #ffffff;
@@ -236,7 +295,7 @@ pre.shiki {
   top: 4rem;
   height: calc(100vh - 4rem);
   overflow-y: auto;
-  padding-right: 0 !important;
+  padding-right: 0.4rem !important;
   padding-left: 0 !important;
   padding-top: 25px;
   font-size: 13px;
@@ -249,6 +308,22 @@ pre.shiki {
 
 .pageToc::-webkit-scrollbar {
   display: none;
+}
+
+.pageToc .title-level3 {
+  padding-left: 25px !important;
+}
+
+.pageToc .title-level4 {
+  padding-left: 45px !important;
+}
+
+.pageToc .title-level5 {
+  padding-left: 65px !important;
+}
+
+.pageToc .title-level6 {
+  padding-left: 85px !important;
 }
 
 .markdown-navigation {
@@ -313,6 +388,13 @@ a.cGreenLinkArrow:hover {
 .pageContentRow h2 {
   color: #585a5e;
   font-size: 1.5rem;
+  scroll-margin-top: 60px;
+}
+
+.community .pageContentRow h2 {
+  color: #585a5e;
+  font-size: 1.5rem;
+  scroll-margin-top: 120px;
 }
 
 .pageHeader h1 {
@@ -348,12 +430,16 @@ pre[class*="language-"] {
 
 .communitySubRow {
   background-color: #f8f8f8;
+  z-index: 100;
 }
 
 .communitySub {
   background-color: #f8f8f8;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: sticky;
+  top: 60px;
+  z-index: 1000;
 }
 
 .communitySub ul {
@@ -531,7 +617,7 @@ ul.eventsTabs {
 }
 
 .installers h3.releaseVersion {
-  font-size: 22px;
+  font-size: 1.3rem;
   color: #555;
   letter-spacing: 0.5px;
   text-transform: none;
@@ -600,6 +686,17 @@ ul.eventsTabs {
   border-radius: 0;
   margin-top: 0;
   background-color: #f5f5f5 !important;
+}
+
+.home pre.shiki code,
+.home pre.shiki span {
+  line-height: 18px;
+}
+
+@media (min-width: 992px) {
+  .algolia-search-cont {
+    margin-left: 0.5rem;
+  }
 }
 
 /*--------------------Specifications------------*/
@@ -698,6 +795,10 @@ ul.eventsTabs {
   font-size: 13px;
 }
 
+.specIcon {
+  cursor: pointer;
+}
+
 /*------------------- Old Versions ------------------*/
 
 ul.cLearnLandingLinks {
@@ -766,9 +867,55 @@ table.cTopControlsContainer tbody {
   --output-color-background: #585a5e;
 
   --output-color-text: #3ad1ca;
-  --button-color-text: #3ad1ca;
   --code-color-output: #818181;
+
+  --button-color-text: #3ad1ca;
   --button-hover-color-text: #a8dbd9;
+}
+
+.bbeBody > * {
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+}
+
+.bbeBody ul {
+  list-style: none;
+}
+
+.bbeBody li {
+  margin: 0;
+}
+
+.bbeBody > pre:not(.bbeOutput pre) {
+  background-color: #eeeeee;
+}
+
+.backToExample {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 16px 0;
+  text-decoration: none;
+}
+
+.backToExample * {
+  margin: 0 16px;
+  cursor: pointer;
+}
+
+.backToExample p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--button-color-text);
+}
+
+.backToExample:hover svg {
+  fill: var(--button-hover-color-text);
+}
+
+.backToExample:hover p {
+  font-weight: 500;
+  color: var(--button-hover-color-text);
 }
 
 .bbeCode {
@@ -827,12 +974,38 @@ table.cTopControlsContainer tbody {
   fill: var(--button-hover-color-text);
 }
 
-.shiki {
+.bbeCode .shiki {
   margin: 0 !important;
+  padding-top: 0 !important;
   background-color: var(--code-color-background) !important;
 }
 
-/* BBE landing page */
+.bbeOutput pre {
+  margin: 0 !important;
+  padding: 0 10px 10px 10px !important;
+}
+
+.archivedCategory {
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #585a5e;
+  margin-bottom: 20px;
+}
+
+/*------ custom shiki theme for home page examples -------*/
+:root {
+  --shiki-color-text: #000;
+  --shiki-color-background: #333333;
+  --shiki-token-constant: #07a;
+  --shiki-token-string: #770000;
+  --shiki-token-comment: slategray;
+  --shiki-token-keyword: #07a;
+  --shiki-token-parameter: #aa0000;
+  --shiki-token-function: #000;
+  --shiki-token-string-expression: #690;
+  --shiki-token-punctuation: #000;
+  --shiki-token-link: #ee0000;
+}
+
 .bbeHomeTitle {
   width: fit-content;
   border-bottom: 2px solid #464646;
@@ -847,14 +1020,29 @@ table.cTopControlsContainer tbody {
   opacity: 1;
 }
 
+.bbeTable h4 {
+  font-size: 28px;
+}
+
 .bbeTable ul {
   list-style: none;
+  scroll-margin-top: 70px;
 }
 
 .bbeTable li {
   border-bottom: 1px solid #cecfd0;
+  cursor: pointer;
 }
 
 .bbeTable a {
   color: #57595d !important;
+}
+
+/* CSS for hard coded html content in mds. */
+.cCodeTable.cCodeTableFixedLayout {
+  table-layout: fixed;
+}
+
+.cBallerina-Box p {
+  margin-left: 20px;
 }

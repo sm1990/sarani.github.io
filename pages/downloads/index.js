@@ -9,20 +9,11 @@ import swanlake from '../../_data/swanlake-latest/metadata.json';
 import stable from '../../_data/stable-latest/metadata.json';
 
 export default function Downloads() {
-
-   const [hoverBtn1, setHoverBtn1] = React.useState(false);
-   const [hoverBtn2, setHoverBtn2] = React.useState(false);
-   const [hoverBtn3, setHoverBtn3] = React.useState(false);
-   const [hoverBtn4, setHoverBtn4] = React.useState(false);
-   const [hoverBtn5, setHoverBtn5] = React.useState(false);
-   const [hoverBtn6, setHoverBtn6] = React.useState(false);
  
    let vsCodeImagePath = prefix + '/images/downloads/vs-code.svg';
    let windowsImagePath = prefix + '/images/downloads/windows.svg';
    let linuxImagePath = prefix + '/images/downloads/linux.svg';
    let macImagePath = prefix + '/images/downloads/mac.svg';
-   let downloadIconPath = prefix + '/images/download-bg.svg';
-   let downloadIconHoverPath = prefix + '/images/download-bg-white.svg';
 
    const vscodeIcon = {
       backgroundImage: 'url('+ vsCodeImagePath +')'
@@ -46,20 +37,6 @@ export default function Downloads() {
       backgroundRepeat: 'no-repeat',
    }
 
-   const downloadIcon = {
-      backgroundImage: 'url('+ downloadIconPath +')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'left 20px top 20px'
-   }
-
-   const downloadIconHover = {
-      backgroundImage: 'url('+ downloadIconHoverPath +')',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'left 20px top 20px',
-      backgroundColor: '#20b6b0'
-   }
-
-
    const Windows = <span style={windowsIcon}>Windows</span>
    const Linux = <span style={linuxIcon}>Linux</span>
    const Mac = <span style={macIcon}>macOs</span>
@@ -73,7 +50,7 @@ export default function Downloads() {
                </Col>
             </Row>
 
-             <Row className={`${styles.donwloadVersion} pageContentRow`}>
+            <Row className={`${styles.donwloadVersion} pageContentRow`}>
                <Col xs={12}>
                   <h2 id="swanlake"><span>{swanlake['display-version']}</span></h2>
                </Col>
@@ -92,17 +69,7 @@ export default function Downloads() {
                      href={`${process.env.distServer}/downloads/${swanlake.version}/${swanlake['windows-installer']}`}
                      className={styles.cDownload} 
                      data-download="downloads" 
-                     data-pack={swanlake['windows-installer']}
-                     // onMouseEnter={()=> {
-                     //    setHoverBtn1(true);
-                     // }}
-                     // onMouseLeave={()=> {
-                     //    setHoverBtn1(false);
-                     // }}
-                     // style={
-                     //    (hoverBtn1 ? downloadIconHover : downloadIcon)
-                     // }
-                     >
+                     data-pack={swanlake['windows-installer']}>
                      <div className={styles.cSize}>msi <span id="packWindowsName">{swanlake['windows-installer-size']}</span></div>
                   </a>
                   <ul className={styles.downloadSubLinks}>
@@ -117,17 +84,8 @@ export default function Downloads() {
                      <div className={styles.dVersion}>
                         <a id="packLinux" href={`${process.env.distServer}/downloads/${swanlake.version}/${swanlake['linux-installer']}`} 
                         className={styles.cDownload} 
-                        data-download="downloads" data-pack={swanlake['linux-installer']}
-                        // onMouseEnter={()=> {
-                        //    setHoverBtn2(true);
-                        // }}
-                        // onMouseLeave={()=> {
-                        //    setHoverBtn2(false);
-                        // }}
-                        // style={
-                        //    (hoverBtn2 ? downloadIconHover : downloadIcon)
-                        // }
-                        >
+                        data-download="downloads" 
+                        data-pack={swanlake['linux-installer']}>
                            <div className={styles.cSize}>deb <span id="packLinuxName">{swanlake['linux-installer-size']}</span></div>
                         </a>
                         <ul className={styles.downloadSubLinks}>
@@ -139,17 +97,8 @@ export default function Downloads() {
                      <div className={styles.dVersion}>
                         <a id="packLinux" href={`${process.env.distServer}/downloads/${swanlake.version}/${swanlake['rpm-installer']}`} 
                         className={styles.cDownload} 
-                        data-download="downloads" data-pack={swanlake['rpm-installer']}
-                        // onMouseEnter={()=> {
-                        //    setHoverBtn3(true);
-                        // }}
-                        // onMouseLeave={()=> {
-                        //    setHoverBtn3(false);
-                        // }}
-                        // style={
-                        //    (hoverBtn3 ? downloadIconHover : downloadIcon)
-                        // }
-                        >
+                        data-download="downloads" 
+                        data-pack={swanlake['rpm-installer']}>
                            <div className={styles.cSize}>rpm <span id="packLinuxName">{swanlake['rpm-installer-size']}</span></div>
                         </a>
                         <ul className={styles.downloadSubLinks}>
@@ -166,17 +115,7 @@ export default function Downloads() {
                      href={`${process.env.distServer}/downloads/${swanlake.version}/${swanlake['macos-installer']}`}
                      className={styles.cDownload} 
                      data-download="downloads" 
-                     data-pack={swanlake['macos-installer']}
-                     // onMouseEnter={()=> {
-                     //    setHoverBtn4(true);
-                     // }}
-                     // onMouseLeave={()=> {
-                     //    setHoverBtn4(false);
-                     // }}
-                     // style={
-                     //    (hoverBtn4 ? downloadIconHover : downloadIcon)
-                     // }
-                     >
+                     data-pack={swanlake['macos-installer']}>
                      <div className={styles.cSize}>pkg <span id="packWindowsName">{swanlake['macos-installer-size']}</span></div>
                   </a>
                   <ul className={styles.downloadSubLinks}>
@@ -187,7 +126,7 @@ export default function Downloads() {
                </Col>
             </Row>
 
-           <Row className={`${styles.donwloadVersion} pageContentRow`}>
+            <Row className={`${styles.donwloadVersion} pageContentRow`}>
                <Col xs={12}>
                <div className={styles.releaseLinks} >
                      <div className={styles.releaseNotes} >
@@ -203,9 +142,9 @@ export default function Downloads() {
             <Row className={`${styles.donwloadVersion} pageContentRow`}>
                <Col xs={12}>
                   <p>
-                     To <a href={`${prefix}/learn/installing-ballerina/installation-options/#verifying-the-installation`} className={styles.instructions}>verify that Ballerina was successfully installed</a>, execute 
+                     To <a href={`${prefix}/learn/install-ballerina/installation-options/#verify-the-installation`} className={styles.instructions}>verify that Ballerina was successfully installed</a>, execute 
                      the <code className="highlighter-rouge language-plaintext">bal version<span aria-hidden="true" className="line-numbers-rows"><span></span></span></code> command 
-                     in the Terminal/Shell. For more information on installing Ballerina, see <a href={`${prefix}/learn/installing-ballerina/installation-options/`} className={styles.instructions}>Installation options</a>.
+                     in the Terminal/Shell. For more information on installing Ballerina, see <a href={`${prefix}/learn/install-ballerina/installation-options/`} className={styles.instructions}>Installation options</a>.
                   </p>
                   <p>Next, install the Ballerina Visual Studio Code extension.</p>
                </Col>
@@ -216,21 +155,11 @@ export default function Downloads() {
                   <h3 className={styles.dVSCode} style={vscodeIcon}>Visual Studio Code</h3>
                   <a id="packWindows" href="https://marketplace.visualstudio.com/items?itemName=wso2.ballerina" 
                   className={styles.cDownload} data-download="downloads" 
-                  target="_blank" rel="noreferrer"
-                  // onMouseEnter={()=> {
-                  //    setHoverBtn5(true);
-                  // }}
-                  // onMouseLeave={()=> {
-                  //    setHoverBtn5(false);
-                  // }}
-                  // style={
-                  //    (hoverBtn5 ? downloadIconHover : downloadIcon)
-                  // }
-                  >
+                  target="_blank" rel="noreferrer">
                      <div className={styles.cSize}>Ballerina Extension<span id="packWindowsName"></span></div>
                   </a>
                   <br/>
-                  <p>Now, you are all set to <a href={`${prefix}/learn/getting-started-with-ballerina/`}>get started with Ballerina.</a></p>
+                  <p>Now, you are all set to <a href={`${prefix}/learn/get-started-with-ballerina/`}>get started with Ballerina.</a></p>
                </Col>
             </Row>
 
@@ -243,21 +172,21 @@ export default function Downloads() {
                            <tr> </tr>
                            <tr>
                               <td>Install via Homebrew (for macOS)
-                                 <a href={`${prefix}/learn/installing-ballerina/installation-options/#installing-on-macos`} className={styles.cDownloadLinkIcon}>
+                                 <a href={`${prefix}/learn/install-ballerina/installation-options/#install-on-macos`} className={styles.cDownloadLinkIcon}>
                                     <Image src={`${prefix}/images/right-bg-green-fill.svg`} width={13} height={13} alt="Install via Homebrew (for macOS)"/>
                                  </a>
                               </td>
                            </tr>
                            <tr>
                               <td>Install via the ZIP archive
-                                 <a href={`${prefix}/learn/installing-ballerina/installation-options/#installing-via-the-ballerina-language-zip-file`} className={styles.cDownloadLinkIcon}>
+                                 <a href={`${prefix}/learn/install-ballerina/installation-options/#install-via-the-ballerina-language-zip-file`} className={styles.cDownloadLinkIcon}>
                                     <Image src={`${prefix}/images/right-bg-green-fill.svg`} width={13} height={13} alt="Install via the ZIP archive"/>
                                  </a>
                               </td>
                            </tr>
                            <tr>
                               <td>Install from source
-                                 <a href={`${prefix}/learn/installing-ballerina/installation-options/#building-from-source`} className={styles.cDownloadLinkIcon}>
+                                 <a href={`${prefix}/learn/install-ballerina/installation-options/#build-from-source`} className={styles.cDownloadLinkIcon}>
                                     <Image src={`${prefix}/images/right-bg-green-fill.svg`} width={13} height={13} alt="Install from source"/>
                                  </a>
                               </td>
@@ -281,17 +210,7 @@ export default function Downloads() {
                      href={`${process.env.distServer}/downloads/${stable.version }/${stable['windows-installer']}`} 
                      className={styles.cDownload} 
                      data-download="downloads" 
-                     data-pack={stable['windows-installer']}
-                     // onMouseEnter={()=> {
-                     //    setHoverBtn1(true);
-                     // }}
-                     // onMouseLeave={()=> {
-                     //    setHoverBtn1(false);
-                     // }}
-                     // style={
-                     //    (hoverBtn1 ? downloadIconHover : downloadIcon)
-                     // }
-                     >
+                     data-pack={stable['windows-installer']}>
                      <div className={styles.cSize}>msi <span id="packWindowsName">{stable['windows-installer-size']}</span></div>
                   </a>
                   <ul className={styles.downloadSubLinks}>
@@ -306,17 +225,8 @@ export default function Downloads() {
                      <div className={styles.dVersion}>
                         <a id="packLinux" href={`${process.env.distServer}/downloads/${stable.version }/${stable['linux-installer']}`}  
                         className={styles.cDownload} 
-                        data-download="downloads" data-pack={stable['linux-installer']}
-                        // onMouseEnter={()=> {
-                        //    setHoverBtn2(true);
-                        // }}
-                        // onMouseLeave={()=> {
-                        //    setHoverBtn2(false);
-                        // }}
-                        // style={
-                        //    (hoverBtn2 ? downloadIconHover : downloadIcon)
-                        // }
-                        >
+                        data-download="downloads" 
+                        data-pack={stable['linux-installer']}>
                            <div className={styles.cSize}>deb <span id="packLinuxName">{stable['linux-installer-size']}</span></div>
                         </a>
                         <ul className={styles.downloadSubLinks}>
@@ -328,17 +238,8 @@ export default function Downloads() {
                      <div className={styles.dVersion}>
                         <a id="packLinux" href={`${process.env.distServer}/downloads/${stable.version }/${stable['rpm-installer']}`}   
                         className={styles.cDownload} 
-                        data-download="downloads" data-pack={stable['rpm-installer']}
-                        // onMouseEnter={()=> {
-                        //    setHoverBtn3(true);
-                        // }}
-                        // onMouseLeave={()=> {
-                        //    setHoverBtn3(false);
-                        // }}
-                        // style={
-                        //    (hoverBtn3 ? downloadIconHover : downloadIcon)
-                        // }
-                        >
+                        data-download="downloads" 
+                        data-pack={stable['rpm-installer']}>
                            <div className={styles.cSize}>rpm <span id="packLinuxName">{stable['rpm-installer-size']}</span></div>
                         </a>
                         <ul className={styles.downloadSubLinks}>
@@ -355,17 +256,7 @@ export default function Downloads() {
                      href={`${process.env.distServer}/downloads/${stable.version }/${stable['macos-installer']}`}  
                      className={styles.cDownload} 
                      data-download="downloads" 
-                     data-pack={stable['macos-installer']}
-                     // onMouseEnter={()=> {
-                     //    setHoverBtn4(true);
-                     // }}
-                     // onMouseLeave={()=> {
-                     //    setHoverBtn4(false);
-                     // }}
-                     // style={
-                     //    (hoverBtn4 ? downloadIconHover : downloadIcon)
-                     // }
-                     >
+                     data-pack={stable['macos-installer']}>
                      <div className={styles.cSize}>pkg <span id="packWindowsName">{stable['macos-installer-size']}</span></div>
                   </a>
                   <ul className={styles.downloadSubLinks}>
@@ -383,7 +274,7 @@ export default function Downloads() {
                         <p><a href={`${prefix}/downloads/1.2.x-release-notes/${stable.version}`}>RELEASE NOTES &gt;</a></p>
                      </div>
                      <div className={styles.releaseNotes} >
-                        <p><a href={`${prefix}/downloads/1.2.x-archived`}>ARCHIVED VERSIONS &gt;</a></p>
+                        <p><a href={`${prefix}/downloads/archived/#1.2.x-archived-versions`}>ARCHIVED VERSIONS &gt;</a></p>
                      </div>
                   </div>
                </Col>
@@ -394,17 +285,7 @@ export default function Downloads() {
                   <h3 className={styles.dVSCode} style={vscodeIcon}>Visual Studio Code</h3>
                   <a id="packWindows" href="https://github.com/wso2/ballerina-plugin-vscode/releases/tag/v2.1.1" 
                   className={styles.cDownload} data-download="downloads" 
-                  target="_blank" rel="noreferrer"
-                  // onMouseEnter={()=> {
-                  //    setHoverBtn6(true);
-                  // }}
-                  // onMouseLeave={()=> {
-                  //    setHoverBtn6(false);
-                  // }}
-                  // style={
-                  //    (hoverBtn6 ? downloadIconHover : downloadIcon)
-                  // }
-                  >
+                  target="_blank" rel="noreferrer">
                      <div className={styles.cSize}>Ballerina Extension<span id="packWindowsName"></span></div>
                   </a>
                </Col>
@@ -443,7 +324,7 @@ export default function Downloads() {
                   <a href={`${prefix}/1.2/learn/installing-ballerina/`} className={styles.instructions}> Installing Ballerina</a>. 
                   </p>
                </Col>
-            </Row> 
+            </Row>
          </Col>
       </Layout>
     

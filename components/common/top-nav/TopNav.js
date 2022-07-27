@@ -20,9 +20,9 @@ const TopNav = (props) => {
   return (
     <>
       <Navbar className={(launcher === 'home') ? `${styles[launcher]} navbar-dark` : styles[launcher]} expand="lg" sticky='top'>
-        <Container fluid className={(launcher === 'home') ? styles.toggleFloat : null}>
+        <Container fluid='xxl' className={(launcher === 'home') ? styles.toggleFloat : null}>
         {(launcher !== "home") ?
-          <Navbar.Brand href={`${prefix}/`}>
+          <Navbar.Brand href={`${prefix}/`} className={styles.logo}>
             
               <Image src={`${prefix}/images/ballerina-logo.svg`} height={28} width={150} alt="Ballerina Logo" />
               
@@ -31,7 +31,7 @@ const TopNav = (props) => {
           : null
           }
           <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Collapse id="navbarScroll" className={styles.navItems}>
             {/* <Nav
               className="topNav ms-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
@@ -48,12 +48,6 @@ const TopNav = (props) => {
               <Nav.Link className={styles.navItem} href="https://central.ballerina.io/">Central</Nav.Link>
               <Nav.Link className={(launcher === 'community') ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`${prefix}/community`}>Community</Nav.Link>
               <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/">Blog</Nav.Link>
-              {/* <NavDropdown title={versionPicker} id={styles.navbarScrollingDropdown}>
-                <NavDropdown.Item href={`${prefix}/learn/`}>Swan-Lake</NavDropdown.Item>
-                <NavDropdown.Item href={`${prefix}/1.2/learn/`}>V 1.2</NavDropdown.Item>
-                <NavDropdown.Item href={`${prefix}/1.1/learn/`}>V 1.1</NavDropdown.Item>
-                <NavDropdown.Item href={`${prefix}/1.0/learn/`}>V 1.0</NavDropdown.Item>
-              </NavDropdown> */}
               {(launcher === 'docs-learn')?
                 <NavDropdown title={versionPicker} id={styles.navbarScrollingDropdown}>
                   <NavDropdown.Item href={`${prefix}/learn/`}>Swan-Lake</NavDropdown.Item>
