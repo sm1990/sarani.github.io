@@ -14,13 +14,13 @@ export default function Learn() {
     <Layout>
       <Col sm={12}>
 
-        <Row className="pageHeader pageContentRow">
+        <Row className="pageHeader pageContentRow llanding">
           <Col xs={12}>
             <h1>Learn Ballerina</h1>
           </Col>
         </Row>
 
-        <Row className="pageContentRow">
+        <Row className="pageContentRow llanding">
           <Col xs={12} md={12}>
             <p>Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Let&apos;s start learning Ballerina.</p>
           </Col>
@@ -30,9 +30,7 @@ export default function Learn() {
         <LearnTheLanguage/>
         <UseCases/>
         <Platform/>
-        <New/>
-
-      
+        <New/>   
 
         {/* <Row className="pageContentRow">
           <Col xs={12} md={12}>

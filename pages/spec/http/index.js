@@ -34,7 +34,7 @@ export async function getStaticProps() {
 }
 
 
-export default function PostPage({ frontmatter, content, id }) {
+export default function PostPage({ frontmatter, content }) {
 
   const HighlightSyntax = (code,language) => {
     const [codeSnippet, setCodeSnippet] = React.useState([]);
@@ -95,7 +95,7 @@ export default function PostPage({ frontmatter, content, id }) {
           <Container>
             <Row className='topRowSpec'>
               <Col xs={12}>
-                <Link href='/'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo"/></Link>
+                <Link href='/' passHref className='specIcon'><Image src={`${prefix}/images/ballerina-logo.svg`} height={37} width={199} alt="Ballerina-logo" className='specIcon'/></Link>
               </Col>
             </Row>
             

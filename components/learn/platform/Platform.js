@@ -8,15 +8,15 @@ export default function Platform() {
 
   return (
     <>
-      <Row className="pageContentRow learnRow">
+      <Row className="pageContentRow learnRow llanding">
         <Col xs={12} md={12}>
           <h2>Learn the platform</h2>
         </Col>
       </Row>
 
 
-      <Row className="pageContentRow">
-        <Col xs={12} lg={4}>
+      <Row className="pageContentRow llanding">
+        <Col xs={12} lg={4} className={styles.contentCol}>
           <div className={styles.pGroup}>
             <h3>Source code &amp; dependencies</h3>
 
@@ -90,7 +90,7 @@ export default function Platform() {
 
 
         </Col>
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className={styles.contentCol}>
           <div className={styles.pGroup}>
             <h3>Run in the cloud</h3>
 
@@ -157,14 +157,14 @@ export default function Platform() {
             </div>
           </div>
         </Col>
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className={styles.contentCol}>
 
           <div className={styles.pGroup}>
             <h3>Ballerina Tooling</h3>
 
             <div className={styles.content}>
               <p className={styles.title}>
-                <a href="https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina" className={styles.titleLink}>
+                <a target='_blank' rel="noreferrer" href="https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina" className={styles.titleLink}>
                   Visual Studio Code extension</a>
               </p>
               <p className={styles.description}>Details of the Ballerina Visual Studio Code extension.</p>
